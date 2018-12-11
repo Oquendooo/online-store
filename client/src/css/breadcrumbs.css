@@ -1,0 +1,32 @@
+.breadcrumbs .container {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs .container .items {
+  display: flex;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs .container .items .item {
+  display: inline-block;
+  color: #b3b3b3;
+}
+
+.breadcrumbs .container .items .item a ::after {
+  color: #b3b3b3;
+  content: ' / ';
+}
+
+.breadcrumbs .container .items .item:last-child::after {
+  color: #b3b3b3;
+  content: ' ';
+}
+
+.breadcrumbs .container .items .item a {
+  font-size: .9rem;
+  display: inline-block;
+  color: #b3b3b3;
+}
