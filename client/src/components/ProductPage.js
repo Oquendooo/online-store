@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import '../css/product.css';
 
-class Product extends Component {
+class ProductPage extends Component {
   constructor(props){
     super(props)
     this.state = {price: 20}
   }
   render() {
+
     return (
       <div className="product-container container">
          <div className="row">
             <div className="product-images-wrapper col-xs-12 col-sm-7 col-md-7 col-lg-7 .col-xl-7">
                <div className="product-images">
+
                   <img
                      className="main-img" src="https://meditationmag.com/wp-content/uploads/2018/06/IMG_8739-yeah-copy-2.jpg"/>
                   <div className="other-images">
@@ -79,4 +81,4 @@ class Product extends Component {
   }
 }
 
-export default Product;
+export default ProductPage;

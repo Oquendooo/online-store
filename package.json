@@ -1,5 +1,5 @@
 {
-  "name": "meditation-mag-shop",
+  "name": "online-store",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "cookie-session": "^2.0.0-beta.3",
+    "event-stream": "^4.0.1",
     "express": "^4.16.4",
     "mongoose": "^5.3.12",
     "mysql": "^2.16.0",

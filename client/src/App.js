@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Product from './components/Product';
+import ProductPage from './components/ProductPage';
 import Header from './components/Header';
 import Banner from './components/Banner';
 import Breadcrumbs from './components/Breadcrumbs';
@@ -12,7 +12,7 @@ class App extends Component {
         <Header />
         <Banner />
         <Breadcrumbs />
-        <Product />
+        <ProductPage />
       </div>
     );
   }
