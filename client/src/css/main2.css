@@ -1,0 +1,1055 @@
+.items {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.item a {
+    display: inline-block;
+    color: #b3b3b3;
+}
+
+.breadcrumbs .container {
+    padding: 0;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.breadcrumbs .container .items .item {
+    display: inline-block;
+    color: #b3b3b3;
+}
+
+.breadcrumbs .container .items .item ::after {
+    color: #b3b3b3;
+    content: ' /';
+}
+
+.breadcrumbs .container .items .item a {
+    font-size: 0.9rem;
+}
+
+.breadcrumbs .container .items .item a span::after {
+    content: '';
+}
+
+#main-content {
+    padding: 0 20px;
+}
+
+#main-content .container {
+    padding: 0;
+}
+
+#main-content .container .category .row {
+    margin: 0;
+}
+
+#main-content .container .category .row .category-img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#main-content .container .content .filter-menu {
+    padding: 0;
+}
+
+#main-content .container .content .filter-menu strong {
+    display: block;
+    font-size: 22px;
+    color: #006bb4;
+    padding: 10px 0 20px;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item {
+    border: 1px solid #e1dcd2;
+    margin-bottom: 20px;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-title {
+    padding: 20px 30px 15px 10px;
+    border-bottom: 1px solid #e1dcd2;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-title ::after {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    color: black;
+    content: '\f106';
+    float: right;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-title h4 {
+    display: inline-block;
+    color: #006bb4;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-title h4 ::after {
+    float: right;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-content {
+    padding: 10px;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-content .items {
+    list-style: none;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-content .items .item {
+    margin: 0;
+    width: 100%;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-content .items .item a {
+    font-size: 0.75rem;
+    color: black;
+}
+
+#main-content .container .content .filter-menu .filter-options .filter-options-item .filter-option-content .items .item .count {
+    font-size: 0.75rem;
+}
+
+#main-content .container .content .products {
+    overflow: auto;
+}
+
+#main-content .container .content .products .page-title-wrapper .page-title {
+    color: #fff;
+    background: #000;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 24px;
+    padding: 6px 6px 2px;
+    margin-bottom: 20px;
+}
+
+#main-content .container .content .products .toolbar {
+    width: 100%;
+    overflow: auto;
+    background-color: #f9f8f6;
+    padding: 5px 10px;
+    margin-bottom: 30px;
+}
+
+#main-content .container .content .products .toolbar .toolbar-sorter.sorter {
+    float: left;
+}
+
+#main-content .container .content .products .toolbar .toolbar-sorter.sorter .sorter-label {
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #006bb4;
+    font-size: 10px;
+}
+
+#main-content .container .content .products .toolbar .toolbar-sorter.sorter .sorter-options {
+    background: white;
+    height: 40px;
+    margin: 0 5px 0 7px;
+    border: 0;
+    border-radius: 0;
+    padding: 5px 25px 4px 10px;
+}
+
+#main-content .container .content .products .toolbar .pages {
+    float: right;
+}
+
+#main-content .container .content .products .toolbar .pages .items.pages-items .item {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 12px;
+    letter-spacing: normal;
+    line-height: 28px;
+}
+
+#main-content .container .content .products .toolbar .pages .items.pages-items .item .page {
+    color: #000;
+    display: inline-block;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items {
+    list-style: none;
+    padding: 0;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item {
+    margin-bottom: 20px;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item :hover {
+    background: #F9F7F5;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info {
+    width: auto;
+    padding: 10px;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info :hover {
+    background: #F9F8F6;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info .product-item-photo {
+    display: inline-block;
+    color: #b3b3b3;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info .product-item-photo .product-image {
+    vertical-align: middle;
+    border-style: none;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info .product-item-photo .product-image .image {
+    width: 100%;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info .product-item-details {
+    display: block;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info .product-item-details .product-item-brand span {
+    color: #006bb4;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info .product-item-details .product-item-name {
+    display: block;
+    margin-bottom: 40px;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info .product-item-details .product-item-name .product-item-link {
+    display: block;
+    font-size: 10px;
+}
+
+#main-content .container .content .products .products-grid-wrapper .product-items .item.product-item .product-item-info .product-item-details .product-price span {
+    color: #006bb4;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Gotham Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+/* Below is the header CSS*/
+
+.mobile-logo .logo {
+    padding: 3px 10px;
+    margin: 12px;
+    border: 3px solid white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 6px;
+    font-weight: 500;
+    color: white;
+}
+
+#site-header {
+    position: relative;
+    background-color: #000;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#site-header .container {
+    justify-content: flex-start;
+}
+
+#site-header.navbar {
+    justify-content: flex-start !important;
+    background-color: #000;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#site-header .hamburger-icon {
+    display: none;
+    font-size: 1.6rem;
+    font-weight: 100;
+    z-index: 1;
+}
+
+#site-header .hamburger-icon .fas.fa-bars {
+    padding: 12px;
+    margin: 0 !important;
+    display: none;
+}
+
+#site-header .hamburger-icon .fas.fa-times {
+    display: none;
+    padding: 12px;
+    margin: 0 !important;
+    padding-left: 13px;
+}
+
+#site-header .logo-wrapper {
+    margin: 12px;
+    z-index: 0;
+}
+
+#site-header .logo {
+    padding: 3px 10px;
+    margin: 12px;
+    border: 3px solid white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 6px;
+    font-weight: 500;
+    color: white;
+}
+
+#site-header .nav .nav-item {
+    padding-right: 4px;
+}
+
+#site-header .nav .nav-item:hover {
+    background: white;
+    color: black;
+}
+
+#site-header #header-nav .nav-item:hover .products-dropdown {
+    display: flex !important;
+    background: white;
+    color: black;
+}
+
+#site-header .nav .nav-item:hover .nav-link {
+    background: white;
+    color: black;
+}
+
+#site-header .nav .nav-item:hover .fas.fa-plus {
+    background: white;
+    color: black;
+}
+
+#site-header .nav .nav-item .nav-link {
+    text-transform: uppercase;
+    display: inline-block;
+    color: white;
+    padding-right: 0;
+    font-size: 0.95rem;
+}
+
+#site-header .nav .nav-item .fas {
+    display: inline-block;
+    color: white;
+    font-size: 0.8rem;
+}
+
+#site-header .form-container {
+    margin-left: auto;
+}
+
+#site-header form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    float: right;
+    margin-left: auto;
+    order: 1;
+}
+
+#site-header form .form-group {
+    margin: 0;
+    padding: 0;
+}
+
+#site-header form .form-group::placeholder {
+    opacity: 0.8;
+}
+
+#site-header form .form-group .form-control {
+    border-radius: 0;
+}
+
+#site-header form .search-icon {
+    color: black;
+    padding: 7.2px 8px;
+    display: inline-block;
+    background: #e1ff0d;
+    height: 100%;
+}
+
+#site-header form .search-icon:hover {
+    color: #000;
+    background: #d3d3d3;
+}
+
+#site-header .account-cart .form {
+    display: flex;
+    margin-left: auto;
+    padding-left: 20px;
+    color: white;
+    order: 1;
+}
+
+#site-header .account-cart {
+    float: right;
+    display: inline-block;
+    padding-left: 20px;
+    color: white;
+    order: 2;
+}
+
+#site-header .account-cart .account {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    color: white;
+    order: 2;
+}
+
+#site-header .account-cart .account a {
+    display: inline-block;
+    padding-left: 20px;
+    color: white;
+}
+
+#site-header .account-cart .account .account-menu {
+    display: none;
+    background: white;
+    padding: 10px 10px 0;
+    margin: 0;
+    border: 1px solid #9b9b9b;
+    width: 160px;
+    list-style: none;
+    position: absolute;
+    top: 30px;
+    left: -32px;
+    z-index: 3;
+}
+
+#site-header .account-cart .account:hover .account-menu {
+    display: block;
+}
+
+#site-header .account-cart .account:hover .account-menu li:hover {
+    background: #d3d3d3;
+}
+
+#site-header .account-cart .account .login-register {
+    display: block;
+    background: white;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 3;
+}
+
+#site-header .account-cart .account .login-register .arrow-up {
+    position: relative;
+    top: -16px;
+}
+
+#site-header .account-cart .account .login-register .item {
+    margin-bottom: 10px;
+}
+
+#site-header .account-cart .account .login-register .item .login {
+    height: 40px;
+    padding: 0 30px;
+    background: #000;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#site-header .account-cart .account .login-register .item .login:hover {
+    color: black;
+    background: #d3d3d3;
+}
+
+#site-header .account-cart .account .login-register .item .register {
+    height: 40px;
+    background: #e1ff0d;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+#site-header .account-cart .account .login-register .item .register:hover {
+    background: #d3d3d3;
+}
+
+#site-header .account-cart .account .menu-actions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#site-header .account-cart .account .menu-actions .menu-actions-item a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#site-header .cart {
+    display: inline-block;
+    padding-left: 20px;
+    color: white;
+    order: 3;
+}
+
+#site-header .cart a {
+    padding-left: 20px;
+    display: inline-block;
+    color: white;
+}
+
+#site-header .cart .cart-menu {
+    display: none;
+}
+
+#site-header .cart .cart-menu .arrow-up {
+    display: none;
+}
+
+#site-header .cart:hover .cart-menu {
+    display: block;
+    background: white;
+    padding: 25px 20px;
+    border: 1px solid black;
+    position: absolute;
+    right: 120px;
+}
+
+#site-header .cart:hover .cart-menu .cart-content {
+    color: black;
+}
+
+/* Below is the CSS for the mobile menu*/
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 68px;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    background: black;
+    z-index: 10;
+}
+
+.mobile-menu li {
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu a {
+    text-transform: uppercase;
+    color: white;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+/* Below is the CSS for the Banner*/
+
+.banner p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.banner a {
+    color: black;
+}
+
+.banner .fas {
+    font-size: 0.2rem;
+    color: black;
+}
+
+/* Below is the CSS for the Mens menu*/
+
+.products-dropdown-wrapper {
+    background: white;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    max-width: 1280px;
+    z-index: 1;
+    position: absolute;
+    top: 53px;
+    right: 0;
+    left: 0;
+}
+
+.products-dropdown {
+    padding: 40px;
+    background: white;
+    width: 100%;
+    display: none;
+    max-width: 1280px;
+    z-index: 1;
+    top: 54px;
+    right: 20;
+    left: 20;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.products-dropdown .dropdown-col {
+    width: calc(100%/4);
+    list-style: none;
+    display: inline-block;
+}
+
+.products-dropdown .dropdown-col .blank-h3 {
+    text-decoration: none;
+}
+
+.products-dropdown .dropdown-col .blank-h3:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
+.products-dropdown .dropdown-col li {
+    color: black;
+}
+
+.products-dropdown .dropdown-col li a {
+    color: black;
+}
+
+.products-dropdown .dropdown-col li h3 {
+    margin-bottom: 20px;
+}
+
+.products-dropdown .dropdown-col li h3:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.products-dropdown .dropdown-col .viewall {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 2px 4px;
+    background: #e1ff0d;
+}
+
+.products-dropdown .dropdown-col .viewall:hover {
+    color: white;
+    background: black;
+}
+
+.products-dropdown .dropdown-imgs-col {
+    width: 50%;
+    font-size: 0;
+    display: inline-block;
+}
+
+.products-dropdown .dropdown-imgs-col .dropdown-img {
+    display: inline-block;
+    width: 50%;
+    padding-left: 20px;
+}
+
+.products-dropdown .dropdown-imgs-col .dropdown-img h5 {
+    color: black;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.products-dropdown .dropdown-imgs-col .dropdown-img span {
+    color: black;
+    width: 100%;
+}
+
+.products-dropdown .dropdown-imgs-col .dropdown-img h3 {
+    color: black;
+    text-align: center;
+}
+
+.products-dropdown .dropdown-imgs-col .dropdown-img .action {
+    display: block;
+    text-decoration: none;
+    padding: 4px 10px;
+    margin-top: 6px;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    border: 2px solid #000;
+    background: #fff;
+}
+
+.products-dropdown .dropdown-imgs-col .dropdown-img .action:hover {
+    background: black;
+    color: white;
+}
+
+.products-dropdown .dropdown-imgs-col .dropdown-img a img {
+    width: 100%;
+}
+
+/* Below is the CSS for The main content*/
+
+#main-content {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+/* Below is the CSS for Row 1*/
+
+.img-fluid {
+    width: 100%;
+}
+
+.row1-wrapper .img-fluid {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Below is the CSS for Row 2*/
+
+.row2-wrapper .img-fluid {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.row2-wrapper .col-xs-12 {
+    margin-bottom: 20px;
+}
+
+/* Below is the CSS for Row 3*/
+
+.row3-wrapper .brand-slider-wrapper {
+    width: 100%;
+}
+
+.row3-wrapper .brand-silder {
+    display: inline-block;
+    transition: all 0s ease 0s;
+    width: 4549px !important;
+    transform: translate3d(-1963px, 0px, 0px) !important;
+}
+
+.row3-wrapper .brand-silder .owl-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row3-wrapper .brand-silder .owl-item {
+    display: flex !important;
+}
+
+.row3-wrapper .brand-silder .owl-item .item {
+    align-items: center;
+    justify-content: center;
+}
+
+.row3-wrapper .brand {
+    display: inline-block;
+    width: auto;
+}
+
+.row3-wrapper .brand-silder .owl-carousel .brand .item .img-fluid {
+    display: inline-block;
+}
+
+.row5-wrapper .col-xs-12 {
+    margin-bottom: 20px;
+}
+
+.row6-wrapper {
+    height: 360px;
+}
+
+.row6-wrapper .item {
+    max-width: 285px;
+}
+
+.row7-wrapper .col-xs-12 {
+    margin-bottom: 20px;
+}
+
+.row8-wrapper .col-xs-12 {
+    margin-bottom: 20px;
+}
+
+.row9-wrapper .col-xs-12 {
+    margin-bottom: 20px;
+}
+
+.row10-wrapper .col-xs-12 {
+    margin-bottom: 20px;
+}
+
+.row11-wrapper {
+    margin-bottom: 20px;
+}
+
+.row12-wrapper {
+    margin-bottom: 20px;
+}
+
+.row13-wrapper {
+    margin-bottom: 20px;
+}
+
+.row14-wrapper {
+    margin-bottom: 20px;
+}
+
+.row15-wrapper {
+    margin-bottom: 20px;
+}
+
+/* Below are the Media Queries for the Site*/
+
+/* Small devices (landscape phones, 576px and up) */
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (max-width: 768px) {
+    #site-header .hamburger-icon .fas.fa-bars {
+        margin: 12px;
+    }
+    h1 {
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    #site-header .logo-wrapper {
+        position: absolute !important;
+        margin: 0 auto !important;
+        top: 20px;
+        left: 0;
+        right: 0;
+        margin: 12px;
+        text-align: center;
+    }
+    #site-header .logo {
+        font-size: 0.7rem;
+        margin: 10px 8px;
+        padding: 5px;
+        border: 2px solid white;
+        font-weight: bold;
+    }
+    #site-header form {
+        padding: 15px 0 5px;
+        width: 100%;
+        order: 4;
+    }
+    #site-header form .form-group {
+        width: 100%;
+    }
+    #site-header .account-cart {
+        float: right;
+        margin-left: auto;
+    }
+}
+
+/* Below is the CSS for the page-footer */
+
+.page-footer {
+    background: #eee;
+    padding-bottom: 25px;
+    height: 275px;
+}
+
+.page-footer .footer-content {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+}
+
+.page-footer .footer-content .email-newsletter {
+    width: auto;
+    padding: 40px 0;
+}
+
+.page-footer .footer-content .email-newsletter .form.subscribe {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-footer .footer-content .email-newsletter .control {
+    display: inline-block;
+    width: 80%;
+}
+
+.page-footer .footer-content .email-newsletter .control input {
+    background: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e1e1e1;
+    border-radius: 0;
+    color: #000;
+    font-family: 'Gotham Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    height: 40px;
+    line-height: 1.42857143;
+    padding: 0 9px;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page-footer .footer-content .email-newsletter .actions {
+    display: inline-block;
+}
+
+.page-footer .footer-content .email-newsletter .actions button {
+    padding: 0 30px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.page-footer .footer-content .email-newsletter .actions button span {
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.footer-menu .footer-menu-col {
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    width: 25%;
+}
+
+.footer-menu .footer-menu-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-menu .footer-menu-col ul li {
+    font-weight: 600;
+}
+
+.footer-menu .social-links {
+    display: inline-block;
+    width: 20%;
+}
+
+.footer-menu .social-links .links .social-icon {
+    display: inline-block;
+}
+
+.footer-menu .social-links .links .social-icon a {
+    color: black;
+}
+
+/* Large devices (desktops, 992px and up) */
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (max-width: 1200px) {
+    #site-header .hamburger-icon {
+        display: block;
+    }
+    #site-header .hamburger-icon .fas.fa-bars {
+        display: block;
+    }
+    #header-nav {
+        display: none;
+    }
+}
+
+/* Misc CSS Styles*/
+
+.row {
+    margin: 0;
+}
+
+.active {
+    display: block !important;
+}
+
+.show {
+    display: flex !important;
+}
+
+.no-show {
+    display: none !important;
+}
+
+.not-active {
+    display: none !important;
+}
+
+.margin-add {
+    margin-bottom: 20px;
+}
+
+.nav-item-on {
+    background: white;
+    color: black !important;
+}
+
+.nav-link-on {
+    background: white;
+    color: black !important;
+}
+
+.font-icon-on {
+    background: white;
+    color: black;
+}
+
+.nav-item-off {
+    background: black;
+    color: white !important;
+}
+
+.nav-link-off {
+    background: black;
+    color: white !important;
+}
+
+.font-icon-off {
+    background: black;
+    color: white;
+}
+
+.arrow-up {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+/*# sourceMappingURL=main.css.map */
