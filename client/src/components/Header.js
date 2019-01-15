@@ -12,7 +12,7 @@ class Header extends Component {
                         <i className="fas fa-times"></i>
                      </div>
                      <div className="logo-wrapper">
-                        <a href="index.html" className="logo">Meditation-Mag shop</a>
+                        <a href="index.html" className="logo">Online Store</a>
                      </div>
                      <ul id="header-nav" className="nav">
                         <li className="nav-item">

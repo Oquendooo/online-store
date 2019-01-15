@@ -15,11 +15,10 @@ class ProductPage extends Component {
                <div className="product-images">
 
                   <img
-                     className="main-img" src="https://meditationmag.com/wp-content/uploads/2018/06/IMG_8739-yeah-copy-2.jpg"/>
+                     className="main-img" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/image/1200x1200/e9c3970ab036de70892d86c6d221abfe/d/3/d3bf8e8fff414325c43fb02ad1cabbb4.jpg"/>
                   <div className="other-images">
-                     <img src="https://meditationmag.com/wp-content/uploads/2018/06/mockup-ef6b57ea.jpg"/>
-                     <img src="https://meditationmag.com/wp-content/uploads/2018/06/mockup-798f1468.jpg"/>
-                     <img src="https://meditationmag.com/wp-content/uploads/2018/06/mockup-4d1d8175.jpg"/>
+                     <img src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/88x110/beff4985b56e3afdbeabfc89641a4582/a/a/aabd633d5b85697ef0db62520566bf77.jpg"/>
+                     <img src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/88x110/beff4985b56e3afdbeabfc89641a4582/7/4/74e806b71c5fc1c433c04b1c48fabe6e.jpg"/>
                   </div>
                </div>
             </div>
