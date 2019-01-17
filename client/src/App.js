@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import ProductPage from './components/ProductPage/ProductPage';
 import Products from './components/DisplayProductsPage/Products';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Banner from './components/Banner';
 import LandingPage from './components/LandingPage';
 import Breadcrumbs from './components/Breadcrumbs';
@@ -17,8 +18,10 @@ class App extends Component {
           <Banner />
           <Route exact path='/' component={LandingPage}/>
           <Route exact path='/products' component={Breadcrumbs} />
+          <Route exact path='/product' component={Breadcrumbs} />
           <Route exact path='/products' component={DisplayProductsPage}/>
           <Route exact path='/product' component={ProductPage}/>
+          <Footer />
       </div>
     );
   }

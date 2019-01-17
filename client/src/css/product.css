@@ -10,27 +10,39 @@
 
 .product-images-wrapper .product-images {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-images-wrapper .product-images .main-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .product-images-wrapper .product-images .main-img {
-  min-width: 500px;
   min-height: 500px;
-  width: 40%;
+  max-height: 500px;
+  width: 400px;
   height: auto;
 }
 
 .product-images-wrapper .product-images .other-images {
   display: flex;
   overflow: auto;
-  max-width: 350px;
-  max-height: 150px;
+  width: 100%;
 }
 
 .product-images-wrapper .product-images .other-images img {
   display: flex;
   overflow: auto;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
+  max-width: 350px;
+  max-height: 150px;
 }
 
 .product-information-wrapper {
@@ -65,7 +77,7 @@
 .product-information-wrapper .product-price-sku {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 14px;
 }
 
 .product-information-wrapper .product-price-sku .product-price {
@@ -82,10 +94,60 @@
   align-items: center;
 }
 
+/*Size Options CSS are below*/
+.product-information-wrapper .sizes {
+  display: flex;
+  margin-top: 6px;
+}
+
+.product-information-wrapper .sizes .size-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 15px 10px 15px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Size quantity and add to cart css*/
+.product-information-wrapper .qty-addtocart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.product-information-wrapper .qty-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.product-information-wrapper .qty-addtocart .addtocart-btn {
+  background: #11873b;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  height: 50px;
+  width: 60%;
+}
+
+.product-information-wrapper .wishList-socialLinks {
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.product-information-wrapper .wishList-socialLinks .fas.fa-heart {
+  margin-right: 8px;
+}
+
+.product-information-wrapper .wishList-socialLinks .product-info {}
+
 .colors-box-wrapper {
   margin-bottom: 40px;
 }
 
 .sizes-box-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }

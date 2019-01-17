@@ -334,6 +334,7 @@ body {
 }
 
 #site-header .nav .nav-item:hover .fas.fa-plus {
+
     background: white;
     color: black;
 }
@@ -347,6 +348,9 @@ body {
 }
 
 #site-header .nav .nav-item .fas {
+    margin-left: 4px;
+    position: relative;
+    top:-1.1px;
     display: inline-block;
     color: white;
     font-size: 0.8rem;

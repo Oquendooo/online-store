@@ -650,12 +650,15 @@ body {
 
 /* Below is the CSS for the page-footer */
 .page-footer {
+  height: auto;
   background: #eee;
   padding-bottom: 25px;
-  height: 275px;
+  display: block;
 }
 
 .page-footer .footer-content {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
