@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
-
+import { Route } from 'react-router-dom'
 import ProductPage from './components/ProductPage/ProductPage';
-import Products from './components/DisplayProductsPage/Products';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Banner from './components/Banner';
 import LandingPage from './components/LandingPage';
 import Breadcrumbs from './components/Breadcrumbs';
 import DisplayProductsPage from "./components/DisplayProductsPage";
+import './css/main.css';
+import './css/bootstrap.min.css';
+
 
 class App extends Component {
   render() {

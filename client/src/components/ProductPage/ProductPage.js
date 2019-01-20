@@ -8,6 +8,29 @@ class ProductPage extends Component {
       price: 20
     }
   }
+  componentDidMount(){
+     this.getProducts();
+  }
+
+  getProducts = (event) => {
+
+   fetch('products/get-products',
+     {
+       method:'GET',
+       headers:
+       {
+         'Accept':'application/json',
+         'Content-Type':'application/json'
+       }
+     }
+   )
+   .then(response => response.json())
+   .then(data => {
+        console.log(data);
+
+   });
+
+ };
   render() {
 
     return (<div className="product-container container">
@@ -15,18 +38,18 @@ class ProductPage extends Component {
         <div className="product-images-wrapper col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
           <div className="product-images">
             <div className="main-img-wrapper">
-              <img className="main-img" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/image/1200x1200/e9c3970ab036de70892d86c6d221abfe/d/3/d3bf8e8fff414325c43fb02ad1cabbb4.jpg"/>
+              <img alt="" className="main-img" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/image/1200x1200/e9c3970ab036de70892d86c6d221abfe/d/3/d3bf8e8fff414325c43fb02ad1cabbb4.jpg"/>
             </div>
 
             <div className="other-images">
-              <img src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/88x110/beff4985b56e3afdbeabfc89641a4582/a/a/aabd633d5b85697ef0db62520566bf77.jpg"/>
-              <img src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/88x110/beff4985b56e3afdbeabfc89641a4582/7/4/74e806b71c5fc1c433c04b1c48fabe6e.jpg"/>
+              <img alt="" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/88x110/beff4985b56e3afdbeabfc89641a4582/a/a/aabd633d5b85697ef0db62520566bf77.jpg"/>
+              <img alt="" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/88x110/beff4985b56e3afdbeabfc89641a4582/7/4/74e806b71c5fc1c433c04b1c48fabe6e.jpg"/>
             </div>
           </div>
         </div>
         <div className="product-information-wrapper col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
           <div className="product-brand">
-            <a href="#">
+            <a href="/">
               <span>Alexander Wang</span>
             </a>
           </div>
@@ -78,7 +101,7 @@ class ProductPage extends Component {
             </div>
           </form>
           <div className="wishList-socialLinks">
-            <a><i class="fas fa-heart"></i><span>Add To Wish List</span></a>
+            <a href="/"><i class="fas fa-heart"></i><span>Add To Wish List</span></a>
           </div>
           <div className="product-info">
 

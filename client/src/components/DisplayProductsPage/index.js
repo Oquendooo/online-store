@@ -4,10 +4,39 @@ import '../../css/main2.css';
 class DisplayProductsPage extends Component {
     constructor(props){
         super(props)
-        this.state = {price: 20}
+        this.state = {
+          products: [],
+        }
     }
-    render() {
 
+    componentDidMount(){
+        this.getProducts();
+
+    }
+
+    getProducts = (event) => {
+
+        fetch('products/get-products',
+            {
+                method:'GET',
+                headers:
+                    {
+                        'Accept':'application/json',
+                        'Content-Type':'application/json'
+                    }
+            }
+        )
+            .then(response => response.json())
+            .then(products => {
+                //console.log(data);
+                this.setState({products});
+            });
+
+    };
+
+
+    render() {
+        console.log(this.state.products);
         return (
 
             <div id="main-content" className="">
@@ -37,7 +66,7 @@ class DisplayProductsPage extends Component {
                                         <div className="filter-option-content">
                                             <ul className="items">
                                                 <li className="item">
-                                                    <a href="#">Short Sleeve</a>
+                                                    <a href="/">Short Sleeve</a>
                                                     <span className="count"> (7)</span>
                                                 </li>
                                             </ul>
@@ -52,19 +81,19 @@ class DisplayProductsPage extends Component {
                                         <div className="filter-option-content">
                                             <ul className="items">
                                                 <li className="item">
-                                                    <a href="#">Sale</a>
+                                                    <a href="/">Sale</a>
                                                     <span className="count"> (7)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">New</a>
+                                                    <a href="/">New</a>
                                                     <span className="count"> (7)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">Looped in</a>
+                                                    <a href="/">Looped in</a>
                                                     <span className="count"> (7)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">MA Products</a>
+                                                    <a href="/">MA Products</a>
                                                     <span className="count"> (7)</span>
                                                 </li>
                                             </ul>
@@ -79,11 +108,11 @@ class DisplayProductsPage extends Component {
                                         <div className="filter-option-content">
                                             <ul className="items">
                                                 <li className="item">
-                                                    <a href="#">Basic Tees</a>
+                                                    <a href="/">Basic Tees</a>
                                                     <span className="count"> (211)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">Short Sleeve</a>
+                                                    <a href="/">Short Sleeve</a>
                                                     <span className="count"> (7)</span>
                                                 </li>
                                             </ul>
@@ -97,31 +126,31 @@ class DisplayProductsPage extends Component {
                                         <div className="filter-option-content">
                                             <ul className="items">
                                                 <li className="item">
-                                                    <a href="#">Above.Millions</a>
+                                                    <a href="/">Above.Millions</a>
                                                     <span className="count"> (1)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">Adidas</a>
+                                                    <a href="/">Adidas</a>
                                                     <span className="count"> (8)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">ALL GOOD</a>
+                                                    <a href="/">ALL GOOD</a>
                                                     <span className="count"> (1)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">Asphalt Yacht Club</a>
+                                                    <a href="/">Asphalt Yacht Club</a>
                                                     <span className="count"> (8)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">Bloodbath</a>
+                                                    <a href="/">Bloodbath</a>
                                                     <span className="count"> (8)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">Champion</a>
+                                                    <a href="/">Champion</a>
                                                     <span className="count"> (8)</span>
                                                 </li>
                                                 <li className="item">
-                                                    <a href="#">Champion</a>
+                                                    <a href="/">Champion</a>
                                                     <span className="count"> (8)</span>
                                                 </li>
                                             </ul>
@@ -139,12 +168,12 @@ class DisplayProductsPage extends Component {
                                     <div className="toolbar-sorter sorter">
                                         <label className="sorter-label" htmlFor="sorter">Sort By</label>
                                         <select id="sorter" className="sorter-options">
-                                            <option value="position"> Popularity</option>
-                                            <option value="price"> Price</option>
-                                            <option value="news_from_date" selected="selected"> Newest Arrivals</option>
-                                            <option value="gender"> Gender</option>
-                                            <option value="sale"> Sale</option>
-                                            <option value="special_sort"> Default</option>
+                                            <option defaultValue="position"> Popularity</option>
+                                            <option defaultValue="price"> Price</option>
+                                            <option defaultValue="news_from_date"> Newest Arrivals</option>
+                                            <option defaultValue="gender"> Gender</option>
+                                            <option defaultValue="sale"> Sale</option>
+                                            <option defaultValue="special_sort"> Default</option>
                                         </select>
                                     </div>
                                     <div className="pages">
@@ -155,22 +184,22 @@ class DisplayProductsPage extends Component {
                                                 </strong>
                                             </div>
                                             <div className="item">
-                                                <a href="#" className="page">
+                                                <a href="/" className="page">
                                                     <span>2</span>
                                                 </a>
                                             </div>
                                             <div className="item">
-                                                <a href="#" className="page">
+                                                <a href="/" className="page">
                                                     <span>3</span>
                                                 </a>
                                             </div>
                                             <div className="item">
-                                                <a href="#" className="page">
+                                                <a href="/" className="page">
                                                     <span>4</span>
                                                 </a>
                                             </div>
                                             <div className="item">
-                                                <a href="#" className="page">
+                                                <a href="/" className="page">
                                                     <span>5</span>
                                                 </a>
                                             </div>
@@ -189,162 +218,38 @@ class DisplayProductsPage extends Component {
                                     <ol className="product-items">
                                         <div className="container">
                                             <div className="row">
-                                                <li className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                                                    <div className="product-item-info">
+                                                {
+                                                  this.state.products.map((product) => {
+                                                    console.log(product.img_urls)
+                                                    return(
+                                                      <li className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                                          <div className="product-item-info">
 
-                                                        <a className="product-item-photo" href="#">
-                                                            <div className="product-image">
-                                                                <img className="image"
-                                                                     src="https://cdn.karmaloopassets.com/media/catalog/product/cache/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/8/2/825212b26bb01b3b8d11b094f7aae3e8.jpg"
-                                                                     alt=""/>
-                                                            </div>
-                                                        </a>
-                                                        <div className="product-item-details">
-                                                            <strong className="product-item-brand">
-                                                                <span>Mitchell & Ness</span>
-                                                            </strong>
-                                                            <strong className="product-item-name">
-                                                                <a href="" className="product-item-link">
-                                                                    Men's All Star Jacket
-                                                                </a>
-                                                            </strong>
-                                                            <div className="product-price">
-                                                                <span>$129.99</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </li>
-                                                <li className="item product-item col-6 col-xs-2 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                                                    <div className="product-item-info">
-
-                                                        <a className="product-item-photo" href="#">
-                                                            <div className="product-image">
-                                                                <img className="image"
-                                                                     src="https://cdn.karmaloopassets.com/media/catalog/product/cache/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/a/3/a39aaf349f702e3312c609a65d9ad5d1.jpg"
-                                                                     alt=""/>
-                                                            </div>
-                                                        </a>
-                                                        <div className="product-item-details">
-                                                            <strong className="product-item-brand">
-                                                                <span>Mitchell & Ness</span>
-                                                            </strong>
-                                                            <strong className="product-item-name">
-                                                                <a href="" className="product-item-link">
-                                                                    Men's All Star Jacket
-                                                                </a>
-                                                            </strong>
-                                                            <div className="product-price">
-                                                                <span>$129.99</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </li>
-                                                <li className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                                                    <div className="product-item-info">
-
-                                                        <a className="product-item-photo" href="#">
-                                                            <div className="product-image">
-                                                                <img className="image"
-                                                                     src="https://cdn.karmaloopassets.com/media/catalog/product/cache/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/7/6/76c7bd25b01d84d1dfc2f5c18b262d47.jpg"
-                                                                     alt=""/>
-                                                            </div>
-                                                        </a>
-                                                        <div className="product-item-details">
-                                                            <strong className="product-item-brand">
-                                                                <span>Mitchell & Ness</span>
-                                                            </strong>
-                                                            <strong className="product-item-name">
-                                                                <a href="" className="product-item-link">
-                                                                    Men's All Star Jacket
-                                                                </a>
-                                                            </strong>
-                                                            <div className="product-price">
-                                                                <span>$129.99</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </li>
-                                                <li className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                                                    <div className="product-item-info">
-
-                                                        <a className="product-item-photo" href="#">
-                                                            <div className="product-image">
-                                                                <img className="image"
-                                                                     src="https://cdn.karmaloopassets.com/media/catalog/product/cache/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/6/0/60c071295898653f1899d5760039277e.jpg"
-                                                                     alt=""/>
-                                                            </div>
-                                                        </a>
-                                                        <div className="product-item-details">
-                                                            <strong className="product-item-brand">
-                                                                <span>Mitchell & Ness</span>
-                                                            </strong>
-                                                            <strong className="product-item-name">
-                                                                <a href="" className="product-item-link">
-                                                                    Men's All Star Jacket
-                                                                </a>
-                                                            </strong>
-                                                            <div className="product-price">
-                                                                <span>$129.99</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </li>
-                                                <li className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                                                    <div className="product-item-info">
-
-                                                        <a className="product-item-photo" href="#">
-                                                            <div className="product-image">
-                                                                <img className="image"
-                                                                     src="https://cdn.karmaloopassets.com/media/catalog/product/cache/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/a/a/aabf3ce45ce53e2e451bf4f58aff9cf9.jpg"
-                                                                     alt=""/>
-                                                            </div>
-                                                        </a>
-                                                        <div className="product-item-details">
-                                                            <strong className="product-item-brand">
-                                                                <span>Mitchell & Ness</span>
-                                                            </strong>
-                                                            <strong className="product-item-name">
-                                                                <a href="" className="product-item-link">
-                                                                    Men's All Star Jacket
-                                                                </a>
-                                                            </strong>
-                                                            <div className="product-price">
-                                                                <span>$129.99</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </li>
-                                                <li className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                                                    <div className="product-item-info">
-
-                                                        <a className="product-item-photo" href="#">
-                                                            <div className="product-image">
-                                                                <img className="image"
-                                                                     src="https://cdn.karmaloopassets.com/media/catalog/product/cache/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/f/0/f0d912689e35763e2920208cbacd09a7.jpg"
-                                                                     alt=""/>
-                                                            </div>
-                                                        </a>
-                                                        <div className="product-item-details">
-                                                            <strong className="product-item-brand">
-                                                                <span>Mitchell & Ness</span>
-                                                            </strong>
-                                                            <strong className="product-item-name">
-                                                                <a href="" className="product-item-link">
-                                                                    Men's All Star Jacket
-                                                                </a>
-                                                            </strong>
-                                                            <div className="product-price">
-                                                                <span>$129.99</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </li>
+                                                              <a className="product-item-photo" href="/product">
+                                                                  <div className="product-image">
+                                                                      <img className="image"
+                                                                           src={product.img_urls}
+                                                                           alt=""/>
+                                                                  </div>
+                                                              </a>
+                                                              <div className="product-item-details">
+                                                                  <strong className="product-item-brand">
+                                                                      <span>{product.brand}</span>
+                                                                  </strong>
+                                                                  <strong className="product-item-name">
+                                                                      <a href="/product" className="product-item-link">
+                                                                          {product.product_name}
+                                                                      </a>
+                                                                  </strong>
+                                                                  <div className="product-price">
+                                                                      <span>{product.price}</span>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </li>
+                                                    )
+                                                  })
+                                                }
                                             </div>
                                         </div>
 

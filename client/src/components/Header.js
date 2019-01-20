@@ -12,11 +12,11 @@ class Header extends Component {
                         <i className="fas fa-times"></i>
                      </div>
                      <div className="logo-wrapper">
-                        <a href="index.html" className="logo">Modern Apparel</a>
+                        <a href="/" className="logo">Modern Apparel</a>
                      </div>
                      <ul id="header-nav" className="nav">
                         <li className="nav-item">
-                           <a className="nav-link" href="#">Men's</a>
+                           <a className="nav-link" href="/">Men's</a>
                            <i className="fas fa-plus"></i>
                            <div className="products-dropdown-wrapper">
                               <div className="products-dropdown">
@@ -26,21 +26,21 @@ class Header extends Component {
                                           <h3>Clothing</h3>
                                        </a>
                                     </li>
-                                    <li><a href="pages/display-items.html"><span>Basic Tees</span></a></li>
-                                    <li><a href="/"><span>Graphic Tees</span></a></li>
-                                    <li><a href="/"><span>Hoodies</span></a></li>
-                                    <li><a href="/"><span>Jackets</span></a></li>
-                                    <li><a href="/"><span>Jeans</span></a></li>
-                                    <li><a href="/"><span>Joggers</span></a></li>
-                                    <li><a href="/"><span>Outerwear</span></a></li>
-                                    <li><a href="/"><span>Pants</span></a></li>
-                                    <li><a href="/"><span>Shirts</span></a></li>
-                                    <li><a href="/"><span>Shorts</span></a></li>
-                                    <li><a href="/"><span>Sweaters</span></a></li>
-                                    <li><a href="/"><span>Sweatshirts</span></a></li>
-                                    <li><a href="/"><span>T-shirts</span></a></li>
-                                    <li><a href="/"><span>Track Pants</span></a></li>
-                                    <li><a><span className="viewall">View All</span></a></li>
+                                    <li><a href="products"><span>Basic Tees</span></a></li>
+                                    <li><a href="products"><span>Graphic Tees</span></a></li>
+                                    <li><a href="products"><span>Hoodies</span></a></li>
+                                    <li><a href="products"><span>Jackets</span></a></li>
+                                    <li><a href="products"><span>Jeans</span></a></li>
+                                    <li><a href="products"><span>Joggers</span></a></li>
+                                    <li><a href="products"><span>Outerwear</span></a></li>
+                                    <li><a href="products"><span>Pants</span></a></li>
+                                    <li><a href="products"><span>Shirts</span></a></li>
+                                    <li><a href="products"><span>Shorts</span></a></li>
+                                    <li><a href="products"><span>Sweaters</span></a></li>
+                                    <li><a href="products"><span>Sweatshirts</span></a></li>
+                                    <li><a href="products"><span>T-shirts</span></a></li>
+                                    <li><a href="products"><span>Track Pants</span></a></li>
+                                    <li><a href="products"><span className="viewall">View All</span></a></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -51,7 +51,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Boots</span></a></li>
                                     <li><a href="/"><span>Sandals & Slides</span></a></li>
                                     <li><a href="/"><span>Sneakers</span></a></li>
-                                    <li><a><span className="viewall">View All</span></a></li>
+                                    <li><a href="/"><span className="viewall">View All</span></a></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -69,28 +69,28 @@ class Header extends Component {
                                     <li><a href="/"><span>Sunglasses</span></a></li>
                                     <li><a href="/"><span>Wallets</span></a></li>
                                     <li><a href="/"><span>Watches</span></a></li>
-                                    <li className="viewall"><a><span>View All</span></a></li>
+                                    <li className="viewall"><a href="/"><span>View All</span></a></li>
                                  </ul>
                                  <div className="dropdown-imgs-col">
                                     <div className="dropdown-img">
                                        <h5>New</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-bbc.jpg"/></a>
-                                       <a className="action" href="">Shop Now</a>
+                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-bbc.jpg"/></a>
+                                       <a className="action" href="/">Shop Now</a>
                                     </div>
                                     <div className="dropdown-img">
                                        <h5>To lowdown</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="#"><img src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-pinkdolphin2.jpg"/>
+                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-pinkdolphin2.jpg"/>
                                        </a>
-                                       <a className="action">Shop Now</a>
+                                       <a href="/" className="action">Shop Now</a>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </li>
                         <li className="nav-item">
-                           <a className="nav-link" href="#">Women's</a>
+                           <a className="nav-link" href="/">Women's</a>
                            <i className="fas fa-plus"></i>
                            {/*-- Below is the products Dropdown Men*/}
                            <div className="products-dropdown-wrapper">
@@ -109,7 +109,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Sweatshirts</span></a></li>
                                     <li><a href="/"><span>Sweaters</span></a></li>
                                     <li><a href="/"><span>Swimwear</span></a></li>
-                                    <li><a><span className="viewall">View All</span></a></li>
+                                    <li><a href="/"><span className="viewall">View All</span></a></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -122,7 +122,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Heels</span></a></li>
                                     <li><a href="/"><span>Boots</span></a></li>
                                     <li><a href="/"><span>Flats</span></a></li>
-                                    <li><a><span className="viewall">View All</span></a></li>
+                                    <li><a href="/"><span className="viewall">View All</span></a></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -136,31 +136,31 @@ class Header extends Component {
                                     <li><a href="/"><span>Bags</span></a></li>
                                     <li><a href="/"><span>Purses</span></a></li>
                                     <li><a href="/"><span>Scarves</span></a></li>
-                                    <li className="viewall"><a><span>View All</span></a></li>
+                                    <li className="viewall"><a href="/"><span>View All</span></a></li>
                                  </ul>
                                  <div className="dropdown-imgs-col">
                                     <div className="dropdown-img">
                                        <h5>New</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-womens-calvin.jpg"/></a>
-                                       <a className="action" href="">Shop Now</a>
+                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-womens-calvin.jpg"/></a>
+                                       <a className="action" href="/">Shop Now</a>
                                     </div>
                                     <div className="dropdown-img">
                                        <h5>For her</h5>
                                        <h3>Footwear</h3>
-                                       <a href="/"><img src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-vans.jpg"/></a>
-                                       <a className="action">Shop Now</a>
+                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-vans.jpg"/></a>
+                                       <a href="/" className="action">Shop Now</a>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </li>
                         <li className="nav-item">
-                           <a className="nav-link" href="#">New</a>
+                           <a className="nav-link" href="/">New</a>
                            <i className="fas fa-plus"></i>
                         </li>
                         <li className="nav-item">
-                           <a className="nav-link" href="#">Sale</a>
+                           <a className="nav-link" href="/">Sale</a>
                            <i className="fas fa-plus"></i>
                            {/*-- Below is the products Dropdown Men*/}
                            <div className="products-dropdown-wrapper">
@@ -173,7 +173,7 @@ class Header extends Component {
                                     </li>
                                     <li><a href="/"><span>Clothing</span></a></li>
                                     <li><a href="/"><span>Footwear</span></a></li>
-                                    <li><a><span className="viewall">View All</span></a></li>
+                                    <li><a href="/"><span className="viewall">View All</span></a></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -183,7 +183,7 @@ class Header extends Component {
                                     </li>
                                     <li><a href="/"><span>Clothing</span></a></li>
                                     <li><a href="/"><span>Footwear</span></a></li>
-                                    <li><a><span className="viewall">View All</span></a></li>
+                                    <li><a href="/"><span className="viewall">View All</span></a></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -194,27 +194,27 @@ class Header extends Component {
                                     <li><a href="/"><span>Fresh Markdowns</span></a></li>
                                     <li><a href="/"><span>25% Off Markdowns</span></a></li>
                                     <li><a href="/"><span>Loosie Sales</span></a></li>
-                                    <li className="viewall"><a><span>View All</span></a></li>
+                                    <li className="viewall"><a href="/"><span>View All</span></a></li>
                                  </ul>
                                  <div className="dropdown-imgs-col">
                                     <div className="dropdown-img">
                                        <h5>New</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img src="https://cdn.karmaloopassets.com/media//gene-cms/c/h/charles.jpg"/></a>
-                                       <a className="action" href="">Shop Now</a>
+                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/c/h/charles.jpg"/></a>
+                                       <a className="action" href="/">Shop Now</a>
                                     </div>
                                     <div className="dropdown-img">
                                        <h5>To lowdown</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img src="https://cdn.karmaloopassets.com/media//gene-cms/_/5/_52a9015-edit.jpg"/></a>
-                                       <a className="action">Shop Now</a>
+                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/_/5/_52a9015-edit.jpg"/></a>
+                                       <a href="/" className="action">Shop Now</a>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </li>
                         <li className="nav-item">
-                           <a className="nav-link" href="#">Brands</a>
+                           <a className="nav-link" href="/">Brands</a>
                            <i className="fas fa-plus"></i>
                            {/*-- Below is the Mens Dropdown Men*/}
                            <div className="products-dropdown-wrapper">
@@ -325,25 +325,25 @@ class Header extends Component {
                         <div className="form-group">
                            <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search"/>
                         </div>
-                        <a className="search-icon" href="#">
+                        <a className="search-icon" href="/">
                         <i className="fas fa-search"></i>
                         </a>
                      </form>
                      <div className="account-cart">
                         <div className="account">
-                           <a href="#">
+                           <a href="/">
                            <i className="fas fa-user-alt"></i>
                            </a>
                            <div className="account-menu">
                               <ul className="login-register">
                                  <div className="arrow-up"></div>
                                  <li className="item">
-                                    <a className="login" href="">
+                                    <a className="login" href="/">
                                     <span>Log In</span>
                                     </a>
                                  </li>
                                  <li className="item">
-                                    <a className="register" href="">
+                                    <a className="register" href="/">
                                     <span>Registration</span>
                                     </a>
                                  </li>
@@ -368,7 +368,7 @@ class Header extends Component {
                            </div>
                         </div>
                         <div className="cart">
-                           <a href="#">
+                           <a href="/">
                            <i className="fas fa-shopping-cart"></i>
                            </a>
                            <div className="cart-menu">
@@ -382,11 +382,11 @@ class Header extends Component {
                   </div>
                </header>
                <ul className="mobile-menu">
-                  <li><a href="#">Men's</a></li>
-                  <li><a href="#">Women's</a></li>
-                  <li><a href="#">New</a></li>
-                  <li><a href="#">Sales</a></li>
-                  <li><a href="#">Brands</a></li>
+                  <li><a href="/">Men's</a></li>
+                  <li><a href="/">Women's</a></li>
+                  <li><a href="/">New</a></li>
+                  <li><a href="/">Sales</a></li>
+                  <li><a href="/">Brands</a></li>
                </ul>
             </React.Fragment>
     );

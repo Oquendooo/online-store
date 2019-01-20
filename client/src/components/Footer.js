@@ -5,71 +5,71 @@ class Footer extends Component {
   render() {
     return (
       <React.Fragment>
-        <footer class="page-footer">
-           <div class="footer-content">
-              <div class="email-newsletter">
-                 <div class="content">
-                    <form class="form subscribe" action="" method="post">
-                       <div class="label">
+        <footer className="page-footer">
+           <div className="footer-content">
+              <div className="email-newsletter">
+                 <div className="content">
+                    <form className="form subscribe" action="" method="post">
+                       <div className="label">
                        </div>
-                       <div class="control">
+                       <div className="control">
                           <input name="email" type="email" id="newsletter" placeholder="Enter email address"/>
                        </div>
-                       <div class="actions">
-                          <button type="submit" class="action secondary subscribe" title="Join"> <span>Join</span>
+                       <div className="actions">
+                          <button type="submit" className="action secondary subscribe" title="Join"> <span>Join</span>
                           </button>
                        </div>
                     </form>
                  </div>
               </div>
-              <div class="footer-menu">
-                 <div class="footer-menu-col">
-                    <ul class="">
-                       <li><a href="#"></a>Home</li>
-                       <li><a href="#"></a>Brands</li>
-                       <li><a href="#"></a>Student Discount</li>
-                       <li><a href="#"></a>Privacy</li>
-                       <li><a href="#"></a>Terms Of Use</li>
+              <div className="footer-menu">
+                 <div className="footer-menu-col">
+                    <ul className="">
+                       <li><a href="/">Home</a></li>
+                       <li><a href="/">Brands</a></li>
+                       <li><a href="/">Student Discount</a></li>
+                       <li><a href="/">Privacy</a></li>
+                       <li><a href="/">Terms Of Use</a></li>
                     </ul>
                  </div>
-                 <div class="footer-menu-col">
+                 <div className="footer-menu-col">
                     <ul>
-                       <li><a href="#"></a>Kazbah</li>
-                       <li><a href="#"></a>Plndr</li>
-                       <li><a href="#"></a>Affiliates</li>
-                       <li><a href="#"></a>Shiekh Shoes</li>
+                       <li><a href="/">Kazbah</a></li>
+                       <li><a href="/">Plndr</a></li>
+                       <li><a href="/">Affiliates</a></li>
+                       <li><a href="/">Shiekh Shoes</a></li>
                     </ul>
                  </div>
-                 <div class="footer-menu-col">
+                 <div className="footer-menu-col">
                     <ul>
-                       <li><a href="#"></a>Contact Us</li>
-                       <li><a href="#"></a>Faq</li>
-                       <li><a href="#"></a>Shipping</li>
-                       <li><a href="#"></a>Return</li>
+                       <li><a href="/">Contact Us</a></li>
+                       <li><a href="/">Faq</a></li>
+                       <li><a href="/">Shipping</a></li>
+                       <li><a href="/">Return</a></li>
                     </ul>
                  </div>
-                 <div class="social-links">
-                    <div class="title">
+                 <div className="social-links">
+                    <div className="title">
                        <strong>Stay Connected</strong>
                     </div>
-                    <div class="links">
-                       <div class="social-icon">
-                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <div className="links">
+                       <div className="social-icon">
+                          <a href="/"><i className="fab fa-facebook-f"></i></a>
                        </div>
-                       <div class="social-icon">
-                          <a href="#"><i class="fab fa-twitter"></i></a>
+                       <div className="social-icon">
+                          <a href="/"><i className="fab fa-twitter"></i></a>
                        </div>
-                       <div class="social-icon">
-                          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                       <div className="social-icon">
+                          <a href="/"><i className="fab fa-pinterest-p"></i></a>
                        </div>
-                       <div class="social-icon">
-                          <a href="#"><i class="fab fa-instagram"></i></a>
+                       <div className="social-icon">
+                          <a href="/"><i className="fab fa-instagram"></i></a>
                        </div>
-                       <div class="social-icon">
-                          <a href="#"><i class="fab fa-tumblr"></i></a>
+                       <div className="social-icon">
+                          <a href="/"><i className="fab fa-tumblr"></i></a>
                        </div>
-                       <div class="social-icon">
-                          <a href="#"><i class="fab fa-youtube"></i></a>
+                       <div className="social-icon">
+                          <a href="/"><i className="fab fa-youtube"></i></a>
                        </div>
                     </div>
                  </div>

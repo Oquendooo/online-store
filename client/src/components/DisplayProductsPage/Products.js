@@ -6,8 +6,12 @@ class Products extends Component {
         super(props)
         this.state = {price: 20}
     }
-    render() {
 
+
+
+
+    render() {
+        console.log("hello");
         return (
 
             <div id="main-content" className="">
