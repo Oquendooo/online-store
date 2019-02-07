@@ -14,9 +14,6 @@ module.exports = (model) => {
 
     app.get('/get-products', (req, res) => {
 
-
-
-
       model.selectProducts()
           .then(data => {
 
