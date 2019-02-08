@@ -1,0 +1,63 @@
+.signup-container{
+    max-width: 1280px !important;
+}
+.signup-container row{
+    margin-left: 0 !important;
+    margin-right:0 !important;
+}
+.page-title-wrapper{
+    padding-left:15px;
+    width:100%;
+}
+.page-title-wrapper .page-title{
+
+    width:100%;
+}
+.page-title-wrapper .page-title span{
+    padding: 6px 6px 2px;
+    font-size: 24px;
+    background: black;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.customer-login-section strong{
+
+}
+
+.customer-login-section .customer-login-section-title{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.customer-login-section .login-note{
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: .95rem;
+}
+
+.customer-login-section form fieldset label{
+    display: block;
+
+}
+.customer-login-section form fieldset{
+    margin: 0 0 20px;
+
+}
+.customer-login-section form fieldset input{
+    font-size: 14px;
+    font-weight: 300;
+    height: 40px;
+    line-height: 1.42857143;
+    padding: 0 9px;
+    vertical-align: baseline;
+    width: 55%;
+    box-sizing: border-box;
+    background: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e1e1e1;
+
+}
+

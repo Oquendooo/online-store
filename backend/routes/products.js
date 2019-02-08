@@ -12,6 +12,13 @@ module.exports = (model) => {
 
     });
 
+    app.get('/category/:gender/:apparelType', (req, res) => {
+        res.send("category gender appareltype route");
+
+    });
+
+
+
     app.get('/get-products', (req, res) => {
 
       model.selectProducts()

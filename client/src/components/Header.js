@@ -1,7 +1,31 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import '../css/main.css';
 
+
 class Header extends Component {
+
+   renderLinks(){
+      if(this.props.authenticated){
+         return(
+             <div>
+                <Link to="/signout">Sign Out</Link>
+                <Link to="/feature">Feature</Link>
+             </div>
+         );
+      }else{
+         return(
+             <div>
+                <Link to="/signup">Sign Up</Link>
+                <Link to="/signin">Sign In </Link>
+             </div>
+         );
+      }
+   }
+
+
   render() {
     return (
       <React.Fragment>
@@ -347,6 +371,10 @@ class Header extends Component {
                                     <span>Registration</span>
                                     </a>
                                  </li>
+                                 <li className="item">
+                                    <Link to="/">Redux Auth </Link>
+                                    {this.renderLinks()}
+                                 </li>
                               </ul>
                               <ul className="menu-actions">
                                  <li className="menu-actions-item">
@@ -393,4 +421,8 @@ class Header extends Component {
   }
 }
 
-export default Header;
+function mapStateToProps (state) {
+   return { authenticated: state.auth.authenticated};
+}
+
+export default connect(mapStateToProps)(Header);

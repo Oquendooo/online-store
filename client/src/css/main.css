@@ -35,6 +35,7 @@ body {
 }
 
 #site-header .container {
+  max-width: 1280px;
   justify-content: flex-start;
 }
 

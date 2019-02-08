@@ -16,7 +16,7 @@ class DisplayProductsPage extends Component {
 
     getProducts = (event) => {
 
-        fetch('products/get-products',
+        fetch('/get-products',
             {
                 method:'GET',
                 headers:
