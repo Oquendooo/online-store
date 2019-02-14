@@ -20,10 +20,10 @@ const ProductsRouter = require('./backend/routes/products')(ProductsModel);
 const AuthRouter = require('./backend/routes/auth')(AuthModel);
 
 // App Setup
-app.use(morgan('combined'));
-app.use(cors());
-app.use(bodyParser.json({type: '*/*' }));
-app.use(bodyParser.urlencoded({extended: false}));
+// app.use(morgan('combined'));
+// app.use(cors());
+// app.use(bodyParser.json({type: '*/*' }));
+// app.use(bodyParser.urlencoded({extended: false}));
 // app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 
