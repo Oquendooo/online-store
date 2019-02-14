@@ -11,25 +11,25 @@ const app = express();
 const mysqlConnection = require('./services/mysqlConfig');
 const cors = require('cors');
 
-// //Importing the Models here
-// const ProductsModel = require('./backend/models/products')(mysqlConnection);
-// const AuthModel = require('./backend/models/auth')(mysqlConnection);
-//
-// // Routers for each API
-// const ProductsRouter = require('./backend/routes/products')(ProductsModel);
-// const AuthRouter = require('./backend/routes/auth')(AuthModel);
-//
-// // App Setup
-// app.use(morgan('combined'));
-// app.use(cors());
-// app.use(bodyParser.json({type: '*/*' }));
-// app.use(bodyParser.urlencoded({extended: false}));
+//Importing the Models here
+const ProductsModel = require('./backend/models/products')(mysqlConnection);
+const AuthModel = require('./backend/models/auth')(mysqlConnection);
+
+// Routers for each API
+const ProductsRouter = require('./backend/routes/products')(ProductsModel);
+const AuthRouter = require('./backend/routes/auth')(AuthModel);
+
+// App Setup
+app.use(morgan('combined'));
+app.use(cors());
+app.use(bodyParser.json({type: '*/*' }));
+app.use(bodyParser.urlencoded({extended: false}));
 // app.use(express.static(path.join(__dirname, 'client', 'build')));
-//
-//
-// // Listeners for each route
-// app.use('/', ProductsRouter);
-// app.use('/', AuthRouter);
+
+
+// Listeners for each route
+app.use('/', ProductsRouter);
+app.use('/', AuthRouter);
 
 
 const PORT = process.env.PORT || 5000;
