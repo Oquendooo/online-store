@@ -12,12 +12,12 @@ const mysqlConnection = require('./services/mysqlConfig');
 const cors = require('cors');
 
 //Importing the Models here
-const ProductsModel = require('./backend/models/products')(mysqlConnection);
-const AuthModel = require('./backend/models/auth')(mysqlConnection);
-
-// Routers for each API
-const ProductsRouter = require('./backend/routes/products')(ProductsModel);
-const AuthRouter = require('./backend/routes/auth')(AuthModel);
+// const ProductsModel = require('./backend/models/products')(mysqlConnection);
+// const AuthModel = require('./backend/models/auth')(mysqlConnection);
+//
+// // Routers for each API
+// const ProductsRouter = require('./backend/routes/products')(ProductsModel);
+// const AuthRouter = require('./backend/routes/auth')(AuthModel);
 
 // App Setup
 // app.use(morgan('combined'));
