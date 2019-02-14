@@ -10,17 +10,26 @@ class Header extends Component {
    renderLinks(){
       if(this.props.authenticated){
          return(
-             <div>
-                <Link to="/signout">Sign Out</Link>
-                <Link to="/feature">Feature</Link>
-             </div>
+
+             <React.Fragment>
+                <li className="item">
+                   <Link className="register" to="/signout"><span>Sign Out</span></Link>
+                </li>
+                <li className="item">
+                   <Link className="register" to="/feature"><span>Feature</span></Link>
+                </li>
+             </React.Fragment>
          );
       }else{
          return(
-             <div>
-                <Link to="/signup">Sign Up</Link>
-                <Link to="/signin">Sign In </Link>
-             </div>
+             <React.Fragment>
+                <li className="item">
+                   <Link className="login" to="/signin"><span>Log In</span></Link>
+                </li>
+                <li className="item">
+                   <Link className="register" to="/signup"><span>Registration</span></Link>
+                </li>
+             </React.Fragment>
          );
       }
    }
@@ -64,7 +73,7 @@ class Header extends Component {
                                     <li><a href="products"><span>Sweatshirts</span></a></li>
                                     <li><a href="products"><span>T-shirts</span></a></li>
                                     <li><a href="products"><span>Track Pants</span></a></li>
-                                    <li><a href="products"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/mens/clothing"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -75,7 +84,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Boots</span></a></li>
                                     <li><a href="/"><span>Sandals & Slides</span></a></li>
                                     <li><a href="/"><span>Sneakers</span></a></li>
-                                    <li><a href="/"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/mens/footwear"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -93,7 +102,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Sunglasses</span></a></li>
                                     <li><a href="/"><span>Wallets</span></a></li>
                                     <li><a href="/"><span>Watches</span></a></li>
-                                    <li className="viewall"><a href="/"><span>View All</span></a></li>
+                                    <li><Link to="/products/category/mens/accessories"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <div className="dropdown-imgs-col">
                                     <div className="dropdown-img">
@@ -133,7 +142,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Sweatshirts</span></a></li>
                                     <li><a href="/"><span>Sweaters</span></a></li>
                                     <li><a href="/"><span>Swimwear</span></a></li>
-                                    <li><a href="/"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/womens/clothing"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -146,7 +155,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Heels</span></a></li>
                                     <li><a href="/"><span>Boots</span></a></li>
                                     <li><a href="/"><span>Flats</span></a></li>
-                                    <li><a href="/"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/womens/footwear"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -160,7 +169,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Bags</span></a></li>
                                     <li><a href="/"><span>Purses</span></a></li>
                                     <li><a href="/"><span>Scarves</span></a></li>
-                                    <li className="viewall"><a href="/"><span>View All</span></a></li>
+                                    <li><Link to="/products/category/womens/accessories"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <div className="dropdown-imgs-col">
                                     <div className="dropdown-img">
@@ -361,20 +370,7 @@ class Header extends Component {
                            <div className="account-menu">
                               <ul className="login-register">
                                  <div className="arrow-up"></div>
-                                 <li className="item">
-                                    <a className="login" href="/">
-                                    <span>Log In</span>
-                                    </a>
-                                 </li>
-                                 <li className="item">
-                                    <a className="register" href="/">
-                                    <span>Registration</span>
-                                    </a>
-                                 </li>
-                                 <li className="item">
-                                    <Link to="/">Redux Auth </Link>
-                                    {this.renderLinks()}
-                                 </li>
+                                 {this.renderLinks()}
                               </ul>
                               <ul className="menu-actions">
                                  <li className="menu-actions-item">

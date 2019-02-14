@@ -5,40 +5,57 @@ class ProductPage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      price: 20
+        product: {},
+        price: 20
     }
   }
   componentDidMount(){
-     this.getProducts();
+
   }
 
-  getProducts = (event) => {
+  componentWillMount() {
+      this.getProduct();
+  }
 
-   fetch('products/get-products',
-     {
-       method:'GET',
-       headers:
-       {
-         'Accept':'application/json',
-         'Content-Type':'application/json'
-       }
-     }
-   )
-   .then(response => response.json())
-   .then(data => {
-        console.log(data);
+    getProduct = (event) => {
 
-   });
+      const {product_name} = this.props.match.params;
+
+        console.log("my product name",product_name);
+      if(typeof product_name === "undefined" ){
+
+          console.log("worked");
+
+      }else if(typeof product_name !== "undefined"){
+
+          fetch(`/product/${product_name}`,
+              {
+                  method:'GET',
+                  headers:
+                      {
+                          'Accept':'application/json',
+                          'Content-Type':'application/json'
+                      }
+              }
+          )
+              .then(response => response.json())
+              .then(product => {
+                  console.log("Your product",product[0]);
+                  this.setState({product: product[0]});
+              });
+      }
 
  };
   render() {
 
-    return (<div className="product-container container">
+
+    return (
+        <div className="product-container container">
       <div className="row">
         <div className="product-images-wrapper col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
           <div className="product-images">
             <div className="main-img-wrapper">
-              <img alt="" className="main-img" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/image/1200x1200/e9c3970ab036de70892d86c6d221abfe/d/3/d3bf8e8fff414325c43fb02ad1cabbb4.jpg"/>
+              <img alt="" className="main-img" src={this.state.product.img_urls}/>
             </div>
 
             <div className="other-images">
@@ -50,15 +67,15 @@ class ProductPage extends Component {
         <div className="product-information-wrapper col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
           <div className="product-brand">
             <a href="/">
-              <span>Alexander Wang</span>
+              <span>{this.state.product.brand}</span>
             </a>
           </div>
           <div className="product-title">
-            <h4>10 Deep Striped Shirt</h4>
+            <h4>{this.state.product.product_name}</h4>
           </div>
           <div className="product-price-sku">
-            <div className="product-price">$20.00</div>
-            <div className="product-sku">SKU#: SD1009__GREY</div>
+            <div className="product-price">{this.state.product.price}</div>
+            <div className="product-sku">{this.state.product.sku}</div>
           </div>
           <form id="product-addtocart-form">
             <div className="sizes-box-wrapper">

@@ -12,10 +12,33 @@ module.exports = (model) => {
 
     });
 
-    app.get('/category/:gender/:apparelType', (req, res) => {
-        res.send("category gender appareltype route");
 
+    // Get sepefiic product route
+    app.get('/product/:product_name', (req, res) => {
+
+        let product_name = req.params.product_name;
+        product_name = product_name.replace(/-/g, ' ');
+        console.log("product name",product_name);
+        model.selectProduct(product_name)
+            .then(data => {
+                console.log("product",data);
+                res.json(data);
+            });
     });
+
+
+    app.get('/category/:gender/:apparel_type', (req, res) => {
+        console.log(req.params);
+        const gender = req.params.gender;
+        const apparel_type = req.params.apparel_type;
+
+        model.selectAllOfGenderAndApparelType(gender,apparel_type)
+            .then(data => {
+                res.json(data);
+            });
+    });
+
+
 
 
 
@@ -30,11 +53,6 @@ module.exports = (model) => {
           .catch(err => {
               console.log(err);
           });
-
-    });
-
-    app.get('/get-product', (req, res) => {
-
 
     });
 

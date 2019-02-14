@@ -13,10 +13,12 @@ const cors = require('cors');
 
 //Importing the Models here
 const ProductsModel = require('./backend/models/products')(mysqlConnection);
+const ProductModel = require('./backend/models/product')(mysqlConnection);
 const AuthModel = require('./backend/models/auth')(mysqlConnection);
 
 // Routers for each API
 const ProductsRouter = require('./backend/routes/products')(ProductsModel);
+const ProductRouter = require('./backend/routes/product')(ProductModel);
 const AuthRouter = require('./backend/routes/auth')(AuthModel);
 
 // App Setup
@@ -28,7 +30,9 @@ app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 
 // Listeners for each route
-app.use('/', ProductsRouter);
+
+app.use('/products', ProductsRouter);
+app.use('/product', ProductRouter);
 app.use('/', AuthRouter);
 
 

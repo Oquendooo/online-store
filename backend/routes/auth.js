@@ -59,8 +59,8 @@ module.exports = (model) => {
             console.log("Email is in use")
           }
 
-        });
-
+        })
+        .catch(err => console.log(err));
   });
 
 

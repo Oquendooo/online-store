@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/main2.css';
 
 class DisplayProductsPage extends Component {
@@ -6,6 +7,7 @@ class DisplayProductsPage extends Component {
         super(props)
         this.state = {
           products: [],
+          currentPath: ''
         }
     }
 
@@ -13,30 +15,64 @@ class DisplayProductsPage extends Component {
         this.getProducts();
 
     }
-
+    componentDidUpdate(prevProps) {
+        // Typical usage (don't forget to compare props):
+        if (this.props.location !== prevProps.location) this.getProducts()
+    }
     getProducts = (event) => {
 
-        fetch('/get-products',
-            {
-                method:'GET',
-                headers:
-                    {
-                        'Accept':'application/json',
-                        'Content-Type':'application/json'
-                    }
-            }
-        )
-            .then(response => response.json())
-            .then(products => {
-                //console.log(data);
-                this.setState({products});
-            });
+        const {gender, apparel_type} = this.props.match.params;
+        const params = this.props.match.params;
+
+        console.log("gender",gender);
+        console.log("gender",apparel_type);
+        console.log("params",params);
+
+        if(typeof gender === "undefined" || typeof apparel_type === "undefined"){
+            console.log("worked");
+            fetch('/products/get-products',
+                {
+                    method:'GET',
+                    headers:
+                        {
+                            'Accept':'application/json',
+                            'Content-Type':'application/json'
+                        }
+                }
+            )
+                .then(response => response.json())
+                .then(products => {
+                    this.setState({products});
+                });
+        }else if(this.props.match.params){
+            const gender = this.props.match.params.gender;
+            const apparel_type = this.props.match.params.apparel_type;
+
+            fetch(`/products/category/${gender}/${apparel_type}`,
+                {
+                    method:'GET',
+                    headers:
+                        {
+                            'Accept':'application/json',
+                            'Content-Type':'application/json'
+                        }
+                }
+            )
+                .then(response => response.json())
+                .then(products => {
+                    //console.log(data);
+                    this.setState({products});
+                });
+        }
+
 
     };
 
 
     render() {
         console.log(this.state.products);
+        console.log("my url params",this.props.match.params);
+        console.log("My location",this.props.location);
         return (
 
             <div id="main-content" className="">
@@ -221,17 +257,20 @@ class DisplayProductsPage extends Component {
                                                 {
                                                   this.state.products.map((product) => {
                                                     console.log(product.img_urls)
+                                                      product.product_name = product.product_name.replace(/\s+/g, '-').toLowerCase();
                                                     return(
                                                       <li className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                                                           <div className="product-item-info">
+                                                              <Link className="product-item-photo" to={`/product/${product.product_name}`}>
 
-                                                              <a className="product-item-photo" href="/product">
-                                                                  <div className="product-image">
-                                                                      <img className="image"
-                                                                           src={product.img_urls}
-                                                                           alt=""/>
-                                                                  </div>
-                                                              </a>
+                                                                      <div className="product-image">
+                                                                          <img className="image"
+                                                                               src={product.img_urls}
+                                                                               alt=""/>
+                                                                      </div>
+
+                                                              </Link>
+
                                                               <div className="product-item-details">
                                                                   <strong className="product-item-brand">
                                                                       <span>{product.brand}</span>
