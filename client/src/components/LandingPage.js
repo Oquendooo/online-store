@@ -12,15 +12,15 @@ class LandingPage extends Component {
                         <div className="row">
                             <div className="col-xs-12 col-lg-6">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row1img1.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row1img1.jpg')}  alt=""/>
                                 </a>
                             </div>
                             <div className="col-xs-12 col-lg-6">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row1img2.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row1img2.jpg')} alt=""/>
                                 </a>
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row1img3.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row1img3.jpg')} alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -31,7 +31,7 @@ class LandingPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-12">
-                                <img className="img-fluid" src="/assets/images/row2im1.jpg" alt=""/>
+                                <img className="img-fluid" src={require('../images/row2im1.jpg')} alt=""/>
                             </div>
                         </div>
                     </div>
@@ -46,32 +46,32 @@ class LandingPage extends Component {
                                         <div className="owl-carousel owl-theme">
                                             <div className="item brand" style={{width:'auto'}}>
                                                 <a href="pages/display-items.html">
-                                                    <img className="img-fluid" src="/assets/images/row3img1.jpg" alt=""/>
+                                                    <img className="img-fluid" src={require('../images/row3img1.png')} alt=""/>
                                                 </a>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
                                                 <a href="pages/display-items.html">
-                                                    <img className="img-fluid" src="/assets/images/row3img2.jpg" alt=""/>
+                                                    <img className="img-fluid" src={require('../images/row3img2.png')} alt=""/>
                                                 </a>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
                                                 <a href="pages/display-items.html">
-                                                    <img className="img-fluid" src="/assets/images/row3img3.jpg" alt=""/>
+                                                    <img className="img-fluid" src={require('../images/row3img3.png')} alt=""/>
                                                 </a>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
                                                 <a href="pages/display-items.html">
-                                                    <img className="img-fluid" src="/assets/images/row3img4.jpg" alt=""/>
+                                                    <img className="img-fluid" src={require('../images/row3img4.png')} alt=""/>
                                                 </a>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
                                                 <a href="pages/display-items.html">
-                                                    <img className="img-fluid" src="/assets/images/row3img5.jpg" alt=""/>
+                                                    <img className="img-fluid" src={require('../images/row3img5.png')} alt=""/>
                                                 </a>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
                                                 <a href="pages/display-items.html">
-                                                    <img className="img-fluid" src="/assets/images/row3img6.jpg" alt=""/>
+                                                    <img className="img-fluid" src={require('../images/row3img6.svg')} alt=""/>
                                                 </a>
                                             </div>
                                         </div>
@@ -104,22 +104,22 @@ class LandingPage extends Component {
                                     <div className="owl-carousel owl-theme">
                                         <div className="col-lg-4 item brand" style={{width:'auto'}}>
                                             <a href="pages/display-items.html">
-                                                <img className="img-fluid" src="/assets/images/row6img1.jpg" alt=""/>
+                                                <img className="img-fluid" src={require('../images/row6img1.jpg')} alt=""/>
                                             </a>
                                         </div>
                                         <div className="col-lg-4 item brand" style={{width:'auto'}}>
                                             <a href="pages/display-items.html">
-                                                <img className="img-fluid" src="/assets/images/row6img2.jpg" alt=""/>
+                                                <img className="img-fluid" src={require('../images/row6img2.jpg')} alt=""/>
                                             </a>
                                         </div>
                                         <div className="col-lg-4 item brand" style={{width:'auto'}}>
                                             <a href="pages/display-items.html">
-                                                <img className="img-fluid" src="/assets/images/row6img3.jpg" alt=""/>
+                                                <img className="img-fluid" src={require('../images/row6img3.jpg')} alt=""/>
                                             </a>
                                         </div>
                                         <div className="col-lg-4 item brand" style={{width:'auto'}}>
                                             <a href="pages/display-items.html">
-                                                <img className="img-fluid" src="/assets/images/row6img4.jpg" alt=""/>
+                                                <img className="img-fluid" src={require('../images/row6img4.jpg')} alt=""/>
                                             </a>
                                         </div>
                                     </div>
@@ -134,7 +134,7 @@ class LandingPage extends Component {
                         <div className="row justify-content-center">
                             <div className="col-xs-12">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row7img1.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row7img1.jpg')} alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ class LandingPage extends Component {
                         <div className="row justify-content-center">
                             <div className="col-xs-12">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row8img1.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row8img1.jpg')} alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -158,15 +158,15 @@ class LandingPage extends Component {
                         <div className="row justify-content-center">
                             <div className="col-xs-12 col-lg-6">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid margin-add" src="/assets/images/row9img1.jpg" alt=""/>
+                                    <img className="img-fluid margin-add" src={require('../images/row9img1.jpg')} alt=""/>
                                 </a>
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid margin-add" src="/assets/images/row6img2.jpg" alt=""/>
+                                    <img className="img-fluid margin-add" src={require('../images/row6img2.jpg')} alt=""/>
                                 </a>
                             </div>
                             <div className="col-xs-12 col-lg-6">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row6img3.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row6img3.jpg')} alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -178,12 +178,12 @@ class LandingPage extends Component {
                         <div className="row justify-content-center">
                             <div className="col-xs-12 col-md-6 col-lg-6">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row10img1.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row10img1.jpg')} alt=""/>
                                 </a>
                             </div>
                             <div className="col-xs-12 col-md-6 col-lg-6">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row10img2.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row10img2.jpg')} alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -195,17 +195,17 @@ class LandingPage extends Component {
                         <div className="row justify-content-center">
                             <div className="col-xs-6 col-md-4 col-lg-4">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row11img1.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row11img1.jpg')} alt=""/>
                                 </a>
                             </div>
                             <div className="col-xs-6 col-md-4 col-lg-4">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row6img2.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row6img2.jpg')} alt=""/>
                                 </a>
                             </div>
                             <div className="col-xs-6 col-md-4 col-lg-4">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row6img3.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row6img3.jpg')} alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -218,7 +218,7 @@ class LandingPage extends Component {
                             <div className="col-xs-12">
                                 <a href="pages/display-items.html">
                                     <img className="img-fluid"
-                                         src="/assets/images/row12img1.jpg" alt=""/>
+                                         src={require('../images/row12img1.jpg')} alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -230,17 +230,17 @@ class LandingPage extends Component {
                         <div className="row justify-content-center">
                             <div className="col-xs-6 col-md-4 col-lg-4">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row13img1.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row13img1.jpg')} alt=""/>
                                 </a>
                             </div>
                             <div className="col-xs-6 col-md-4 col-lg-4">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row13img1.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row13img1.jpg')} alt=""/>
                                 </a>
                             </div>
                             <div className="col-xs-6 col-md-4 col-lg-4">
                                 <a href="pages/display-items.html">
-                                    <img className="img-fluid" src="/assets/images/row13img1.jpg" alt=""/>
+                                    <img className="img-fluid" src={require('../images/row13img1.jpg')} alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -253,7 +253,8 @@ class LandingPage extends Component {
                             <div className="col-xs-12">
                                 <a href="pages/display-items.html">
                                     <img className="img-fluid"
-                                         src="/assets/images/row14img1.jpg" alt=""/>
+                                         src={require('../images/row14img1.jpg')}
+                                         alt=""/>
                                 </a>
                             </div>
                         </div>
