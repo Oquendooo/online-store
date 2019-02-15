@@ -24,11 +24,15 @@ app.use(morgan('combined'));
 app.use(cors());
 app.use(bodyParser.json({type: '*/*' }));
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'client', 'build')));
 
-app.get('/', (req, res) => {
-    res.send({hi: 'there'});
+// Serve any static files built by React
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
+
+
 // Listeners for each route
 app.use('/', ProductsRouter);
 app.use('/', AuthRouter);
