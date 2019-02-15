@@ -26,7 +26,9 @@ app.use(bodyParser.json({type: '*/*' }));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
-
+app.get('/', (req, res) => {
+    res.send({hi: 'there'});
+});
 // Listeners for each route
 app.use('/', ProductsRouter);
 app.use('/', AuthRouter);
