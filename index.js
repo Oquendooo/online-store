@@ -12,19 +12,19 @@ const mysqlConnection = require('./services/mysqlConfig');
 const cors = require('cors');
 
 //Importing the Models here
-// const ProductsModel = require('./backend/models/products')(mysqlConnection);
-// const AuthModel = require('./backend/models/auth')(mysqlConnection);
-//
-// // Routers for each API
-// const ProductsRouter = require('./backend/routes/products')(ProductsModel);
-// const AuthRouter = require('./backend/routes/auth')(AuthModel);
+const ProductsModel = require('./backend/models/products')(mysqlConnection);
+const AuthModel = require('./backend/models/auth')(mysqlConnection);
 
-// App Setup
-// app.use(morgan('combined'));
-// app.use(cors());
-// app.use(bodyParser.json({type: '*/*' }));
-// app.use(bodyParser.urlencoded({extended: false}));
-// app.use(express.static(path.join(__dirname, 'client', 'build')));
+// Routers for each API
+const ProductsRouter = require('./backend/routes/products')(ProductsModel);
+const AuthRouter = require('./backend/routes/auth')(AuthModel);
+
+//App Setup
+app.use(morgan('combined'));
+app.use(cors());
+app.use(bodyParser.json({type: '*/*' }));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 
 // Listeners for each route
