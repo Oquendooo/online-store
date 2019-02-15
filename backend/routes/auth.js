@@ -4,14 +4,14 @@ const jwt = require('jwt-simple');
 const express = require('express');
 const config = require('../../config');
 
-// const requireAuth = passport.authenticate('jwt', {session: false});
-// const requireSignin = passport.authenticate('local', {session: false});
-//
-//
-// const tokenForUser = (user) => {
-//     const timeStamp = new Date().getTime();
-//     return jwt.encode({ sub: user.user_id, iat: timeStamp }, config.secret);
-// }
+const requireAuth = passport.authenticate('jwt', {session: false});
+const requireSignin = passport.authenticate('local', {session: false});
+
+
+const tokenForUser = (user) => {
+    const timeStamp = new Date().getTime();
+    return jwt.encode({ sub: user.user_id, iat: timeStamp }, config.secret);
+}
 
 module.exports = (model) => {
   const app = express.Router();
@@ -20,9 +20,9 @@ module.exports = (model) => {
   //     res.send({hi: 'there'});
   // });
 
-  // app.post('/signin', requireSignin, (req, res, next) => {
-  //   res.send( { token:tokenForUser(req.user) });
-  // });
+  app.post('/signin', requireSignin, (req, res, next) => {
+    res.send( { token:tokenForUser(req.user) });
+  });
 
   app.post('/signup',  (req, res, next) => {
 
