@@ -42,6 +42,32 @@ module.exports = (connection) => {
 
           return executeQuery(query, params)
       },
+        selectProductsWithThisGenderAndApparelType: (gender, apparel_type) => {
+
+            const query = `
+            SELECT *
+            FROM products
+            WHERE gender = ? AND apparel_type = ?
+          `;
+
+            const params = [gender, apparel_type];
+
+            return executeQuery(query, params)
+        },
+        selectProductsWithThisGenderAndApparelTypeAndTopOrBottom: (gender, apparel_type, top_bottom) => {
+
+            const query = `
+            SELECT *
+            FROM products
+            WHERE gender = ? AND apparel_type = ? AND top_bottom = ?
+          `;
+
+            const params = [gender, apparel_type, top_bottom];
+
+            return executeQuery(query, params)
+        },
+
+
 
     }
 };

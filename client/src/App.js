@@ -31,6 +31,8 @@ class App extends Component {
           <Route exact path='/products' component={Breadcrumbs} />
           <Route exact path='/product' component={Breadcrumbs} />
           <Route exact path='/products' component={DisplayProductsPage}/>
+          <Route exact path='/products/category/:gender/:apparel_type' component={DisplayProductsPage}/>
+          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom' component={DisplayProductsPage}/>
           <Route exact path='/product' component={ProductPage}/>
           <Footer />
       </div>

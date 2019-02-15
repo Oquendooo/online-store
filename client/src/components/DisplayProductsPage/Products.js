@@ -12,6 +12,7 @@ class Products extends Component {
 
     render() {
         console.log("hello");
+        console.log(this.props.params);
         return (
 
             <div id="main-content" className="">

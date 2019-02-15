@@ -15,23 +15,58 @@ class DisplayProductsPage extends Component {
     }
 
     getProducts = (event) => {
+        console.log(this.props.match.params);
 
-        fetch('/get-products',
-            {
-                method:'GET',
-                headers:
-                    {
-                        'Accept':'application/json',
-                        'Content-Type':'application/json'
-                    }
-            }
-        )
-            .then(response => response.json())
-            .then(products => {
-                //console.log(data);
-                this.setState({products});
-            });
+        const { gender, apparel_type, top_bottom} = this.props.match.params;
 
+        if(typeof gender !== 'undefined' && apparel_type !== 'undefined' && typeof top_bottom !== 'undefined'){
+            console.log("test");
+            fetch(`/category/${gender}/${apparel_type}/${top_bottom}`,
+                {
+                    method:'GET',
+                    headers:
+                        {
+                            'Accept':'application/json',
+                            'Content-Type':'application/json'
+                        }
+                }
+            )
+                .then(response => response.json())
+                .then(products => {
+                    this.setState({products});
+                });
+        }else if (typeof gender !== 'undefined' && apparel_type !== 'undefined'){
+            fetch(`/category/${gender}/${apparel_type}`,
+                {
+                    method:'GET',
+                    headers:
+                        {
+                            'Accept':'application/json',
+                            'Content-Type':'application/json'
+                        }
+                }
+            )
+                .then(response => response.json())
+                .then(products => {
+                    this.setState({products});
+                });
+
+        }else{
+            fetch('/get-products',
+                {
+                    method:'GET',
+                    headers:
+                        {
+                            'Accept':'application/json',
+                            'Content-Type':'application/json'
+                        }
+                }
+            )
+                .then(response => response.json())
+                .then(products => {
+                    this.setState({products});
+                });
+        }
     };
 
 
@@ -220,9 +255,8 @@ class DisplayProductsPage extends Component {
                                             <div className="row">
                                                 {
                                                   this.state.products.map((product) => {
-                                                    console.log(product.img_urls)
                                                     return(
-                                                      <li className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                                      <li key={product.product_id} className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                                                           <div className="product-item-info">
 
                                                               <a className="product-item-photo" href="/product">
