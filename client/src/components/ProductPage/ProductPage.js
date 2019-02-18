@@ -60,7 +60,7 @@ class ProductPage extends Component {
   render() {
 
     const {product} = this.props.location.state;
-  console.log("My Product", product);
+    console.log("My Product", product);
     return (<div className="product-container container">
       <div className="row">
         <div className="product-images-wrapper col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
