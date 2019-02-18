@@ -7,6 +7,7 @@ class DisplayProductsPage extends Component {
         super(props)
         this.state = {
           products: [],
+          urlPath: ''
         }
     }
 
@@ -15,6 +16,15 @@ class DisplayProductsPage extends Component {
 
     }
 
+
+    componentWillReceiveProps(nextProps) {
+        console.log("nextprops", nextProps.location.pathname);
+        console.log("current props", this.props.location.pathname);
+        if (nextProps.location.pathname !== this.props.location.pathname) {
+            console.log("here");
+            this.setState({urlPath: nextProps.location.pathname});
+        }
+    }
     getProducts = (event) => {
         console.log(this.props.match.params);
 

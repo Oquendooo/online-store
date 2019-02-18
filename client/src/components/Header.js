@@ -50,21 +50,20 @@ class Header extends Component {
                                           <h3>Clothing</h3>
                                        </a>
                                     </li>
-                                    <li><a href="products"><span>Basic Tees</span></a></li>
-                                    <li><a href="products"><span>Graphic Tees</span></a></li>
-                                    <li><a href="products"><span>Hoodies</span></a></li>
-                                    <li><a href="products"><span>Jackets</span></a></li>
-                                    <li><a href="products"><span>Jeans</span></a></li>
-                                    <li><a href="products"><span>Joggers</span></a></li>
-                                    <li><a href="products"><span>Outerwear</span></a></li>
-                                    <li><a href="products"><span>Pants</span></a></li>
-                                    <li><a href="products"><span>Shirts</span></a></li>
-                                    <li><a href="products"><span>Shorts</span></a></li>
-                                    <li><a href="products"><span>Sweaters</span></a></li>
-                                    <li><a href="products"><span>Sweatshirts</span></a></li>
-                                    <li><a href="products"><span>T-shirts</span></a></li>
-                                    <li><a href="products"><span>Track Pants</span></a></li>
-                                    <li><a href="products"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/mens/clothing/basic-tees"><span>Basic Tees</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/hoodies"><span>Hoodies</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/jackets"><span>Jackets</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/jeans"><span>Jeans</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/joggers"><span>Joggers</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/jackets"><span>Outerwear</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/pants"><span>Pants</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/shirts"><span>Shirts</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/shorts"><span>Shorts</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/sweaters"><span>Sweaters</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/sweatshirts"><span>Sweatshirts</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/tops"><span>T-shirts</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/track-pants"><span>Track Pants</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -133,7 +132,7 @@ class Header extends Component {
                                     <li><a href="/"><span>Sweatshirts</span></a></li>
                                     <li><a href="/"><span>Sweaters</span></a></li>
                                     <li><a href="/"><span>Swimwear</span></a></li>
-                                    <li><a href="/"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/womens/clothing"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
