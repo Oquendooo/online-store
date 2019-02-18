@@ -9,36 +9,64 @@ class ProductPage extends Component {
     }
   }
   componentDidMount(){
-     this.getProducts();
+     this.getProduct();
   }
 
-  getProducts = (event) => {
+  getProduct = (event) => {
 
-   fetch('products/get-products',
-     {
-       method:'GET',
-       headers:
-       {
-         'Accept':'application/json',
-         'Content-Type':'application/json'
-       }
-     }
-   )
-   .then(response => response.json())
-   .then(data => {
-        console.log(data);
 
-   });
+      console.log(this.props.match.params);
+
+      const { id } = this.props.match.params;
+        console.log(id);
+      if(typeof id !== 'undefined'){
+          console.log("test");
+          fetch(`${id}`,
+              {
+                  method:'GET',
+                  headers:
+                      {
+                          'Accept':'application/json',
+                          'Content-Type':'application/json'
+                      }
+              }
+          )
+              .then(response => response.json())
+              .then(product => {
+                  console.log("my product", product);
+              });
+      }else{
+
+      }
+
+
+   // fetch('products/get-products',
+   //   {
+   //     method:'GET',
+   //     headers:
+   //     {
+   //       'Accept':'application/json',
+   //       'Content-Type':'application/json'
+   //     }
+   //   }
+   // )
+   // .then(response => response.json())
+   // .then(data => {
+   //      console.log(data);
+   //
+   // });
 
  };
   render() {
 
+    const {product} = this.props.location.state;
+  console.log("My Product", product);
     return (<div className="product-container container">
       <div className="row">
         <div className="product-images-wrapper col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
           <div className="product-images">
             <div className="main-img-wrapper">
-              <img alt="" className="main-img" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/image/1200x1200/e9c3970ab036de70892d86c6d221abfe/d/3/d3bf8e8fff414325c43fb02ad1cabbb4.jpg"/>
+              <img alt="" className="main-img" src={product.img_urls} />
             </div>
 
             <div className="other-images">
@@ -50,15 +78,15 @@ class ProductPage extends Component {
         <div className="product-information-wrapper col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
           <div className="product-brand">
             <a href="/">
-              <span>Alexander Wang</span>
+              <span>{product.brand}</span>
             </a>
           </div>
           <div className="product-title">
-            <h4>10 Deep Striped Shirt</h4>
+            <h4>{product.product_name}</h4>
           </div>
           <div className="product-price-sku">
-            <div className="product-price">$20.00</div>
-            <div className="product-sku">SKU#: SD1009__GREY</div>
+            <div className="product-price">${product.price}</div>
+            <div className="product-sku">SKU#: {product.sku}</div>
           </div>
           <form id="product-addtocart-form">
             <div className="sizes-box-wrapper">

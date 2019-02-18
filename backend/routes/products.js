@@ -64,8 +64,19 @@ module.exports = (model) => {
 
     });
 
-    app.get('/get-product', (req, res) => {
+    app.get('/product/:id', (req, res) => {
 
+        console.log("req.body",req.body);
+
+        model.selectProduct()
+            .then(data => {
+
+                res.json(data);
+                console.log("Successfully received products from our database");
+            })
+            .catch(err => {
+                console.log(err);
+            });
 
     });
 

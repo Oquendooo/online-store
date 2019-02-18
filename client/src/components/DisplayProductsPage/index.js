@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/main2.css';
 
 class DisplayProductsPage extends Component {
@@ -259,13 +260,19 @@ class DisplayProductsPage extends Component {
                                                       <li key={product.product_id} className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                                                           <div className="product-item-info">
 
-                                                              <a className="product-item-photo" href="/product">
+                                                              <Link className="product-item-photo" to={{
+                                                                  pathname: `/product/${product.product_id}`,
+                                                                  state: {
+                                                                      product
+                                                                  }
+                                                              }}>
                                                                   <div className="product-image">
                                                                       <img className="image"
                                                                            src={product.img_urls}
                                                                            alt=""/>
                                                                   </div>
-                                                              </a>
+                                                              </Link>
+
                                                               <div className="product-item-details">
                                                                   <strong className="product-item-brand">
                                                                       <span>{product.brand}</span>
@@ -286,8 +293,6 @@ class DisplayProductsPage extends Component {
                                                 }
                                             </div>
                                         </div>
-
-
                                     </ol>
                                 </div>
                             </div>

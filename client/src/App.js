@@ -30,6 +30,7 @@ class App extends Component {
           <Route exact path='/signout' component={Signout}/>
           <Route exact path='/products' component={Breadcrumbs} />
           <Route exact path='/product' component={Breadcrumbs} />
+          <Route exact path='/product/:id/' component={ProductPage}/>
           <Route exact path='/products' component={DisplayProductsPage}/>
           <Route exact path='/products/category/:gender/:apparel_type' component={DisplayProductsPage}/>
           <Route exact path='/products/category/:gender/:apparel_type/:top_bottom' component={DisplayProductsPage}/>

@@ -22,10 +22,14 @@ module.exports = (connection) => {
           return executeQuery(query, params)
       },
 
-      selectProduct: (event_id) => {
-          const query = ``;
+      selectProduct: (product_id) => {
+          const query = `
+            SELECT *
+            FROM products
+            WHERE product_id = ?
+          `;
 
-          const params = [event_id];
+          const params = [product_id];
 
           return executeQuery(query, params)
       },
