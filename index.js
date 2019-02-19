@@ -26,13 +26,13 @@ app.use(bodyParser.json({type: '*/*' }));
 app.use(bodyParser.urlencoded({extended: false}));
 
 
-// Serve any static files built by React
-//app.use(express.static(path.join(__dirname, 'client', 'build')));
+Serve any static files built by React
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 
-// app.get('/*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-// });
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+});
 
 
 // Listeners for each route
