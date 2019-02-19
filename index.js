@@ -25,6 +25,9 @@ app.use(cors());
 app.use(bodyParser.json({type: '*/*' }));
 app.use(bodyParser.urlencoded({extended: false}));
 
+// Listeners for each route
+app.use('/', ProductsRouter);
+app.use('/', AuthRouter);
 
 //Serve any static files built by React
 
@@ -37,9 +40,7 @@ if(process.env.PORT){
     });
 }
 
-// Listeners for each route
-app.use('/', ProductsRouter);
-app.use('/', AuthRouter);
+
 
 
 const PORT = process.env.PORT || 5000;
