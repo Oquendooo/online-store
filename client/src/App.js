@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Banner from './components/Banner';
 import FrontPage from './components/FrontPage';
 import Breadcrumbs from './components/Breadcrumbs';
-import DisplayProductsPage from "./components/DisplayProductsPage";
+import ProductsPage from "./components/ProductsPage";
 import Signup from './components/auth/Signup';
 import Feature from './components/Feature';
 import Signout from './components/auth/Signout';
@@ -37,12 +37,13 @@ class App extends Component {
           <Route exact path='/product/:id/' component={ProductPage}/>
 
           {/*Products routes*/}
-          <Route exact path='/products' component={DisplayProductsPage}/>
+          <Route exact path='/products' component={ProductsPage}/>
           <Route exact path='/products' component={Breadcrumbs} />
-          <Route exact path='/products/category/:gender/:apparel_type' component={props => <DisplayProductsPage {...props}/>}/>
-          <Route exact path='/products/category/:gender/:apparel_type/:apparel_type2' component={props => <DisplayProductsPage {...props}/>}/>
-          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom' component={props => <DisplayProductsPage {...props} />}/>
-          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom/:apparel_type2' component={props => <DisplayProductsPage {...props} />}/>
+          <Route exact path='/products/category/:brands' component={props => <ProductsPage {...props}/>}/>
+          <Route exact path='/products/category/:gender/:apparel_type' component={props => <ProductsPage {...props}/>}/>
+          <Route exact path='/products/category/:gender/:apparel_type/:apparel_type2' component={props => <ProductsPage {...props}/>}/>
+          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom' component={props => <ProductsPage {...props} />}/>
+          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom/:apparel_type2' component={props => <ProductsPage {...props} />}/>
 
           {/*Footer*/}
           <Footer />

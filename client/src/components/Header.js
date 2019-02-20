@@ -150,7 +150,7 @@ class Header extends Component {
                            </div>
                         </li>
                         <li className="nav-item">
-                           <a className="nav-link" href="/">Women's</a>
+                           <Link className="nav-link" to="/products/category/womens/clothing">Women's</Link>
                            <i className="fas fa-plus"></i>
                            {/*-- Below is the products Dropdown Men*/}
                            <div className="products-dropdown-wrapper">
@@ -161,15 +161,13 @@ class Header extends Component {
                                           <h3>Clothing</h3>
                                        </Link>
                                     </li>
-                                    <li><a href="/"><span>Tops</span></a></li>
-                                    <li><a href="/"><span>Bottoms</span></a></li>
-                                    <li><a href="/"><span>Outerwear</span></a></li>
-                                    <li><a href="/"><span>Dresses</span></a></li>
-                                    <li><a href="/"><span>Lingerie</span></a></li>
-                                    <li><a href="/"><span>Sweatshirts</span></a></li>
-                                    <li><a href="/"><span>Sweaters</span></a></li>
-                                    <li><a href="/"><span>Swimwear</span></a></li>
-                                    <li><Link to="/products/category/womens/clothing"><span className="viewall">View All</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing/tops"><span>Tops</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing/bottoms"><span>Bottoms</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing/outerwear"><span>Outerwear</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing/dresses"><span>Dresses</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing/sweatshirts"><span>Sweatshirts</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing/sweaters"><span>Sweaters</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing"><span className="viewall" >View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -177,12 +175,12 @@ class Header extends Component {
                                           <h3>Footwear</h3>
                                        </Link>
                                     </li>
-                                    <li><a href="/"><span>Sneakers</span></a></li>
-                                    <li><a href="/"><span>Sandals & Slides</span></a></li>
-                                    <li><a href="/"><span>Heels</span></a></li>
-                                    <li><a href="/"><span>Boots</span></a></li>
-                                    <li><a href="/"><span>Flats</span></a></li>
-                                    <li><a href="/"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/womens/footwear/sneakers"><span>Sneakers</span></Link></li>
+                                    <li><Link to="/products/category/womens/footwear/sandals-slides"><span>Sandals & Slides</span></Link></li>
+                                    <li><Link to="/products/category/womens/footwear/heels"><span>Heels</span></Link></li>
+                                    <li><Link to="/products/category/womens/footwear/boots"><span>Boots</span></Link></li>
+                                    <li><Link to="/products/category/womens/footwear/flats"><span>Flats</span></Link></li>
+                                    <li><Link to="/products/category/womens/footwear"><span className="viewall" >View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
@@ -190,192 +188,211 @@ class Header extends Component {
                                           <h3>Accessories</h3>
                                        </Link>
                                     </li>
-                                    <li><a href="/"><span>Hats</span></a></li>
-                                    <li><a href="/"><span>Jewelry</span></a></li>
-                                    <li><a href="/"><span>Sunglasses</span></a></li>
-                                    <li><a href="/"><span>Bags</span></a></li>
-                                    <li><a href="/"><span>Purses</span></a></li>
-                                    <li><a href="/"><span>Scarves</span></a></li>
-                                    <li className="viewall"><a href="/"><span>View All</span></a></li>
+                                    <li><Link to="/products/category/womens/accessories/watches"><span>Hats</span></Link></li>
+                                    <li><Link to="/products/category/womens/accessories/jewelry"><span>Jewelry</span></Link></li>
+                                    <li><Link to="/products/category/womens/accessories/sunglasses"><span>Sunglasses</span></Link></li>
+                                    <li><Link to="/products/category/womens/accessories/bags"><span>Bags</span></Link></li>
+                                    <li><Link to="/products/category/womens/accessories/purses"><span>Purses</span></Link></li>
+                                    <li><Link to="/products/category/womens/accessories/scarves"><span>Scarves</span></Link></li>
+                                    <li><Link to="/products/category/womens/accessories/"><span className="viewall" >View All</span></Link></li>
                                  </ul>
                                  <div className="dropdown-imgs-col">
                                     <div className="dropdown-img">
                                        <h5>New</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-womens-calvin.jpg"/></a>
-                                       <a className="action" href="/">Shop Now</a>
+                                       <Link to="/products/category/womens/clothing/">
+                                          <img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-womens-calvin.jpg"/>
+                                       </Link>
+                                       <Link className="action" to="/products/category/womens/clothing/">
+                                          Shop Now
+                                       </Link>
                                     </div>
                                     <div className="dropdown-img">
                                        <h5>For her</h5>
                                        <h3>Footwear</h3>
-                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-vans.jpg"/></a>
-                                       <a href="/" className="action">Shop Now</a>
+                                       <Link to="/products/category/womens/footwear/">
+                                          <img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-vans.jpg"/>
+                                       </Link>
+                                       <Link className="action" to="/products/category/womens/footwear/">
+                                          Shop Now
+                                       </Link>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </li>
                         <li className="nav-item">
-                           <a className="nav-link" href="/">New</a>
+                           <Link className="nav-link" to="/products/category/new">
+                              New
+                           </Link>
                            <i className="fas fa-plus"></i>
                         </li>
                         <li className="nav-item">
-                           <a className="nav-link" href="/">Sale</a>
+                           <Link className="nav-link" to="/products/category/sale">
+                              Sale
+                           </Link>
                            <i className="fas fa-plus"></i>
                            {/*-- Below is the products Dropdown Men*/}
                            <div className="products-dropdown-wrapper">
                               <div className="products-dropdown">
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/mens/clothing">
                                           <h3>Men's</h3>
-                                       </a>
+                                       </Link>
                                     </li>
-                                    <li><a href="/"><span>Clothing</span></a></li>
-                                    <li><a href="/"><span>Footwear</span></a></li>
-                                    <li><a href="/"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/mens/clothing"><span>Clothing</span></Link></li>
+                                    <li><Link to="/products/category/mens/footwear"><span>Footwear</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/womens/clothing">
                                           <h3>Women's</h3>
-                                       </a>
+                                       </Link>
                                     </li>
-                                    <li><a href="/"><span>Clothing</span></a></li>
-                                    <li><a href="/"><span>Footwear</span></a></li>
-                                    <li><a href="/"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/womens/clothing"><span>Clothing</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing"><span>Footwear</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/sales">
                                           <h3>Sales</h3>
-                                       </a>
+                                       </Link>
                                     </li>
-                                    <li><a href="/"><span>Fresh Markdowns</span></a></li>
-                                    <li><a href="/"><span>25% Off Markdowns</span></a></li>
-                                    <li><a href="/"><span>Loosie Sales</span></a></li>
-                                    <li className="viewall"><a href="/"><span>View All</span></a></li>
+                                    <li><Link to="/products/category/womens/clothing"><span>Fresh Markdowns</span></Link></li>
+                                    <li><Link to="/products/category/womens/footwear"><span>25% Off Markdowns</span></Link></li>
+                                    <li><Link to="/products/category/womens/accessories"><span>Loosie Sales</span></Link></li>
+                                    <li><Link to="/products/category/womens/clothing"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <div className="dropdown-imgs-col">
                                     <div className="dropdown-img">
                                        <h5>New</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/c/h/charles.jpg"/></a>
-                                       <a className="action" href="/">Shop Now</a>
+                                       <Link to="/products/category/mens/clothing"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/c/h/charles.jpg"/></Link>
+                                       <Link className="action" to="/products/category/mens/clothing">Shop Now</Link>
                                     </div>
                                     <div className="dropdown-img">
                                        <h5>To lowdown</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/_/5/_52a9015-edit.jpg"/></a>
-                                       <a href="/" className="action">Shop Now</a>
+                                       <Link to="/products/category/mens/clothing"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/_/5/_52a9015-edit.jpg"/></Link>
+                                       <Link to="/products/category/mens/clothing" className="action">Shop Now</Link>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </li>
                         <li className="nav-item">
-                           <a className="nav-link" href="/">Brands</a>
+                           <Link className="nav-link" to="/products/category/brands">
+                              Brands
+                           </Link>
                            <i className="fas fa-plus"></i>
                            {/*-- Below is the Mens Dropdown Men*/}
                            <div className="products-dropdown-wrapper">
                               <div className="products-dropdown">
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/brands">
                                           <h3>Top Brands</h3>
-                                       </a>
+                                       </Link>
                                     </li>
-                                    <li><a href="/"><span>10 Deep</span></a></li>
-                                    <li><a href="/"><span>Adidas</span></a></li>
-                                    <li><a href="/"><span>Billionaire Boys Club</span></a></li>
-                                    <li><a href="/"><span>Champion</span></a></li>
-                                    <li><a href="/"><span>Crysp</span></a></li>
-                                    <li><a href="/"><span>Elwood</span></a></li>
-                                    <li><a href="/"><span>Enslaved</span></a></li>
-                                    <li><a href="/"><span>Embellish</span></a></li>
-                                    <li><a href="/"><span>Herschel Supply Co.</span></a></li>
-                                    <li><a href="/"><span>HUF</span></a></li>
-                                    <li><a href="/"><span>Kappa</span></a></li>
-                                    <li><a href="/"><span>Pink Dolphin</span></a></li>
-                                    <li><a href="/"><span>Primitive</span></a></li>
-                                    <li><a href="/"><span>Seize&Desist</span></a></li>
-                                    <li><a href="/"><span>Vans</span></a></li>
+                                    <li><Link to="/products/category/brands"><span>10 Deep</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Adidas</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Billionaire Boys Club</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Champion</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Crysp</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Elwood</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Enslaved</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Embellish</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Herschel Supply Co.</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>HUF</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Kappa</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Pink Dolphin</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Primitive</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Seize&Desist</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Vans</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+
+                                       <Link to="/products/category/mens/clothing" >
                                           <h3>Mens</h3>
-                                       </a>
+                                       </Link>
                                     </li>
-                                    <li><a href="/"><span>8&9 Clothing</span></a></li>
-                                    <li><a href="/"><span>10 Deep</span></a></li>
-                                    <li><a href="/"><span>Billionaire Boys Club</span></a></li>
-                                    <li><a href="/"><span>Any Memes</span></a></li>
-                                    <li><a href="/"><span>Boardies Apparel</span></a></li>
-                                    <li><a href="/"><span>Champion</span></a></li>
-                                    <li><a href="/"><span>Civil</span></a></li>
-                                    <li><a href="/"><span>classNamey Brand</span></a></li>
-                                    <li><a href="/"><span>Converse</span></a></li>
-                                    <li><a href="/"><span>CRYSP</span></a></li>
-                                    <li><a href="/"><span>Diamond Supply Co.</span></a></li>
-                                    <li><a href="/"><span>Dr Martens</span></a></li>
-                                    <li><a href="/"><span>Elwood</span></a></li>
+                                    <li><Link to="/products/category/brands"><span>8&9 Clothing</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>10 Deep</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Billionaire Boys Club</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Any Memes</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Boardies Apparel</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Champion</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Civil</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Gucci</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Converse</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>CRYSP</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Diamond Supply Co.</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Dr Martens</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Primitive</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Seize&Desist</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Elwood</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
                                        <h3 className="blank-h3">&nbsp;</h3>
                                     </li>
-                                    <li><a href="/"><span>Enslaved</span></a></li>
-                                    <li><a href="/"><span>Embellish</span></a></li>
-                                    <li><a href="/"><span>Fairplay Brands</span></a></li>
-                                    <li><a href="/"><span>Golden Denim</span></a></li>
-                                    <li><a href="/"><span>Hall Of Fame</span></a></li>
-                                    <li><a href="/"><span>Hasta Muerte</span></a></li>
-                                    <li><a href="/"><span>Hex</span></a></li>
-                                    <li><a href="/"><span>Hershcel</span></a></li>
-                                    <li><a href="/"><span>HUF</span></a></li>
-                                    <li><a href="/"><span>Jansport</span></a></li>
-                                    <li><a href="/"><span>Kappa</span></a></li>
-                                    <li><a href="/"><span>Mitchell & Ness</span></a></li>
-                                    <li><a href="/"><span>New Balance</span></a></li>
-                                    <li><a href="/"><span>Paper Planes</span></a></li>
+
+                                    <li><Link to="/products/category/brands"><span>Enslaved</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Embellish</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Fairplay Brands</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Golden Denim</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Hall Of Fame</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Hasta Muerte</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Hex</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Hershcel</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>HUF</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Jansport</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Kappa</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Mitchell & Ness</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>New Balance</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Mitchell & Ness</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Paper Planes</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
                                        <h3 className="blank-h3">&nbsp;</h3>
                                     </li>
-                                    <li><a href="/"><span>Pink Dolphin</span></a></li>
-                                    <li><a href="/"><span>Publish</span></a></li>
-                                    <li><a href="/"><span>Puma</span></a></li>
-                                    <li><a href="/"><span>Reebok</span></a></li>
-                                    <li><a href="/"><span>Seize&Desist</span></a></li>
-                                    <li><a href="/"><span>Stance</span></a></li>
-                                    <li><a href="/"><span>Timberland</span></a></li>
-                                    <li><a href="/"><span>Toms shoes</span></a></li>
-                                    <li><a href="/"><span>UNDEFEATED</span></a></li>
-                                    <li><a href="/"><span>Vandal Collective</span></a></li>
-                                    <li><a href="/"><span>Venley</span></a></li>
-                                    <li><a href="/"><span>Vans</span></a></li>
+                                    <li><Link to="/products/category/brands"><span>Pink Dolphin</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Publish</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Puma</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Reebok</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Seize&Desist</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Stance</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Timberland</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Toms shoes</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>UNDEFEATED</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Vandal Collective</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Venley</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Vans</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/womens/clothing" >
                                           <h3>Womens</h3>
-                                       </a>
+                                       </Link>
                                     </li>
-                                    <li><a href="/"><span>Adidas</span></a></li>
-                                    <li><a href="/"><span>classNamey Brand</span></a></li>
-                                    <li><a href="/"><span>Dimepiece LA</span></a></li>
-                                    <li><a href="/"><span>FILA</span></a></li>
-                                    <li><a href="/"><span>HLZBLZ</span></a></li>
-                                    <li><a href="/"><span>Jeffrey Campbell</span></a></li>
-                                    <li><a href="/"><span>Kill Brand</span></a></li>
-                                    <li><a href="/"><span>Married To The Mob</span></a></li>
-                                    <li><a href="/"><span>Primitive</span></a></li>
-                                    <li><a href="/"><span>Puma</span></a></li>
-                                    <li><a href="/"><span>Steve Madden</span></a></li>
-                                    <li><a href="/"><span>T.U.K</span></a></li>
-                                    <li><a href="/"><span>Vans</span></a></li>
+                                    <li><Link to="/products/category/brands"><span>Adidas</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>classNamey Brand</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Dimepiece LA</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>FILA</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>HLZBLZ</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Jeffrey Campbell</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Kill Brand</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Married To The Mob</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Primitive</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Puma</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Steve Madden</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>T.U.K</span></Link></li>
+                                    <li><Link to="/products/category/brands"><span>Vans</span></Link></li>
                                  </ul>
                               </div>
                            </div>
