@@ -4,10 +4,9 @@ import ProductPage from './components/ProductPage/ProductPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Banner from './components/Banner';
-import LandingPage from './components/LandingPage';
+import FrontPage from './components/FrontPage';
 import Breadcrumbs from './components/Breadcrumbs';
 import DisplayProductsPage from "./components/DisplayProductsPage";
-import Welcome from './components/Welcome';
 import Signup from './components/auth/Signup';
 import Feature from './components/Feature';
 import Signout from './components/auth/Signout';
@@ -22,8 +21,9 @@ class App extends Component {
       <div className="App">
           <Header />
           <Banner />
-          <Route exact path='/' component={Welcome}/>
-          <Route exact path='/' component={LandingPage}/>
+
+          {/*Front Page*/}
+          <Route exact path='/' component={FrontPage}/>
 
           {/*Authenication routes*/}
           <Route exact path='/signup' component={Signup}/>
@@ -33,15 +33,18 @@ class App extends Component {
 
           {/*Product routes*/}
           <Route exact path='/product' component={Breadcrumbs} />
-          <Route path='/product' component={ProductPage}/>
+          <Route exact path='/product' component={ProductPage}/>
           <Route exact path='/product/:id/' component={ProductPage}/>
 
           {/*Products routes*/}
           <Route exact path='/products' component={DisplayProductsPage}/>
           <Route exact path='/products' component={Breadcrumbs} />
           <Route exact path='/products/category/:gender/:apparel_type' component={props => <DisplayProductsPage {...props}/>}/>
+          <Route exact path='/products/category/:gender/:apparel_type/:apparel_type2' component={props => <DisplayProductsPage {...props}/>}/>
           <Route exact path='/products/category/:gender/:apparel_type/:top_bottom' component={props => <DisplayProductsPage {...props} />}/>
           <Route exact path='/products/category/:gender/:apparel_type/:top_bottom/:apparel_type2' component={props => <DisplayProductsPage {...props} />}/>
+
+          {/*Footer*/}
           <Footer />
       </div>
     );

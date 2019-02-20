@@ -29,6 +29,24 @@ module.exports = (model) => {
 
     });
 
+    //Below we are selecting our products
+    app.get('/category/:gender/:apparel_type/:apparel_type2', (req, res) => {
+
+        const {gender, apparel_type, apparel_type2 } = req.params;
+
+        model.selectProductsWithThisGenderAndApparelTypeAndApparelType2(gender, apparel_type, apparel_type2)
+            .then(data => {
+
+                res.json(data);
+                console.log("Successfully received products from our database");
+            })
+            .catch(err => {
+                console.log(err);
+            });
+
+    });
+
+
     app.get('/category/:gender/:apparel_type/:top_bottom', (req, res) => {
 
         const {gender, apparel_type, top_bottom } = req.params;

@@ -13,20 +13,38 @@ class Header extends Component {
       };
       this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
    }
+
    renderLinks(){
       if(this.props.authenticated){
          return(
-             <div>
-                <Link to="/signout">Sign Out</Link>
-                <Link to="/feature">Feature</Link>
-             </div>
+             <React.Fragment>
+                <li className="item">
+                   <Link className="login" to="/signout">
+                      <span>Sign Out</span>
+                   </Link>
+                </li>
+                <li className="item">
+                   <Link className="login" to="/feature">
+                      <span>Feature</span>
+                   </Link>
+                </li>
+             </React.Fragment>
          );
       }else{
          return(
-             <div>
-                <Link to="/signup">Sign Up</Link>
-                <Link to="/signin">Sign In </Link>
-             </div>
+             <React.Fragment>
+                <li className="item">
+                   <Link className="login" to="/signin">
+                      <span>Log In</span>
+                   </Link>
+                </li>
+
+                <li className="item">
+                   <Link className="register" to="/signup">
+                      <span>Registration</span>
+                   </Link>
+                </li>
+             </React.Fragment>
          );
       }
    }
@@ -56,15 +74,15 @@ class Header extends Component {
                      </div>
                      <ul id="header-nav" className="nav">
                         <li className="nav-item">
-                           <a className="nav-link" href="/">Men's</a>
+                           <Link className="nav-link" to="/products/category/mens/clothing">Men's</Link>
                            <i className="fas fa-plus"></i>
                            <div className="products-dropdown-wrapper">
                               <div className="products-dropdown">
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/mens/clothing">
                                           <h3>Clothing</h3>
-                                       </a>
+                                       </Link>
                                     </li>
                                     <li><Link to="/products/category/mens/clothing/tops/basic-tees"><span>Basic Tees</span></Link></li>
                                     <li><Link to="/products/category/mens/clothing/tops/hoodies"><span>Hoodies</span></Link></li>
@@ -83,46 +101,49 @@ class Header extends Component {
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
-                                          <h3>Footwear</h3>
-                                       </a>
+                                       <Link to="/products/category/mens/footwear"><h3>Footwear</h3></Link>
                                     </li>
-                                    <li><a href="/"><span>Boots</span></a></li>
-                                    <li><a href="/"><span>Sandals & Slides</span></a></li>
-                                    <li><a href="/"><span>Sneakers</span></a></li>
-                                    <li><a href="/"><span className="viewall">View All</span></a></li>
+                                    <li><Link to="/products/category/mens/footwear/boots"><span>Boots</span></Link></li>
+                                    <li><Link to="/products/category/mens/footwear/sandals-slides"><span>Sandals & Slides</span></Link></li>
+                                    <li><Link to="/products/category/mens/footwear/sneakers"><span>Sneakers</span></Link></li>
+                                    <li><Link to="/products/category/mens/footwear"><span className="viewall" >View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
-                                          <h3>Accessories</h3>
-                                       </a>
+                                       <Link to="/products/category/mens/accessories"><h3>Accessories</h3></Link>
                                     </li>
-                                    <li><a href="/"><span>Bags</span></a></li>
-                                    <li><a href="/"><span>Belts</span></a></li>
-                                    <li><a href="/"><span>All Hats</span></a></li>
-                                    <li><a href="/"><span>Dad Hats</span></a></li>
-                                    <li><a href="/"><span>Jewelry</span></a></li>
-                                    <li><a href="/"><span>Media Cases</span></a></li>
-                                    <li><a href="/"><span>Socks & Underwear</span></a></li>
-                                    <li><a href="/"><span>Sunglasses</span></a></li>
-                                    <li><a href="/"><span>Wallets</span></a></li>
-                                    <li><a href="/"><span>Watches</span></a></li>
-                                    <li className="viewall"><a href="/"><span>View All</span></a></li>
+                                    <li><Link to="/products/category/mens/accessories/bags"><span>Bags</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/belts"><span>Belts</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/all-hats"><span>All Hats</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/dad-hats"><span>Dad Hats</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/jewelry"><span>Jewelry</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/media-cases"><span>Media Cases</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/socks-underwear"><span>Socks & Underwear</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/Sunglasses"><span>Sunglasses</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/wallets"><span>Wallets</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/watches"><span>Watches</span></Link></li>
+                                    <li><Link to="/products/category/mens/accessories/"><span className="viewall" >View All</span></Link></li>
                                  </ul>
                                  <div className="dropdown-imgs-col">
                                     <div className="dropdown-img">
                                        <h5>New</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-bbc.jpg"/></a>
-                                       <a className="action" href="/">Shop Now</a>
+                                       <Link to="/products/category/mens/clothing/">
+                                          <img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-bbc.jpg"/>
+                                       </Link>
+                                       <Link className="action" to="/products/category/mens/clothing/">
+                                          Shop Now
+                                       </Link>
                                     </div>
                                     <div className="dropdown-img">
                                        <h5>To lowdown</h5>
                                        <h3>Fresh Drops!</h3>
-                                       <a href="/"><img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-pinkdolphin2.jpg"/>
-                                       </a>
-                                       <a href="/" className="action">Shop Now</a>
+                                       <Link to="/products/category/mens/clothing/">
+                                          <img alt="" src="https://cdn.karmaloopassets.com/media//gene-cms/2/0/20171215-kl-nav-pinkdolphin2.jpg"/>
+                                       </Link>
+                                       <Link className="action" to="/products/category/mens/clothing/">
+                                          Shop Now
+                                       </Link>
                                     </div>
                                  </div>
                               </div>
@@ -136,9 +157,9 @@ class Header extends Component {
                               <div className="products-dropdown">
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/womens/clothing">
                                           <h3>Clothing</h3>
-                                       </a>
+                                       </Link>
                                     </li>
                                     <li><a href="/"><span>Tops</span></a></li>
                                     <li><a href="/"><span>Bottoms</span></a></li>
@@ -152,9 +173,9 @@ class Header extends Component {
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/womens/footwear">
                                           <h3>Footwear</h3>
-                                       </a>
+                                       </Link>
                                     </li>
                                     <li><a href="/"><span>Sneakers</span></a></li>
                                     <li><a href="/"><span>Sandals & Slides</span></a></li>
@@ -165,9 +186,9 @@ class Header extends Component {
                                  </ul>
                                  <ul className="dropdown-col">
                                     <li>
-                                       <a href="/">
+                                       <Link to="/products/category/womens/accessories">
                                           <h3>Accessories</h3>
-                                       </a>
+                                       </Link>
                                     </li>
                                     <li><a href="/"><span>Hats</span></a></li>
                                     <li><a href="/"><span>Jewelry</span></a></li>
@@ -374,22 +395,10 @@ class Header extends Component {
                            <i className="fas fa-user-alt"></i>
                            </a>
                            <div className="account-menu">
+
                               <ul className="login-register">
                                  <div className="arrow-up"></div>
-                                 <li className="item">
-                                    <a className="login" href="/">
-                                    <span>Log In</span>
-                                    </a>
-                                 </li>
-                                 <li className="item">
-                                    <a className="register" href="/">
-                                    <span>Registration</span>
-                                    </a>
-                                 </li>
-                                 <li className="item">
-                                    <Link to="/">Redux Auth </Link>
-                                    {this.renderLinks()}
-                                 </li>
+                                 {this.renderLinks()}
                               </ul>
                               <ul className="menu-actions">
                                  <li className="menu-actions-item">

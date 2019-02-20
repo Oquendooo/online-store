@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class LandingPage extends Component {
+class FrontPage extends Component {
     render() {
         return (
             <React.Fragment>
@@ -282,4 +282,4 @@ class LandingPage extends Component {
     }
 }
 
-export default LandingPage;
+export default FrontPage;

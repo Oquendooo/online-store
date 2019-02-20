@@ -36,6 +36,14 @@ class DisplayProductsPage extends Component {
                     this.setState({products});
                 });
 
+        }else if (typeof gender !== 'undefined' && apparel_type !== 'undefined' && typeof apparel_type2 !== 'undefined'){
+
+
+            getJson(`/category/${gender}/${apparel_type}/${apparel_type2}`)
+                .then(products => {
+                    this.setState({products});
+                });
+
         }else if (typeof gender !== 'undefined' && apparel_type !== 'undefined' && typeof top_bottom !== 'undefined'){
 
 
