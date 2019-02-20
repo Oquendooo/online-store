@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Banner from './components/Banner';
 import FrontPage from './components/FrontPage';
 import Breadcrumbs from './components/Breadcrumbs';
-import ProductsPage from "./components/ProductsPage";
+import ProductsPage from "./components/ProductsPage/ProductsPage";
 import Signup from './components/auth/Signup';
 import Feature from './components/Feature';
 import Signout from './components/auth/Signout';
