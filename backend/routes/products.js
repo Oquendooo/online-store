@@ -15,7 +15,7 @@ module.exports = (model) => {
     //Below we are selecting our products
     app.get('/category/:gender/:apparel_type', (req, res) => {
 
-        const {gender, apparel_type } =req.params;
+        const {gender, apparel_type } = req.params;
 
         model.selectProductsWithThisGenderAndApparelType(gender, apparel_type)
             .then(data => {
@@ -45,8 +45,18 @@ module.exports = (model) => {
 
     });
 
-    app.get('/category/:gender/:apparelType1/:top-bottom/:apparelType2', (req, res) => {
+    app.get('/category/:gender/:apparel_type/:top_bottom/:apparel_type2', (req, res) => {
+        const {gender, apparel_type,top_bottom, apparel_type2 } = req.params;
+        console.log(req.params);
+        model.selectProductsWithThisGenderAndApparelTypeTopBottomApparelType2(gender, apparel_type, top_bottom, apparel_type2)
+            .then(data => {
 
+                res.json(data);
+                console.log("Successfully received products from our database");
+            })
+            .catch(err => {
+                console.log(err);
+            });
     });
 
 

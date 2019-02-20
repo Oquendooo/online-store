@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import '../css/main.css';
 
 
 class Header extends Component {
-
+   constructor(props) {
+      super(props)
+      this.state = {
+         isMobileMenuOpened: false,
+         mobileMenuClass: 'mobile-menu',
+      };
+      this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+   }
    renderLinks(){
       if(this.props.authenticated){
          return(
@@ -25,14 +31,24 @@ class Header extends Component {
       }
    }
 
+   toggleMobileMenu(){
+
+      if(this.state.isMobileMenuOpened === true){
+         this.setState({mobileMenuClass: 'mobile-menu', isMobileMenuOpened: false});
+      }else if(!this.state.isMobileMenuOpened){
+         this.setState({mobileMenuClass: 'mobile-menu active', isMobileMenuOpened: true});
+      }
+
+   }
 
   render() {
+
     return (
       <React.Fragment>
                <header id="site-header" className="navbar">
                   <div className="container">
                      <div className="hamburger-icon">
-                        <i className="fas fa-bars"></i>
+                        <i onClick={this.toggleMobileMenu} className="fas fa-bars"></i>
                         <i className="fas fa-times"></i>
                      </div>
                      <div className="logo-wrapper">
@@ -50,19 +66,19 @@ class Header extends Component {
                                           <h3>Clothing</h3>
                                        </a>
                                     </li>
-                                    <li><Link to="/products/category/mens/clothing/basic-tees"><span>Basic Tees</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/hoodies"><span>Hoodies</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/jackets"><span>Jackets</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/jeans"><span>Jeans</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/joggers"><span>Joggers</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/jackets"><span>Outerwear</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/pants"><span>Pants</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/shirts"><span>Shirts</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/shorts"><span>Shorts</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/sweaters"><span>Sweaters</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/sweatshirts"><span>Sweatshirts</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/tops/basic-tees"><span>Basic Tees</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/tops/hoodies"><span>Hoodies</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/tops/jackets"><span>Jackets</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/bottoms/jeans"><span>Jeans</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/bottoms/joggers"><span>Joggers</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/tops/jackets"><span>Outerwear</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/bottoms/pants"><span>Pants</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/tops/shirts"><span>Shirts</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/bottoms/shorts"><span>Shorts</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/tops/sweaters"><span>Sweaters</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/tops/sweatshirts"><span>Sweatshirts</span></Link></li>
                                     <li><Link to="/products/category/mens/clothing/tops"><span>T-shirts</span></Link></li>
-                                    <li><Link to="/products/category/mens/clothing/track-pants"><span>Track Pants</span></Link></li>
+                                    <li><Link to="/products/category/mens/clothing/bottoms/track-pants"><span>Track Pants</span></Link></li>
                                     <li><Link to="/products/category/mens/clothing"><span className="viewall">View All</span></Link></li>
                                  </ul>
                                  <ul className="dropdown-col">
@@ -408,12 +424,12 @@ class Header extends Component {
                      </div>
                   </div>
                </header>
-               <ul className="mobile-menu">
-                  <li><a href="/">Men's</a></li>
-                  <li><a href="/">Women's</a></li>
-                  <li><a href="/">New</a></li>
-                  <li><a href="/">Sales</a></li>
-                  <li><a href="/">Brands</a></li>
+               <ul className={this.state.mobileMenuClass}>
+                  <li><Link onClick={this.toggleMobileMenu} to="/products/category/mens/clothing">Men's</Link></li>
+                  <li><Link onClick={this.toggleMobileMenu} to="/products/category/womens/clothing">Women's</Link></li>
+                  <li><Link onClick={this.toggleMobileMenu} to="/products/category/mens/clothing">New</Link></li>
+                  <li><Link onClick={this.toggleMobileMenu} to="/products/category/mens/clothing">Sales</Link></li>
+                  <li><Link onClick={this.toggleMobileMenu} to="/products/category/mens/clothing">Brands</Link></li>
                </ul>
             </React.Fragment>
     );

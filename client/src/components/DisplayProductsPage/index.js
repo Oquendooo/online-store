@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/main2.css';
-
+import {getJson} from "../../helpers";
 class DisplayProductsPage extends Component {
     constructor(props){
         super(props)
@@ -26,57 +26,39 @@ class DisplayProductsPage extends Component {
         }
     }
     getProducts = (event) => {
-        console.log(this.props.match.params);
 
-        const { gender, apparel_type, top_bottom} = this.props.match.params;
+        const { gender, apparel_type, top_bottom, apparel_type2} = this.props.match.params;
 
-        if(typeof gender !== 'undefined' && apparel_type !== 'undefined' && typeof top_bottom !== 'undefined'){
-            console.log("test");
-            fetch(`/category/${gender}/${apparel_type}/${top_bottom}`,
-                {
-                    method:'GET',
-                    headers:
-                        {
-                            'Accept':'application/json',
-                            'Content-Type':'application/json'
-                        }
-                }
-            )
-                .then(response => response.json())
+        if(typeof gender !== 'undefined' && apparel_type !== 'undefined' && typeof top_bottom !== 'undefined' && typeof apparel_type2 !== 'undefined'){
+
+            getJson(`/category/${gender}/${apparel_type}/${top_bottom}/${apparel_type2}`)
                 .then(products => {
                     this.setState({products});
                 });
+
+        }else if (typeof gender !== 'undefined' && apparel_type !== 'undefined' && typeof top_bottom !== 'undefined'){
+
+
+            getJson(`/category/${gender}/${apparel_type}/${top_bottom}`)
+                .then(products => {
+                    this.setState({products});
+                });
+
         }else if (typeof gender !== 'undefined' && apparel_type !== 'undefined'){
-            fetch(`/category/${gender}/${apparel_type}`,
-                {
-                    method:'GET',
-                    headers:
-                        {
-                            'Accept':'application/json',
-                            'Content-Type':'application/json'
-                        }
-                }
-            )
-                .then(response => response.json())
+
+
+            getJson(`/category/${gender}/${apparel_type}`)
                 .then(products => {
                     this.setState({products});
                 });
 
         }else{
-            fetch('/get-products',
-                {
-                    method:'GET',
-                    headers:
-                        {
-                            'Accept':'application/json',
-                            'Content-Type':'application/json'
-                        }
-                }
-            )
-                .then(response => response.json())
+
+            getJson('/get-products')
                 .then(products => {
                     this.setState({products});
                 });
+
         }
     };
 

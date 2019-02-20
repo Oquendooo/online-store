@@ -14,11 +14,7 @@ class ProductPage extends Component {
 
   getProduct = (event) => {
 
-
-      console.log(this.props.match.params);
-
       const { id } = this.props.match.params;
-        console.log(id);
       if(typeof id !== 'undefined'){
           console.log("test");
           fetch(`${id}`,
