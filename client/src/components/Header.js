@@ -70,7 +70,7 @@ class Header extends Component {
                         <i className="fas fa-times"></i>
                      </div>
                      <div className="logo-wrapper">
-                        <a href="/" className="logo">Modern Apparel</a>
+                        <Link to="/" className="logo">Modern Apparel</Link>
                      </div>
                      <ul id="header-nav" className="nav">
                         <li className="nav-item">
@@ -408,9 +408,9 @@ class Header extends Component {
                      </form>
                      <div className="account-cart">
                         <div className="account">
-                           <a href="/">
+                           <Link to="/signin">
                            <i className="fas fa-user-alt"></i>
-                           </a>
+                           </Link>
                            <div className="account-menu">
 
                               <ul className="login-register">
@@ -419,27 +419,27 @@ class Header extends Component {
                               </ul>
                               <ul className="menu-actions">
                                  <li className="menu-actions-item">
-                                    <a href="/">
+                                    <Link to="/account">
                                     <span>My Account</span>
-                                    </a>
+                                    </Link>
                                  </li>
                                  <li className="menu-actions-item">
-                                    <a href="/">
+                                    <Link to="/wishlist">
                                     <span>My WishList</span>
-                                    </a>
+                                    </Link>
                                  </li>
                                  <li className="menu-actions-item">
-                                    <a href="/">
+                                    <Link to="/my-orders">
                                     <span>My Orders</span>
-                                    </a>
+                                    </Link>
                                  </li>
                               </ul>
                            </div>
                         </div>
                         <div className="cart">
-                           <a href="/">
+                           <Link to="/cart">
                            <i className="fas fa-shopping-cart"></i>
-                           </a>
+                           </Link>
                            <div className="cart-menu">
                               <div className="arrow-up"></div>
                               <div className="cart-content">

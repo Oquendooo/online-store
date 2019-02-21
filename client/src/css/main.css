@@ -516,10 +516,12 @@ body {
 
 /* Below is the CSS for Row 3*/
 .row3-wrapper .brand-slider-wrapper {
+  text-align: center;
   width: 100%;
 }
 
 .row3-wrapper .brand-silder {
+
   display: inline-block;
   transition: all 0s ease 0s;
   width: 4549px !important;
@@ -546,7 +548,7 @@ body {
   width: auto;
 }
 
-.row3-wrapper .brand-silder .owl-carousel .brand .item .img-fluid {
+.row3-wrapper .brand-slider .owl-carousel .brand .item .img-fluid {
   display: inline-block;
 }
 
@@ -557,6 +559,11 @@ body {
 .row6-wrapper {
   height: 360px;
 }
+.brand-slider-wrapper .brand-slider{
+  display: flex !important;
+}
+
+
 
 .row6-wrapper .item {
   max-width: 285px;

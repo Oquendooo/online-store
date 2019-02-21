@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+
 
 
 class FrontPage extends Component {
@@ -11,17 +14,17 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-xs-12 col-lg-6">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row1img1.jpg')}  alt=""/>
-                                </a>
+                                </Link>
                             </div>
                             <div className="col-xs-12 col-lg-6">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row1img2.jpg')} alt=""/>
-                                </a>
-                                <a href="pages/display-items.html">
+                                </Link>
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row1img3.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -43,36 +46,37 @@ class FrontPage extends Component {
                             <div className="col-xs-12">
                                 <div className="container brand-slider-wrapper">
                                     <div className="brand-slider">
+
                                         <div className="owl-carousel owl-theme">
                                             <div className="item brand" style={{width:'auto'}}>
-                                                <a href="pages/display-items.html">
+                                                <Link to="/products/category/mens/clothing">
                                                     <img className="img-fluid" src={require('../images/row3img1.png')} alt=""/>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
-                                                <a href="pages/display-items.html">
+                                                <Link to="/products/category/mens/clothing">
                                                     <img className="img-fluid" src={require('../images/row3img2.png')} alt=""/>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
-                                                <a href="pages/display-items.html">
+                                                <Link to="/products/category/mens/clothing">
                                                     <img className="img-fluid" src={require('../images/row3img3.png')} alt=""/>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
-                                                <a href="pages/display-items.html">
+                                                <Link to="/products/category/mens/clothing">
                                                     <img className="img-fluid" src={require('../images/row3img4.png')} alt=""/>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
-                                                <a href="pages/display-items.html">
+                                                <Link to="/products/category/mens/clothing">
                                                     <img className="img-fluid" src={require('../images/row3img5.png')} alt=""/>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="item brand" style={{width:'auto'}}>
-                                                <a href="pages/display-items.html">
+                                                <Link to="/products/category/mens/clothing">
                                                     <img className="img-fluid" src={require('../images/row3img6.svg')} alt=""/>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -86,11 +90,11 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-12">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid"
                                          src="https://cdn.karmaloopassets.com/media/gene-cms/s/h/shopourfeed_1__1240x100.jpg"
                                          alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -101,28 +105,27 @@ class FrontPage extends Component {
                         <div className="row justify-content-center">
                             <div className="container brand-slider-wrapper">
                                 <div className="brand-slider">
-                                    <div className="owl-carousel owl-theme">
                                         <div className="col-lg-4 item brand" style={{width:'auto'}}>
-                                            <a href="pages/display-items.html">
+                                            <Link to="/products/category/mens/clothing">
                                                 <img className="img-fluid" src={require('../images/row6img1.jpg')} alt=""/>
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="col-lg-4 item brand" style={{width:'auto'}}>
-                                            <a href="pages/display-items.html">
+                                            <Link to="/products/category/mens/clothing">
                                                 <img className="img-fluid" src={require('../images/row6img2.jpg')} alt=""/>
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="col-lg-4 item brand" style={{width:'auto'}}>
-                                            <a href="pages/display-items.html">
+                                            <Link to="/products/category/mens/clothing">
                                                 <img className="img-fluid" src={require('../images/row6img3.jpg')} alt=""/>
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="col-lg-4 item brand" style={{width:'auto'}}>
-                                            <a href="pages/display-items.html">
+                                            <Link to="/products/category/mens/clothing">
                                                 <img className="img-fluid" src={require('../images/row6img4.jpg')} alt=""/>
-                                            </a>
+                                            </Link>
                                         </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -133,9 +136,9 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-12">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row7img1.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -145,9 +148,9 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-12">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row8img1.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -157,17 +160,17 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-12 col-lg-6">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid margin-add" src={require('../images/row9img1.jpg')} alt=""/>
-                                </a>
-                                <a href="pages/display-items.html">
-                                    <img className="img-fluid margin-add" src={require('../images/row6img2.jpg')} alt=""/>
-                                </a>
+                                </Link>
+                                <Link to="/products/category/mens/clothing">
+                                    <img className="img-fluid margin-add" src={require('../images/row9img2.jpg')} alt=""/>
+                                </Link>
                             </div>
                             <div className="col-xs-12 col-lg-6">
-                                <a href="pages/display-items.html">
-                                    <img className="img-fluid" src={require('../images/row6img3.jpg')} alt=""/>
-                                </a>
+                                <Link to="/products/category/mens/clothing">
+                                    <img className="img-fluid" src={require('../images/row9img3.jpg')} alt=""/>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -177,14 +180,14 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-12 col-md-6 col-lg-6">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row10img1.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                             <div className="col-xs-12 col-md-6 col-lg-6">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row10img2.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -194,19 +197,19 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-6 col-md-4 col-lg-4">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row11img1.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                             <div className="col-xs-6 col-md-4 col-lg-4">
-                                <a href="pages/display-items.html">
-                                    <img className="img-fluid" src={require('../images/row6img2.jpg')} alt=""/>
-                                </a>
+                                <Link to="/products/category/mens/clothing">
+                                    <img className="img-fluid" src={require('../images/row11img2.jpg')} alt=""/>
+                                </Link>
                             </div>
                             <div className="col-xs-6 col-md-4 col-lg-4">
-                                <a href="pages/display-items.html">
-                                    <img className="img-fluid" src={require('../images/row6img3.jpg')} alt=""/>
-                                </a>
+                                <Link to="/products/category/mens/clothing">
+                                    <img className="img-fluid" src={require('../images/row11img3.jpg')} alt=""/>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -216,10 +219,10 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-12">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid"
                                          src={require('../images/row12img1.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -229,19 +232,19 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-6 col-md-4 col-lg-4">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row13img1.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                             <div className="col-xs-6 col-md-4 col-lg-4">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row13img1.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                             <div className="col-xs-6 col-md-4 col-lg-4">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid" src={require('../images/row13img1.jpg')} alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -251,11 +254,11 @@ class FrontPage extends Component {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-xs-12">
-                                <a href="pages/display-items.html">
+                                <Link to="/products/category/mens/clothing">
                                     <img className="img-fluid"
                                          src={require('../images/row14img1.jpg')}
                                          alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
