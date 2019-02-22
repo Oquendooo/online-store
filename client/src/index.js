@@ -5,8 +5,8 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
-
 import reducers from './reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore(
@@ -14,7 +14,7 @@ const store = createStore(
     {
         auth: { authenticated: localStorage.getItem('token') }
     },
-    applyMiddleware(reduxThunk)
+    composeWithDevTools(applyMiddleware(reduxThunk)),
 );
 
 

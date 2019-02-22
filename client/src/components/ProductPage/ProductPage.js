@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import '../../css/product.css';
+import { connect } from 'react-redux'
+import {addToCart, removeFromCart} from "../../actions";
+
 
 class ProductPage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      price: 20
+      product: {}
     }
   }
   componentDidMount(){
@@ -17,7 +20,7 @@ class ProductPage extends Component {
       const { id } = this.props.match.params;
       if(typeof id !== 'undefined'){
           console.log("test");
-          fetch(`${id}`,
+          fetch(`/product/${id}`,
               {
                   method:'GET',
                   headers:
@@ -30,39 +33,25 @@ class ProductPage extends Component {
               .then(response => response.json())
               .then(product => {
                   console.log("my product", product);
+                  this.setState({product});
+
               });
       }else{
 
       }
 
-
-   // fetch('products/get-products',
-   //   {
-   //     method:'GET',
-   //     headers:
-   //     {
-   //       'Accept':'application/json',
-   //       'Content-Type':'application/json'
-   //     }
-   //   }
-   // )
-   // .then(response => response.json())
-   // .then(data => {
-   //      console.log(data);
-   //
-   // });
-
  };
+  addToCart = () => {
+      this.props.addToCart(this.state.product);
+};
   render() {
 
-    const {product} = this.props.location.state;
-    console.log("My Product", product);
     return (<div className="product-container container">
       <div className="row">
         <div className="product-images-wrapper col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
           <div className="product-images">
             <div className="main-img-wrapper">
-              <img alt="" className="main-img" src={product.img_urls} />
+              <img alt="" className="main-img" src={this.state.product.img_urls} />
             </div>
 
             <div className="other-images">
@@ -74,15 +63,15 @@ class ProductPage extends Component {
         <div className="product-information-wrapper col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
           <div className="product-brand">
             <a href="/">
-              <span>{product.brand}</span>
+              <span>{this.state.product.brand}</span>
             </a>
           </div>
           <div className="product-title">
-            <h4>{product.product_name}</h4>
+            <h4>{this.state.product.product_name}</h4>
           </div>
           <div className="product-price-sku">
-            <div className="product-price">${product.price}</div>
-            <div className="product-sku">SKU#: {product.sku}</div>
+            <div className="product-price">${this.state.product.price}</div>
+            <div className="product-sku">SKU#: {this.state.product.sku}</div>
           </div>
           <form id="product-addtocart-form">
             <div className="sizes-box-wrapper">
@@ -119,9 +108,9 @@ class ProductPage extends Component {
                   </span>
                 </div>
               </div>
-                <button className="addtocart-btn" type="submit">
+                <div onClick={this.addToCart} className="addtocart-btn" type="submit">
                   <span>Add to Cart</span>
-                </button>
+                </div>
             </div>
           </form>
           <div className="wishList-socialLinks">
@@ -199,4 +188,9 @@ class ProductPage extends Component {
   }
 }
 
-export default ProductPage;
+const mapStateToProps = (state) => ({
+    cart: state.cart.cart,
+});
+
+
+export default connect(mapStateToProps,{addToCart, removeFromCart})(ProductPage);

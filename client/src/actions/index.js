@@ -28,7 +28,14 @@ export const signin = (formProps, callback) => async (dispatch) => {
 
 };
 
-export const addToCart = (formProps, callback) => async (dispatch) => {
+export const addToCart = (item) => ({
+    type: ADD_TO_CART,
+    payload: {
+        item
+    },
+});
+
+export const removeFromCart = (formProps, callback) => async (dispatch) => {
 
     try{
         const response = await axios.post('http://localhost:5000/signin', formProps);
@@ -42,7 +49,6 @@ export const addToCart = (formProps, callback) => async (dispatch) => {
 
 };
 
-
 export const signout = () => {
     localStorage.removeItem('token');
 
@@ -51,4 +57,3 @@ export const signout = () => {
         payload: ''
     }
 };
-

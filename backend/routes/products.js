@@ -93,14 +93,13 @@ module.exports = (model) => {
     });
 
     app.get('/product/:id', (req, res) => {
-
-        console.log("req.body",req.body);
-
-        model.selectProduct()
+        const {id} = req.params;
+        console.log(id);
+        model.selectProduct(id)
             .then(data => {
 
-                res.json(data);
-                console.log("Successfully received products from our database");
+                res.json(data[0]);
+                console.log("Successfully received the product from our database");
             })
             .catch(err => {
                 console.log(err);
