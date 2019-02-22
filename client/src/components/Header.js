@@ -6,13 +6,13 @@ import '../css/main.css';
 
 class Header extends Component {
    constructor(props) {
-      super(props)
+      super(props);
       this.state = {
          isMobileMenuOpened: false,
          mobileMenuClass: 'mobile-menu',
       };
       this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
-   }
+   };
 
    renderLinks(){
       if(this.props.authenticated){

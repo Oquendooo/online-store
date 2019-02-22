@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { AUTH_USER, AUTH_ERROR } from './types';
+import { AUTH_USER, AUTH_ERROR, ADD_TO_CART } from './types';
 
 export const signup = (formProps, callback) => async (dispatch) => {
     try{
@@ -28,6 +28,20 @@ export const signin = (formProps, callback) => async (dispatch) => {
 
 };
 
+export const addToCart = (formProps, callback) => async (dispatch) => {
+
+    try{
+        const response = await axios.post('http://localhost:5000/signin', formProps);
+
+        dispatch({type: ADD_TO_CART, payload: response.data});
+        localStorage.setItem('cart', response.data);
+        callback();
+    } catch(e){
+        dispatch({type: AUTH_ERROR, payload: 'Invalid login credentials'});
+    }
+
+};
+
 
 export const signout = () => {
     localStorage.removeItem('token');
@@ -36,5 +50,5 @@ export const signout = () => {
         type: AUTH_USER,
         payload: ''
     }
-}
+};
 
