@@ -48,7 +48,31 @@ class Header extends Component {
          );
       }
    }
+   renderCartItems(){
 
+      let cartLength = JSON.parse(localStorage.getItem('cart')).length;
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      if(cartLength > 0){
+         return(
+             <React.Fragment>
+                {cart.map( item => (
+                   <div style={{color:'black'}}key={item.product_id}>
+                      {item.product_name}
+                   </div>
+                   ))}
+             </React.Fragment>
+         );
+      }else{
+         return(
+             <React.Fragment>
+                <div className="cart-content">
+                   <span>You have no items in your shopping cart</span>
+                </div>
+             </React.Fragment>
+         );
+      }
+
+   }
    toggleMobileMenu(){
 
       if(this.state.isMobileMenuOpened === true){
@@ -60,8 +84,7 @@ class Header extends Component {
    }
 
   render() {
-
-    return (
+     return (
       <React.Fragment>
                <header id="site-header" className="navbar">
                   <div className="container">
@@ -442,9 +465,8 @@ class Header extends Component {
                            </Link>
                            <div className="cart-menu">
                               <div className="arrow-up"></div>
-                              <div className="cart-content">
-                                 <span>You have no items in your shopping cart</span>
-                              </div>
+                              {this.renderCartItems()}
+
                            </div>
                         </div>
                      </div>
@@ -463,7 +485,10 @@ class Header extends Component {
 }
 
 function mapStateToProps (state) {
-   return { authenticated: state.auth.authenticated};
+   return {
+      authenticated: state.auth.authenticated,
+      cart:state.cart
+   };
 }
 
 export default connect(mapStateToProps)(Header);
