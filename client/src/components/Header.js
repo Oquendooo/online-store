@@ -50,9 +50,10 @@ class Header extends Component {
    }
    renderCartItems(){
 
-      let cartLength = JSON.parse(localStorage.getItem('cart')).length;
-      let cart = JSON.parse(localStorage.getItem('cart'));
-      if(cartLength > 0){
+      if(JSON.parse(localStorage.getItem('cart')) !== null){
+
+         let cart = JSON.parse(localStorage.getItem('cart'));
+
          return(
              <React.Fragment>
                 {cart.map( item => (
