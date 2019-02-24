@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../css/main.css';
-
+import '../css/header.css';
 
 class Header extends Component {
    constructor(props) {
@@ -49,20 +49,34 @@ class Header extends Component {
       }
    }
    renderCartItems(){
-
+      console.log()
       if(JSON.parse(localStorage.getItem('cart')) !== null){
 
          let cart = JSON.parse(localStorage.getItem('cart'));
 
-         return(
-             <React.Fragment>
-                {cart.map( item => (
-                   <div style={{color:'black'}}key={item.product_id}>
-                      {item.product_name}
-                   </div>
+         let filteredCart = cart.filter(item => item.length !== 0);
+
+         if(cart[0] !== null){
+            return(
+                <React.Fragment>
+                   {filteredCart.map( (item, key) => (
+                       <div className="product-item" key={item.product_id+key}>
+                          <div className="product-image">
+                             <img src={item.img_urls} alt=""/>
+                          </div>
+                          <div className="product-details">
+                             <div className="brand-price">
+                                <strong>S&D</strong><strong>$39.99</strong>
+                             </div>
+                             <div className="product-name"><p>{item.product_name}</p></div>
+                             <div className="product-size"><span>Size: </span><span>M</span></div>
+                             <div className="product-qty-delete"><input/><span><i className="fas fa-trash-alt"></i></span></div>
+                          </div>
+                       </div>
                    ))}
-             </React.Fragment>
-         );
+                </React.Fragment>
+            );
+         }
       }else{
          return(
              <React.Fragment>
@@ -461,12 +475,18 @@ class Header extends Component {
                            </div>
                         </div>
                         <div className="cart">
-                           <Link to="/cart">
+                           <Link to="/checkout/cart">
                            <i className="fas fa-shopping-cart"></i>
                            </Link>
                            <div className="cart-menu">
                               <div className="arrow-up"></div>
-                              {this.renderCartItems()}
+                              <div className="cart-quantity">
+                                 <span className="count">3 </span><span>items in your cart</span>
+                              </div>
+                              <div className="cart-items">
+                                 {this.renderCartItems()}
+                              </div>
+
 
                            </div>
                         </div>

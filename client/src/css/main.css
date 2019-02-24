@@ -301,6 +301,8 @@ body {
 
 #site-header .cart .cart-menu {
   display: none;
+  z-index: 1;
+  color:black;
 }
 
 #site-header .cart .cart-menu .arrow-up {
@@ -310,7 +312,7 @@ body {
 #site-header .cart:hover .cart-menu {
   display: block;
   background: white;
-  padding: 25px 20px;
+  padding: 20px 20px 25px 20px;
   border: 1px solid black;
   position: absolute;
   right: 120px;

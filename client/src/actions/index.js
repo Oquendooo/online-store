@@ -35,11 +35,11 @@ export const addToCart = (item) => ({
     },
 });
 
-export const removeFromCart = (id) => ({
+export const removeFromCart = (index) => ({
 
     type: REMOVE_FROM_CART,
         payload: {
-        id
+        index
     },
 
 });

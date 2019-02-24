@@ -43,7 +43,7 @@ class ProductPage extends Component {
  };
   addToCart = () => {
       this.props.addToCart(this.state.product);
-};
+  };
   render() {
 
     return (<div className="product-container container">
@@ -53,11 +53,12 @@ class ProductPage extends Component {
             <div className="main-img-wrapper">
               <img alt="" className="main-img" src={this.state.product.img_urls} />
             </div>
-
+              {/*
             <div className="other-images">
               <img alt="" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/88x110/beff4985b56e3afdbeabfc89641a4582/a/a/aabd633d5b85697ef0db62520566bf77.jpg"/>
               <img alt="" src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/88x110/beff4985b56e3afdbeabfc89641a4582/7/4/74e806b71c5fc1c433c04b1c48fabe6e.jpg"/>
             </div>
+              */}
           </div>
         </div>
         <div className="product-information-wrapper col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">

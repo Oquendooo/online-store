@@ -539,7 +539,7 @@ body {
 #site-header .cart:hover .cart-menu {
     display: block;
     background: white;
-    padding: 25px 20px;
+    padding: 20px 20px 25px 20px;
     border: 1px solid black;
     position: absolute;
     right: 120px;

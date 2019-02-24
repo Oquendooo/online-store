@@ -11,6 +11,7 @@ import Signup from './components/auth/Signup';
 import Feature from './components/Feature';
 import Signout from './components/auth/Signout';
 import Signin from './components/auth/Signin';
+import Cart from './components/Cart/Cart';
 import './css/main.css';
 import './css/bootstrap.min.css';
 
@@ -44,6 +45,10 @@ class App extends Component {
           <Route exact path='/products/category/:gender/:apparel_type/:apparel_type2' component={props => <ProductsPage {...props}/>}/>
           <Route exact path='/products/category/:gender/:apparel_type/:top_bottom' component={props => <ProductsPage {...props} />}/>
           <Route exact path='/products/category/:gender/:apparel_type/:top_bottom/:apparel_type2' component={props => <ProductsPage {...props} />}/>
+
+          {/*Checkout Routes*/}
+          <Route exact path='/checkout/cart' component={Cart}/>
+
 
           {/*Footer*/}
           <Footer />
