@@ -23,9 +23,14 @@ class Cart extends Component {
     renderCart = () => {
         console.log("Yooo",this.props.cart);
         //Here we filter out if there are any empty elements in the array
-        let cartItems = this.props.cart.filter(item => item.length !== 0);
+        let cartItems = [];
+        if(this.props.cart.length !== 0){
+            cartItems = this.props.cart.filter(item => item.length !== 0);
+        }
+
+
         console.log("cart items",cartItems);
-        if(cartItems.length > 0){
+        if(cartItems.length > 0 ){
             return(
                 <React.Fragment>
                     {cartItems.map( (item, index) => (

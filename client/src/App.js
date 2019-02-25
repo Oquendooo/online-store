@@ -18,7 +18,7 @@ import './css/bootstrap.min.css';
 
 class App extends Component {
     componentWillMount() {
-        localStorage.setItem('cart','[]');
+
     }
 
     render() {

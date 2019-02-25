@@ -56,9 +56,8 @@ class Header extends Component {
       }
    }
    renderCartItems(){
-      if(JSON.parse(localStorage.getItem('cart')) !== null){
 
-         let cart = JSON.parse(localStorage.getItem('cart'));
+      const { cart } = this.props;
 
          const filteredCart = cart.filter(item => item.length !== 0);
 
@@ -97,7 +96,7 @@ class Header extends Component {
             );
          }
 
-      }
+
 
 
    }
@@ -498,10 +497,10 @@ class Header extends Component {
                            <i className="fas fa-shopping-cart"></i>
                               {
                                  (() => {
-                                    if(this.state.cart.length > 0){
+                                    if(this.props.cart.length > 0){
                                        return(
                                            <span className="counter">
-                                             <span className="counter-number">{this.state.cart.length}</span>
+                                             <span className="counter-number">{this.props.cart.length}</span>
                                           </span>
                                        );
                                     }

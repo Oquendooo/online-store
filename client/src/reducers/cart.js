@@ -28,11 +28,10 @@ export default function(state = INITIAL_STATE, action){
             let filteredCart = cart.slice();
             filteredCart.splice(index, 1);
 
+            filteredCart = filteredCart.filter(item => item.length !== 0);
             console.log("filteredCart",filteredCart);
             localStorage.setItem('cart', JSON.stringify(filteredCart));
-            return [
-                filteredCart
-            ];
+            return filteredCart;
 
         }
         case SET_CART:{
