@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART} from '../actions/types';
+import { ADD_TO_CART, REMOVE_FROM_CART, SET_CART} from '../actions/types';
 
 const INITIAL_STATE = [
 
@@ -28,15 +28,18 @@ export default function(state = INITIAL_STATE, action){
             let filteredCart = cart.slice();
             filteredCart.splice(index, 1);
 
-            // cart = cart.filter( item => {
-            //     return item.product_id !== id;
-            // });
-
             console.log("filteredCart",filteredCart);
             localStorage.setItem('cart', JSON.stringify(filteredCart));
-            console.log("in",INITIAL_STATE);
             return [
                 filteredCart
+            ];
+
+        }
+        case SET_CART:{
+
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            return [
+                cart
             ];
 
         }

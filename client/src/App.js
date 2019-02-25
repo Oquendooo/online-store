@@ -17,7 +17,11 @@ import './css/bootstrap.min.css';
 
 
 class App extends Component {
-  render() {
+    componentWillMount() {
+        localStorage.setItem('cart','[]');
+    }
+
+    render() {
     return (
       <div className="App">
           <Header />
@@ -42,13 +46,12 @@ class App extends Component {
           <Route exact path='/products' component={Breadcrumbs} />
           <Route exact path='/products/category/:brands' component={props => <ProductsPage {...props}/>}/>
           <Route exact path='/products/category/:gender/:apparel_type' component={props => <ProductsPage {...props}/>}/>
-          <Route exact path='/products/category/:gender/:apparel_type/:apparel_type2' component={props => <ProductsPage {...props}/>}/>
-          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom' component={props => <ProductsPage {...props} />}/>
-          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom/:apparel_type2' component={props => <ProductsPage {...props} />}/>
+          <Route exact path='/products/category/:gender/:apparel_type/:apparel_type2' component={props => <ProductsPage {...props}/>} />
+          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom' component={props => <ProductsPage {...props} />} />
+          <Route exact path='/products/category/:gender/:apparel_type/:top_bottom/:apparel_type2' component={props => <ProductsPage {...props} />} />
 
           {/*Checkout Routes*/}
-          <Route exact path='/checkout/cart' component={Cart}/>
-
+          <Route exact path='/checkout/cart' component={props => <Cart{...props}/>}/>
 
           {/*Footer*/}
           <Footer />

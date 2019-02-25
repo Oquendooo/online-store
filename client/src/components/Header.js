@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import {removeFromCart} from "../actions";
 import '../css/main.css';
 import '../css/header.css';
 
@@ -10,9 +11,15 @@ class Header extends Component {
       this.state = {
          isMobileMenuOpened: false,
          mobileMenuClass: 'mobile-menu',
+         cart:[]
       };
       this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
    };
+   componentDidMount() {
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      const filteredCart = cart.filter(item => item.length !== 0);
+      this.setState({cart: filteredCart});
+   }
 
    renderLinks(){
       if(this.props.authenticated){
@@ -49,18 +56,21 @@ class Header extends Component {
       }
    }
    renderCartItems(){
-      console.log()
       if(JSON.parse(localStorage.getItem('cart')) !== null){
 
          let cart = JSON.parse(localStorage.getItem('cart'));
 
-         let filteredCart = cart.filter(item => item.length !== 0);
+         const filteredCart = cart.filter(item => item.length !== 0);
 
-         if(cart[0] !== null){
+         if(filteredCart.length > 0){
             return(
                 <React.Fragment>
-                   {filteredCart.map( (item, key) => (
-                       <div className="product-item" key={item.product_id+key}>
+                   <div className="cart-quantity">
+                      <span className="count">{filteredCart.length} </span><span>items in your cart</span>
+                   </div>
+                   <div className="cart-items">
+                   {filteredCart.map( (item, index) => (
+                       <div className="product-item" key={item.product_id+index}>
                           <div className="product-image">
                              <img src={item.img_urls} alt=""/>
                           </div>
@@ -70,24 +80,33 @@ class Header extends Component {
                              </div>
                              <div className="product-name"><p>{item.product_name}</p></div>
                              <div className="product-size"><span>Size: </span><span>M</span></div>
-                             <div className="product-qty-delete"><input/><span><i className="fas fa-trash-alt"></i></span></div>
+                             <div className="product-qty-delete"><input/><span><i onClick={() => this.deleteCartItem(index)} className="fas fa-trash-alt"></i></span></div>
                           </div>
                        </div>
                    ))}
+                   </div>
+                </React.Fragment>
+            );
+         }else if(filteredCart.length === 0){
+            return(
+                <React.Fragment>
+                   <div className="cart-content">
+                      <span>You have no items in your shopping cart</span>
+                   </div>
                 </React.Fragment>
             );
          }
-      }else{
-         return(
-             <React.Fragment>
-                <div className="cart-content">
-                   <span>You have no items in your shopping cart</span>
-                </div>
-             </React.Fragment>
-         );
+
       }
 
+
    }
+   deleteCartItem = (index) => {
+
+      this.props.removeFromCart(index);
+
+      this.setState({cart: JSON.parse(localStorage.getItem('cart'))});
+   };
    toggleMobileMenu(){
 
       if(this.state.isMobileMenuOpened === true){
@@ -477,17 +496,23 @@ class Header extends Component {
                         <div className="cart">
                            <Link to="/checkout/cart">
                            <i className="fas fa-shopping-cart"></i>
+                              {
+                                 (() => {
+                                    if(this.state.cart.length > 0){
+                                       return(
+                                           <span className="counter">
+                                             <span className="counter-number">{this.state.cart.length}</span>
+                                          </span>
+                                       );
+                                    }
+                                 })()
+                              }
+
                            </Link>
                            <div className="cart-menu">
-                              <div className="arrow-up"></div>
-                              <div className="cart-quantity">
-                                 <span className="count">3 </span><span>items in your cart</span>
+                              <div className="arrow-up">
                               </div>
-                              <div className="cart-items">
-                                 {this.renderCartItems()}
-                              </div>
-
-
+                              {this.renderCartItems()}
                            </div>
                         </div>
                      </div>
@@ -508,8 +533,8 @@ class Header extends Component {
 function mapStateToProps (state) {
    return {
       authenticated: state.auth.authenticated,
-      cart:state.cart
+      cart: state.cart
    };
 }
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, {removeFromCart})(Header);

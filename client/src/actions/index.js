@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {AUTH_USER, AUTH_ERROR, ADD_TO_CART, REMOVE_FROM_CART} from './types';
+import {AUTH_USER, AUTH_ERROR, ADD_TO_CART, REMOVE_FROM_CART, SET_CART} from './types';
 
 export const signup = (formProps, callback) => async (dispatch) => {
     try{
@@ -38,11 +38,18 @@ export const addToCart = (item) => ({
 export const removeFromCart = (index) => ({
 
     type: REMOVE_FROM_CART,
-        payload: {
+    payload: {
         index
     },
 
 });
+export const setCart = () => ({
+    type: SET_CART,
+});
+
+
+
+
 
 export const signout = () => {
     localStorage.removeItem('token');
