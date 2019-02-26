@@ -9,14 +9,28 @@ import reducers from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import * as serviceWorker from './serviceWorker';
 
+let store;
 
-const store = createStore(
-    reducers,
-    {
-        auth: { authenticated: localStorage.getItem('token') }
-    },
-    composeWithDevTools(applyMiddleware(reduxThunk)),
-);
+if(process.env.NODE_ENV === 'production'){
+    store = createStore(
+        reducers,
+        {
+            auth: { authenticated: localStorage.getItem('token') }
+        },
+        applyMiddleware(reduxThunk),
+    );
+
+}else if(process.env.NODE_ENV === 'development') {
+    store = createStore(
+        reducers,
+        {
+            auth: { authenticated: localStorage.getItem('token') }
+        },
+        composeWithDevTools(applyMiddleware(reduxThunk)),
+    );
+}
+
+
 
 ReactDOM.render((
         <Provider store={store}>
