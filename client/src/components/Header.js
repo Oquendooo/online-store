@@ -17,9 +17,7 @@ class Header extends Component {
       this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
    };
    componentDidMount() {
-      let cart = JSON.parse(localStorage.getItem('cart'));
-      const filteredCart = cart.filter(item => item.length !== 0);
-      this.setState({cart: filteredCart});
+
    }
 
    renderLinks(){
