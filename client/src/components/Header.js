@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Payments  from './Payments';
 import {removeFromCart} from "../actions";
 import '../css/main.css';
 import '../css/header.css';
@@ -25,6 +26,7 @@ class Header extends Component {
       if(this.props.authenticated){
          return(
              <React.Fragment>
+                <Payments />
                 <li className="item">
                    <Link className="login" to="/signout">
                       <span>Sign Out</span>

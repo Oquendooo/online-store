@@ -9,13 +9,27 @@ import reducers from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(
-    reducers,
-    {
-        auth: { authenticated: localStorage.getItem('token') }
-    },
-    composeWithDevTools(applyMiddleware(reduxThunk)),
-);
+let store;
+
+if(process.env.PORT){
+    store = createStore(
+        reducers,
+        {
+            auth: { authenticated: localStorage.getItem('token') }
+        },
+        applyMiddleware(reduxThunk),
+    );
+
+}else {
+    store = createStore(
+        reducers,
+        {
+            auth: { authenticated: localStorage.getItem('token') }
+        },
+        composeWithDevTools(applyMiddleware(reduxThunk)),
+    );
+}
+
 
 
 ReactDOM.render((
@@ -26,6 +40,9 @@ ReactDOM.render((
         </Provider>
 
    ), document.getElementById('root'));
+
+
+console.log('ENVIOR',process.env.NODE_ENV);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
