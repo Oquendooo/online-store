@@ -11,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 
 let store;
 
-if(process.env.PORT){
+if(process.env.NODE_ENV === 'production'){
     store = createStore(
         reducers,
         {
@@ -20,7 +20,7 @@ if(process.env.PORT){
         applyMiddleware(reduxThunk),
     );
 
-}else {
+}else if(process.env.NODE_ENV === 'development') {
     store = createStore(
         reducers,
         {
