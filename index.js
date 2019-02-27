@@ -18,6 +18,7 @@ const AuthModel = require('./backend/models/auth')(mysqlConnection);
 // Routers for each API
 const ProductsRouter = require('./backend/routes/products')(ProductsModel);
 const AuthRouter = require('./backend/routes/auth')(AuthModel);
+const BillingRouter = require('./backend/routes/BillingRoutes')(null);
 
 //App Setup
 app.use(morgan('combined'));
@@ -28,6 +29,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Listeners for each route
 app.use('/', ProductsRouter);
 app.use('/', AuthRouter);
+app.use('/', BillingRouter);
 
 //Serve any static files built by React
 
