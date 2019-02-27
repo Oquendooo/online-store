@@ -151,3 +151,7 @@
 .sizes-box-wrapper {
   margin-bottom: 20px;
 }
+
+.product-container .related-products .row .product-item .product-item-info .product-item-photo .product-image .image{
+  width:100%;
+}

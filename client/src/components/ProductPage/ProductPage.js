@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../../css/product.css';
 import { connect } from 'react-redux'
 import {addToCart, removeFromCart} from "../../actions";
+import {Link} from "react-router-dom";
 
 
 class ProductPage extends Component {
@@ -109,9 +110,9 @@ class ProductPage extends Component {
                   </span>
                 </div>
               </div>
-                <div onClick={this.addToCart} className="addtocart-btn" type="submit">
+                <button onClick={this.addToCart} className="addtocart-btn" type="button">
                   <span>Add to Cart</span>
-                </div>
+                </button>
             </div>
           </form>
           <div className="wishList-socialLinks">
@@ -181,9 +182,143 @@ class ProductPage extends Component {
                 </form>
               </div>
             </div>
-
           </div>
         </div>
+      </div>
+      <div className="related-products">
+        <div className="row">
+              <div key={this.state.product.product_id} className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                  <div className="product-item-info">
+                      <Link className="product-item-photo" to={{
+                          pathname: `/product/${this.state.product.product_id}`,
+                          state: this.state.product
+                      }}>
+                          <div className="product-image">
+                              <img className="image"
+                                   src={this.state.product.img_urls}
+                                   alt=""/>
+                          </div>
+                      </Link>
+
+                      <div className="product-item-details">
+                          <strong className="product-item-brand">
+                              <span>{this.state.product.brand}</span>
+                          </strong>
+                          <strong className="product-item-name">
+                              <a href="/product" className="product-item-link">
+                                  {this.state.product.product_name}
+                              </a>
+                          </strong>
+                          <div className="product-price">
+                              <span>{this.state.product.price}</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+              <div key={this.state.product.product_id} className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                  <div className="product-item-info">
+                      <Link className="product-item-photo" to={{
+                          pathname: `/product/${this.state.product.product_id}`,
+                          state: this.state.product
+                      }}>
+                          <div className="product-image">
+                              <img className="image"
+                                   src={this.state.product.img_urls}
+                                   alt=""/>
+                          </div>
+                      </Link>
+
+                      <div className="product-item-details">
+                          <strong className="product-item-brand">
+                              <span>{this.state.product.brand}</span>
+                          </strong>
+                          <strong className="product-item-name">
+                              <a href="/product" className="product-item-link">
+                                  {this.state.product.product_name}
+                              </a>
+                          </strong>
+                          <div className="product-price">
+                              <span>{this.state.product.price}</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+              <div key={this.state.product.product_id} className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                  <div className="product-item-info">
+                      <Link className="product-item-photo" to={{
+                          pathname: `/product/${this.state.product.product_id}`,
+                          state: this.state.product
+                      }}>
+                          <div className="product-image">
+                              <img className="image"
+                                   src={this.state.product.img_urls}
+                                   alt=""/>
+                          </div>
+                      </Link>
+
+                      <div className="product-item-details">
+                          <strong className="product-item-brand">
+                              <span>{this.state.product.brand}</span>
+                          </strong>
+                          <strong className="product-item-name">
+                              <a href="/product" className="product-item-link">
+                                  {this.state.product.product_name}
+                              </a>
+                          </strong>
+                          <div className="product-price">
+                              <span>{this.state.product.price}</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+              <div key={this.state.product.product_id} className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                  <div className="product-item-info">
+                      <Link className="product-item-photo" to={{
+                          pathname: `/product/${this.state.product.product_id}`,
+                          state: this.state.product
+                      }}>
+                          <div className="product-image">
+                              <img className="image"
+                                   src={this.state.product.img_urls}
+                                   alt=""/>
+                          </div>
+                      </Link>
+
+                      <div className="product-item-details">
+                          <strong className="product-item-brand">
+                              <span>{this.state.product.brand}</span>
+                          </strong>
+                          <strong className="product-item-name">
+                              <a href="/product" className="product-item-link">
+                                  {this.state.product.product_name}
+                              </a>
+                          </strong>
+                          <div className="product-price">
+                              <span>{this.state.product.price}</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+
+
+
+
+          </div>
       </div>
     </div>);
   }

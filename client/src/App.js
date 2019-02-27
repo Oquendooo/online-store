@@ -54,7 +54,7 @@ class App extends Component {
           <Route exact path='/checkout/cart' component={props => <Cart{...props}/>}/>
 
           {/*Footer*/}
-          <Footer />
+          <Route path='/' component={Footer}/>
       </div>
     );
   }
