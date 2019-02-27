@@ -20,7 +20,7 @@ const AuthModel = require('./backend/models/auth')(mysqlConnection);
 // Routers for each API
 const ProductsRouter = require('./backend/routes/products')(ProductsModel);
 const AuthRouter = require('./backend/routes/auth')(AuthModel);
-const BillingRouter = require('./backend/routes/BillingRoutes')(null);
+const BillingRouter = require('./backend/routes/billingRoutes')(null);
 
 
 //App Setup
