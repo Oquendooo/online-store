@@ -26,27 +26,27 @@ class Footer extends Component {
             <div className="footer-menu">
               <div className="footer-menu-col">
                 <ul className="">
-                  <li><a href="#"></a>Home</li>
-                  <li><a href="#"></a>Brands</li>
-                  <li><a href="#"></a>Student Discount</li>
-                  <li><a href="#"></a>Privacy</li>
-                  <li><a href="#"></a>Terms Of Use</li>
+                  <li><a href="/">Homes</a></li>
+                  <li><a href="/">Brands</a></li>
+                  <li><a href="/">Student Discount</a></li>
+                  <li><a href="/">Privacy</a></li>
+                  <li><a href="/">Terms Of Use</a></li>
                 </ul>
               </div>
               <div className="footer-menu-col">
                 <ul>
-                  <li><a href="#"></a>Kazbah</li>
-                  <li><a href="#"></a>Plndr</li>
-                  <li><a href="#"></a>Affiliates</li>
-                  <li><a href="#"></a>Shiekh Shoes</li>
+                  <li><a href="/">Kazbah</a></li>
+                  <li><a href="/">Plndr</a></li>
+                  <li><a href="/">Affiliates</a></li>
+                  <li><a href="/">Shiekh Shoes</a></li>
                 </ul>
               </div>
               <div className="footer-menu-col">
                 <ul>
-                  <li><a href="#"></a>Contact Us</li>
-                  <li><a href="#"></a>Faq</li>
-                  <li><a href="#"></a>Shipping</li>
-                  <li><a href="#"></a>Return</li>
+                  <li><a href="/">Contact Us</a></li>
+                  <li><a href="/">Faq</a></li>
+                  <li><a href="/">Shipping</a></li>
+                  <li><a href="/">Return</a></li>
                 </ul>
               </div>
               <div className="social-links">
@@ -55,22 +55,22 @@ class Footer extends Component {
                 </div>
                 <div className="links">
                   <div className="social-icon">
-                    <a href="#"><i className="fab fa-facebook-f"></i></a>
+                    <a href="/"><i className="fab fa-facebook-f"></i></a>
                   </div>
                   <div className="social-icon">
-                    <a href="#"><i className="fab fa-twitter"></i></a>
+                    <a href="/"><i className="fab fa-twitter"></i></a>
                   </div>
                   <div className="social-icon">
-                    <a href="#"><i className="fab fa-pinterest-p"></i></a>
+                    <a href="/"><i className="fab fa-pinterest-p"></i></a>
                   </div>
                   <div className="social-icon">
-                    <a href="#"><i className="fab fa-instagram"></i></a>
+                    <a href="/"><i className="fab fa-instagram"></i></a>
                   </div>
                   <div className="social-icon">
-                    <a href="#"><i className="fab fa-tumblr"></i></a>
+                    <a href="/"><i className="fab fa-tumblr"></i></a>
                   </div>
                   <div className="social-icon">
-                    <a href="#"><i className="fab fa-youtube"></i></a>
+                    <a href="/"><i className="fab fa-youtube"></i></a>
                   </div>
                 </div>
               </div>
