@@ -9,7 +9,11 @@ class ProductPage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      product: {}
+        product: {},
+        isDescriptionOpen: false,
+        descriptionClass: 'item-content description',
+        areReviewsOpen: false,
+        reviewsClass: 'item-content reviews'
     }
   }
   componentDidMount(){
@@ -41,10 +45,27 @@ class ProductPage extends Component {
 
       }
 
- };
+  };
+
   addToCart = () => {
       this.props.addToCart(this.state.product);
   };
+
+    toggleDescription = () => {
+      if(this.state.isDescriptionOpen === true){
+          this.setState({descriptionClass: 'item-content description', isDescriptionOpen: false});
+      }else if(!this.state.isDescriptionOpen){
+          this.setState({descriptionClass: 'item-content description active', isDescriptionOpen: true});
+      }
+    };
+    toggleReviews = () => {
+        if(this.state.areReviewsOpen === true){
+            this.setState({reviewsClass: 'item-content reviews', areReviewsOpen: false});
+        }else if(!this.state.areReviewsOpen){
+            this.setState({reviewsClass: 'item-content reviews active', areReviewsOpen: true});
+        }
+    };
+
   render() {
 
     return (<div className="product-container container">
@@ -121,24 +142,19 @@ class ProductPage extends Component {
           <div className="product-info">
 
             <div className="item">
-              <div className="item-title">
-                <span>Description</span>
+              <div className="item-title" onClick={this.toggleDescription}>
+                <span>Description</span> <span><i className="fas fa-angle-down"></i></span>
               </div>
-              <div className="item-content">
-                <p>Panda express yourself with our hottest design! He won't be causing any pandamonium. Hes got a rose in his mouth just for you. The characters on top of the design say "Riot Society" in Chinese.</p>
+              <div className={this.state.descriptionClass}>
+                <p>{this.state.product.product_description}</p>
               </div>
-              <ul>
-                <li>100% Cotton</li>
-                <li>Feel:Soft Wash</li>
-                <li>Machine Washable</li>
-              </ul>
             </div>
 
             <div className="item">
-              <div className="item-title">
-                <span>Reviews</span>
+              <div className="item-title" onClick={this.toggleReviews}>
+                <span>Reviews</span><span><i className="fas fa-angle-down"></i></span>
               </div>
-              <div className="item-content">
+              <div className={this.state.reviewsClass}>
                 <form className="review-form">
                    <legend class="legend review-legend"><span>You're reviewing:</span><strong>10 Deep Striped Shirt</strong></legend>
                    <br/><span id="input-message-box"></span>
@@ -186,6 +202,7 @@ class ProductPage extends Component {
         </div>
       </div>
       <div className="related-products">
+          <h2 className="title">Related Products</h2>
         <div className="row">
               <div key={this.state.product.product_id} className="item product-item col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                   <div className="product-item-info">
@@ -210,7 +227,7 @@ class ProductPage extends Component {
                               </a>
                           </strong>
                           <div className="product-price">
-                              <span>{this.state.product.price}</span>
+                              <span>S{this.state.product.price}</span>
                           </div>
                       </div>
                   </div>

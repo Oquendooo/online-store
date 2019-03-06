@@ -11,7 +11,10 @@ import Signup from './components/auth/Signup';
 import Feature from './components/Feature';
 import Signout from './components/auth/Signout';
 import Signin from './components/auth/Signin';
-import Cart from './components/Cart/Cart';
+import Cart from './components/CheckoutPages/Cart';
+import Checkout from './components/CheckoutPages/Checkout';
+import Payment from './components/CheckoutPages/Payment';
+import Account from './components/UserAccountPages/Account';
 import './css/main.css';
 import './css/bootstrap.min.css';
 
@@ -30,11 +33,17 @@ class App extends Component {
           {/*Front Page*/}
           <Route exact path='/' component={FrontPage}/>
 
-          {/*Authenication routes*/}
+          {/*Authentication routes*/}
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/signin' component={Signin}/>
           <Route exact path='/feature' component={Feature}/>
           <Route exact path='/signout' component={Signout}/>
+
+          {/*Authentication routes*/}
+          <Route exact path='/account' component={Account}/>
+
+
+
 
           {/*Product routes*/}
           <Route exact path='/product' component={Breadcrumbs} />
@@ -51,7 +60,9 @@ class App extends Component {
           <Route exact path='/products/category/:gender/:apparel_type/:top_bottom/:apparel_type2' component={props => <ProductsPage {...props} />} />
 
           {/*Checkout Routes*/}
+          <Route exact path='/checkout/' component={props => <Checkout{...props}/>}/>
           <Route exact path='/checkout/cart' component={props => <Cart{...props}/>}/>
+          <Route exact path='/checkout/payment' component={props => <Payment{...props}/>}/>
 
           {/*Footer*/}
           <Route path='/' component={Footer}/>

@@ -73,17 +73,28 @@ class DisplayProductsPage extends Component {
 
     render() {
         console.log(this.state.products);
+        console.log("products page props",this.props);
+        let category = '';
+        console.log("products page props",this.props.match.params);
+        if(typeof this.props.match.params.apparel_type2 === 'undefined'){
+
+            category = this.props.match.params.gender;
+        }else{
+            category = this.props.match.params.apparel_type2;
+        }
+
+        console.log("test",category);
+
         return (
 
             <div id="main-content" className="">
                 <div className="container">
                     <div className="category">
                         <div className="row">
-                            <div className="col-xs-12">
+                            <div className="col-xs-12 col-xl-12">
                                 <div className="category-img">
-                                    <img className="img-fluid"
-                                         src="https://cdn.karmaloopassets.com/media/gene-cms/4/-/4-19-kl-cbanners__1240x150.jpg"
-                                         alt=""/>
+                                    <span>{category}</span>
+
                                 </div>
                             </div>
                         </div>
@@ -91,7 +102,7 @@ class DisplayProductsPage extends Component {
                     <div className="content">
                         <div className="row">
                             <div className="filter-menu col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                                <div className=""></div>
+
                                 <strong>Filter By</strong>
                                 <div className="filter-options">
                                     <div className="filter-options-item">
@@ -197,7 +208,7 @@ class DisplayProductsPage extends Component {
                             <div className="products col-sm-10 col-md-10 col-lg-10 col-xl-10">
                                 <div className="page-title-wrapper">
                                     <h1 className="page-title">
-                                        <span className="base">Basic Tees</span>
+                                        <span className="base">{category}</span>
                                     </h1>
                                 </div>
                                 <div className="toolbar">
@@ -283,7 +294,7 @@ class DisplayProductsPage extends Component {
                                                                       </a>
                                                                   </strong>
                                                                   <div className="product-price">
-                                                                      <span>{product.price}</span>
+                                                                      <span>${product.price}</span>
                                                                   </div>
                                                               </div>
                                                           </div>

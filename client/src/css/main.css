@@ -34,7 +34,7 @@ body {
   margin-bottom: 20px;
 }
 
-#site-header .container {
+#site-header .container {padding: 0;
   max-width: 1280px;
   justify-content: flex-start;
 }
@@ -743,15 +743,25 @@ body {
 .footer-menu .footer-menu-col ul li {
   font-weight: 600;
 }
+.footer-menu .footer-menu-col ul li a{
+  color:black;
+}
 
 .footer-menu .social-links {
   display: inline-block;
   width: 20%;
 }
+.footer-menu .social-links .title{
+ margin-bottom: 2px;
+}
 
 .footer-menu .social-links .links .social-icon {
   display: inline-block;
 }
+.footer-menu .social-links .links .social-icon:not(:last-child) {
+  margin-right: 6px;
+}
+
 
 .footer-menu .social-links .links .social-icon a {
   color: black;

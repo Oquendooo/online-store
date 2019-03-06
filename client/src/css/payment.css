@@ -1,0 +1,118 @@
+.payment-container{}
+
+.payment-container h3{}
+
+.payment-container .payment-method{}
+
+.payment-container .payment-method .payment-method-header{}
+
+.payment-container .payment-method .payment-method-header input{}
+
+.payment-container .payment-method .payment-method-header label{}
+
+.payment-container .payment-method-content {}
+
+.payment-container .payment-method-content .payment-method-billing-address {}
+
+.payment-container .payment-method-content .payment-method-billing-address .billing-address-same-as-shipping-block {}
+
+.payment-container .payment-method-content .payment-method-billing-address .billing-address-same-as-shipping-block input{}
+
+
+.payment-container .payment-method-content .payment-method-billing-address .billing-address-same-as-shipping-block label{}
+
+
+.payment-container .payment-method-content .payment-method-billing-address .billing-address-same-as-shipping-block .billing-address-details{}
+
+
+.payment-container .payment-method .payment-form{}
+
+
+.payment-container .payment-method .payment-form .cc-types{
+    margin-top: 20px;
+    padding:0;
+    list-style: none;
+    display: flex;
+}
+
+.payment-container .payment-method .payment-form cc-types li{
+    margin-right: 10px;
+}
+
+.payment-container .payment-method .payment-form ul li .payment-img{
+    width: 46px;
+    height: 30px;
+}
+
+
+.payment-container .payment-method .payment-form .field{
+    margin-top: 12px;
+}
+
+.payment-container .payment-method .payment-form .field label{
+    display: block;
+}
+
+
+.payment-container .payment-method .payment-form .field input{
+
+}
+
+
+
+.payment-container .payment-method-content .action-bar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.payment-container .payment-method-content .action-bar button{
+    padding: 14px 16px;
+    background-color: #11873b;
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

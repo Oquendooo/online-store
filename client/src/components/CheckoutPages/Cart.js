@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/cartPage.css';
 import {connect} from "react-redux";
+
 import {removeFromCart, setCart} from "../../actions";
 
 class Cart extends Component {
@@ -93,7 +94,7 @@ class Cart extends Component {
                             </div>
                             <div className="cart-container">
                                 <div className="row">
-                                    <div className="cart-items col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                    <div className="cart-items col-sm-8 col-md-8 col-lg-9 col-xl-9">
                                         <div className="cart-header">
                                             <div className="item">Item</div>
                                             <div className="price">Price</div>
@@ -103,8 +104,20 @@ class Cart extends Component {
                                         {this.renderCart()}
 
                                     </div>
-                                    <div className="cart-summary col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                        test2
+                                    <div className="cart-summary col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                                        <h2>Summary</h2>
+                                        <div className="cart-pricing">
+                                            <div className="subtotal"><span>Subtotal</span><span>$80.00</span></div>
+                                            <div className="tax"><span>Tax</span><span>$0.00</span></div>
+                                            <div className="total"><span>Order Total</span><span>$80.00</span></div>
+                                        </div>
+
+                                        <div className="checkout-cta">
+                                            <Link to="/checkout/">
+                                                <button>Proceed to checkout</button>
+                                            </Link>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -86,3 +86,63 @@
 
     margin-left: 32px;
 }
+
+/*Cart summary CSS*/
+.cart-summary{
+    background: #eee;
+
+}
+.cart-summary h2{
+    margin: 5px 0 10px 0;
+    font-size: 1.2rem;
+
+}
+.cart-summary .cart-pricing{
+    border-top: 2px solid #fff;
+
+}
+.cart-summary .cart-pricing .subtotal{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart-summary .cart-pricing .tax{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.cart-summary .cart-pricing .total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart-summary .checkout-cta {
+    display:flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+}
+.cart-summary .checkout-cta button{
+    background: #11873b;
+    padding: 0 20px;
+    color: white;
+    height: 50px;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

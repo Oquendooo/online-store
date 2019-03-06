@@ -1,0 +1,37 @@
+.shipping-container{
+
+}
+.shipping-address-container{
+
+}
+
+.shipping-address-container .field{
+
+
+}
+.shipping-address-container .field label{
+    display: block;
+    width:100%;
+
+}
+.shipping-address-container .field input{
+    display: block;
+    width:100%;
+}
+
+.shipping-address-container .toPayment-btn {
+
+}
+.shipping-address-container .toPayment-btn button {
+    margin-top: 20px;
+    background: #e1ff0d;
+    border: none;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 50px;
+    min-width: 200px;
+}
+
+
+
