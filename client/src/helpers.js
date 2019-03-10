@@ -48,7 +48,7 @@ function postJson(url, data, crossOrigin = true) {
 
     return fetch(url, options)
         .then(res => {
-
+            console.log(res);
             if (res.ok) {
 
                 return res.json()
@@ -57,6 +57,7 @@ function postJson(url, data, crossOrigin = true) {
             else {
 
                 if (res.status === 400) {
+                    console.log(res.json);
                     throw new Error(res.json())
                 }
 

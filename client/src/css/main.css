@@ -300,9 +300,11 @@ body {
 }
 
 #site-header .cart .cart-menu {
+  overflow: scroll;
   display: none;
   z-index: 1;
   color:black;
+  max-height: 500px;
 }
 
 #site-header .cart .cart-menu .arrow-up {

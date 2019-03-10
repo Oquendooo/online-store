@@ -33,6 +33,20 @@ module.exports = (connection) => {
 
           return executeQuery(query, params)
       },
+      searchForProductsRelatedTo: (name) => {
+            let LikedFormatted = "%" + name + "%";
+            console.log(LikedFormatted);
+            const query = `
+            SELECT *
+            FROM products
+            WHERE product_name like ?
+            ;
+          `;
+            console.log("model", query);
+            const params = [LikedFormatted];
+
+            return executeQuery(query, params)
+        },
 
       selectProducts: () => {
 

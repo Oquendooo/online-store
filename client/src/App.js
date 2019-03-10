@@ -27,7 +27,7 @@ class App extends Component {
     render() {
     return (
       <div className="App">
-          <Header />
+          <Header exact path='/' component={props => <Header {...props}/>}/>
           <Banner />
 
           {/*Front Page*/}
@@ -48,7 +48,7 @@ class App extends Component {
           {/*Product routes*/}
           <Route exact path='/product' component={Breadcrumbs} />
           <Route exact path='/product' component={ProductPage}/>
-          <Route exact path='/product/:id/' component={ProductPage}/>
+          <Route exact path='/product/:id/'  component={props => <ProductPage {...props}/>}/>
 
           {/*Products routes*/}
           <Route exact path='/products' component={ProductsPage}/>

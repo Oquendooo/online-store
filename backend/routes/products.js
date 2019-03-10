@@ -3,6 +3,23 @@ const express = require('express');
 module.exports = (model) => {
     const app = express.Router();
 
+    //Below we are selecting our products
+    app.post('/search', (req, res) => {
+
+        const query = req.body.query;
+        //console.log("My query",query);
+        model.searchForProductsRelatedTo(query)
+            .then(data => {
+
+                res.json(data);
+                console.log("Successfully received products from our database");
+            })
+            .catch(err => {
+                console.log(err);
+            });
+
+    });
+
     app.post('/insert-product', (req, res) => {
 
     });

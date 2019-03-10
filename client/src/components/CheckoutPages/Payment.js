@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../css/payment.css';
 import {connect} from "react-redux";
-import {Link} from "react-router-dom";
+
 
 
 class Payment extends Component {
@@ -38,10 +38,10 @@ class Payment extends Component {
                                             </div>
                                             <div className="payment-form">
                                                 <ul className="cc-types">
-                                                    <li><img className="payment-img" src={require("../../images/creditcardtypes/aa.png")} /></li>
-                                                    <li><img className="payment-img" src={require("../../images/creditcardtypes/visa.png")} /></li>
-                                                    <li><img className="payment-img" src={require("../../images/creditcardtypes/mc.png")} /></li>
-                                                    <li><img className="payment-img" src={require("../../images/creditcardtypes/discover.png")} /></li>
+                                                    <li><img alt="" className="payment-img" src={require("../../images/creditcardtypes/aa.png")} /></li>
+                                                    <li><img  alt="" className="payment-img" src={require("../../images/creditcardtypes/visa.png")} /></li>
+                                                    <li><img  alt="" className="payment-img" src={require("../../images/creditcardtypes/mc.png")} /></li>
+                                                    <li><img  alt="" className="payment-img" src={require("../../images/creditcardtypes/discover.png")} /></li>
                                                 </ul>
 
                                                 <div className="field cc-number">
@@ -76,7 +76,7 @@ class Payment extends Component {
                                                 <div className="items">
                                                     <div className="item">
                                                         {item.product_name}
-                                                        <img src/>
+                                                        <img  alt="" src/>
                                                     </div>
                                                 </div>
                                             )

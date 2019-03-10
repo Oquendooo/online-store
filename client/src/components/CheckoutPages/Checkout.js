@@ -78,7 +78,7 @@ class Checkout extends Component {
                                             <div className="items">
                                                 <div className="item">
                                                     {item.product_name}
-                                                    <img src/>
+                                                    <img  alt="" src/>
                                                 </div>
                                             </div>
                                             )

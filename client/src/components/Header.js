@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Payments  from './Payments';
+import SearchBar from './SearchBar';
 import {removeFromCart} from "../actions";
 import '../css/main.css';
 import '../css/header.css';
+
 
 class Header extends Component {
    constructor(props) {
@@ -17,6 +19,10 @@ class Header extends Component {
       this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
    };
    componentDidMount() {
+
+
+
+
 
    }
 
@@ -59,7 +65,7 @@ class Header extends Component {
    renderCartItems(){
 
       const { cart } = this.props;
-
+         console.log("my props",this.props);
          const filteredCart = cart.filter(item => item.length !== 0);
 
          if(filteredCart.length > 0){
@@ -455,14 +461,8 @@ class Header extends Component {
                            </div>
                         </li>
                      </ul>
-                     <form>
-                        <div className="form-group">
-                           <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search"/>
-                        </div>
-                        <a className="search-icon" href="/">
-                        <i className="fas fa-search"></i>
-                        </a>
-                     </form>
+                     <SearchBar  />
+
                      <div className="account-cart">
                         <div className="account">
                            <Link to="/signin">
