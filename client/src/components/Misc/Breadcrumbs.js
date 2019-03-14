@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../css/breadcrumbs.css';
+import '../../css/breadcrumbs.css';
 class Breadcrumbs extends Component {
   render() {
     return (

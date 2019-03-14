@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { postJson} from "../helpers";
+import { postJson} from "../../helpers";
 import { withRouter } from 'react-router-dom';
-import '../css/searchbar.css';
+import '../../css/searchbar.css';
 
 class SearchBar extends Component {
   constructor(props){
@@ -15,7 +15,12 @@ class SearchBar extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  doNothing(event) {
+    event.preventDefault();
+  }
   handleChange(event) {
+    event.preventDefault();
+
     const query = event.target.value;
 
     this.setState({query: event.target.value});
@@ -55,7 +60,7 @@ class SearchBar extends Component {
           <div className="form-group">
             <input type="text" className="form-control" value={this.state.query} onChange={this.handleChange} placeholder="Search"/>
           </div>
-          <a className="search-icon" href="/">
+          <a className="search-icon" onClick={this.doNothing}>
             <i className="fas fa-search"></i>
           </a>
           <div className={this.state.searchResultsClass}>

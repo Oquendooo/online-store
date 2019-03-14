@@ -4,7 +4,7 @@ import '../../css/main2.css';
 import {getJson} from "../../helpers";
 class DisplayProductsPage extends Component {
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
           products: [],
           urlPath: ''

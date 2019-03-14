@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Payments  from './Payments';
+import Payments  from '../CheckoutPages/Payments';
 import SearchBar from './SearchBar';
-import {removeFromCart} from "../actions";
-import '../css/main.css';
-import '../css/header.css';
+import {removeFromCart} from "../../actions";
+import '../../css/main.css';
+import '../../css/header.css';
 
 
 class Header extends Component {
@@ -19,11 +19,6 @@ class Header extends Component {
       this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
    };
    componentDidMount() {
-
-
-
-
-
    }
 
    renderLinks(){

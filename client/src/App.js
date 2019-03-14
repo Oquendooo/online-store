@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import ProductPage from './components/ProductPage/ProductPage';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Banner from './components/Banner';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Banner from './components/Misc/Banner';
 import FrontPage from './components/FrontPage';
-import Breadcrumbs from './components/Breadcrumbs';
+import Breadcrumbs from './components/Misc/Breadcrumbs';
 import ProductsPage from "./components/ProductsPage/ProductsPage";
 import Signup from './components/auth/Signup';
-import Feature from './components/Feature';
+import Feature from './components/auth/Feature';
 import Signout from './components/auth/Signout';
 import Signin from './components/auth/Signin';
 import Cart from './components/CheckoutPages/Cart';
