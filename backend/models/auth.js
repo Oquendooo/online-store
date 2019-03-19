@@ -7,14 +7,12 @@ module.exports = (connection) => {
   const executeQuery = util.promisify(connection.query).bind(connection);
 
   return {
-
     findUser: async (email) => {
-
       const query = `
-            SELECT *
-            FROM users
-            WHERE email = ?
-          `;
+        SELECT *
+        FROM users
+        WHERE email = ?
+      `;
 
       const params = [email];
 
@@ -23,10 +21,10 @@ module.exports = (connection) => {
     findUserById: (email) => {
 
       const query = `
-            SELECT *
-            FROM users
-            WHERE user_id = ?
-          `;
+        SELECT *
+        FROM users
+        WHERE user_id = ?
+      `;
 
       const params = [email];
 
@@ -35,52 +33,51 @@ module.exports = (connection) => {
 
     insertUser: async (email, password) => {
 
-      async function hashPassword (email, password) {
+      async function hashPassword(email, password) {
 
         const userPassword = password;
         const saltRounds = bcrypt.genSaltSync(10);
 
         const hashedPassword = await new Promise((resolve, reject) => {
           bcrypt.hash(password, saltRounds, null, (err, hash) => {
-            if (err) reject(err)
+            if (err) reject(err);
             resolve(hash)
           });
-        })
+        });
 
-        return hashedPassword
+        return hashedPassword;
       }
 
       const myHash = await hashPassword(email, password);
-      console.log("This is my hash password",myHash);
 
       const query = `
-                      INSERT INTO users (email, password)
-                      VALUES (?,?)
-                  `;
+        INSERT INTO users (email, password)
+        VALUES (?,?)
+      `;
 
       const params = [email, myHash];
       executeQuery(query, params)
 
       const query2 = `
-                      SELECT *
-                      FROM users
-                      WHERE email = ?
-                  `;
+        SELECT *
+        FROM users
+        WHERE email = ?
+      `;
 
       const params2 = [email];
 
-
       return executeQuery(query2, params2)
-
 
     },
     comparePassword: (cadidatePassword, hashedPassword, callback) => {
       bcrypt.compare(cadidatePassword, hashedPassword, (err, isMatch) => {
-        if (err) { return callback(err); }
+        if (err) {
+          return callback(err);
+        }
         callback(null, isMatch);
       });
 
     },
-  }
 
+  }
 };

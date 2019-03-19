@@ -1,67 +1,63 @@
 const util = require('util');
 
 module.exports = (connection) => {
-
-    const executeQuery = util.promisify(connection.query).bind(connection);
+  const executeQuery = util.promisify(connection.query).bind(connection);
 
     return {
       insertProduct: () => {
+        const query = ``;
 
-          const query = ``;
+        const params = [];
 
-          const params = [];
-
-          return executeQuery(query, params)
+        return executeQuery(query, params)
       },
 
       deleteProduct: (event_id) => {
-          const query =``;
+        const query =``;
 
-          const params = [event_id];
+        const params = [event_id];
 
-          return executeQuery(query, params)
+        return executeQuery(query, params)
       },
 
       selectProduct: (product_id) => {
-          const query = `
-            SELECT *
-            FROM products
-            WHERE product_id = ?
-          `;
+        const query = `
+          SELECT *
+          FROM products
+          WHERE product_id = ?
+        `;
 
-          const params = [product_id];
+        const params = [product_id];
 
-          return executeQuery(query, params)
+        return executeQuery(query, params)
       },
       searchForProductsRelatedTo: (name) => {
-            let LikedFormatted = "%" + name + "%";
-            console.log(LikedFormatted);
-            const query = `
-            SELECT *
-            FROM products
-            WHERE product_name like ?
-            ;
-          `;
-            console.log("model", query);
-            const params = [LikedFormatted];
+        let LikedFormatted = "%" + name + "%";
 
-            return executeQuery(query, params)
+          const query = `
+          SELECT *
+          FROM products
+          WHERE product_name like ?
+          ;
+        `;
+
+        const params = [LikedFormatted];
+
+        return executeQuery(query, params)
         },
 
       selectProducts: () => {
-
         const query = `
-            SELECT *
-            FROM products
-            ;
-          `;
+          SELECT *
+          FROM products
+          ;
+        `;
 
-          const params = [];
+        const params = [];
 
-          return executeQuery(query, params)
+        return executeQuery(query, params)
       },
-        selectProductsWithThisGenderAndApparelType: (gender, apparel_type) => {
-
+      selectProductsWithThisGenderAndApparelType: (gender, apparel_type) => {
             const query = `
             SELECT *
             FROM products
@@ -71,42 +67,41 @@ module.exports = (connection) => {
             const params = [gender, apparel_type];
 
             return executeQuery(query, params)
-        },
-        selectProductsWithThisGenderAndApparelTypeAndApparelType2: (gender, apparel_type, clothing_type) => {
+      },
+      selectProductsWithThisGenderAndApparelTypeAndApparelType2: (gender, apparel_type, clothing_type) => {
+        const query = `
+          SELECT *
+          FROM products
+          WHERE gender = ? AND apparel_type = ? AND clothing_type = ?
+        `;
 
-            const query = `
-            SELECT *
-            FROM products
-            WHERE gender = ? AND apparel_type = ? AND clothing_type = ?
-          `;
+        const params = [gender, apparel_type, clothing_type];
 
-            const params = [gender, apparel_type, clothing_type];
-
-            return executeQuery(query, params)
+        return executeQuery(query, params)
         },
         selectProductsWithThisGenderAndApparelTypeAndTopOrBottom: (gender, apparel_type, top_bottom) => {
 
-            const query = `
-            SELECT *
-            FROM products
-            WHERE gender = ? AND apparel_type = ? AND top_bottom = ?
-          `;
+          const query = `
+          SELECT *
+          FROM products
+          WHERE gender = ? AND apparel_type = ? AND top_bottom = ?
+        `;
 
-            const params = [gender, apparel_type, top_bottom];
+        const params = [gender, apparel_type, top_bottom];
 
-            return executeQuery(query, params)
+        return executeQuery(query, params)
         },
         selectProductsWithThisGenderAndApparelTypeTopBottomApparelType2: (gender, apparel_type, top_bottom, clothing_type) => {
 
-            const query = `
-            SELECT *
-            FROM products
-            WHERE gender = ? AND apparel_type = ? AND top_bottom = ? AND clothing_type = ?
-          `;
+          const query = `
+          SELECT *
+          FROM products
+          WHERE gender = ? AND apparel_type = ? AND top_bottom = ? AND clothing_type = ?
+        `;
 
-            const params = [gender, apparel_type, top_bottom, clothing_type];
+        const params = [gender, apparel_type, top_bottom, clothing_type];
 
-            return executeQuery(query, params)
+        return executeQuery(query, params)
         },
 
     }

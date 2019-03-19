@@ -9,9 +9,9 @@ const requireSignin = passport.authenticate('local', {session: false});
 
 
 const tokenForUser = (user) => {
-    const timeStamp = new Date().getTime();
-    return jwt.encode({ sub: user.user_id, iat: timeStamp }, config.secret);
-}
+  const timeStamp = new Date().getTime();
+  return jwt.encode({sub: user.user_id, iat: timeStamp}, config.secret);
+};
 
 module.exports = (model) => {
   const app = express.Router();
@@ -21,45 +21,43 @@ module.exports = (model) => {
   // });
 
   app.post('/signin', requireSignin, (req, res, next) => {
-    res.send( { token:tokenForUser(req.user) });
+    res.send({token: tokenForUser(req.user)});
   });
 
-  app.post('/signup',  (req, res, next) => {
+  app.post('/signup', (req, res, next) => {
 
     console.log(req.body);
     const email = req.body.email;
     const password = req.body.password;
 
-    if(!email || !password){
+    if (!email || !password) {
       return res.status(422).send({error: 'You must provide email and password'})
     }
 
     // See if a user with given email exists
     model.findUser(email)
-        .then( data => {
+      .then(data => {
 
-          const foundEmail = JSON.parse(JSON.stringify(data))
+        const foundEmail = JSON.parse(JSON.stringify(data))
 
-          console.log("this is the found email",foundEmail[0])
+        console.log("this is the found email", foundEmail[0])
 
-          // If a user with email does Not exist create and save user record
+        // If a user with email does Not exist create and save user record
 
-          if(foundEmail.length === 0 || typeof foundEmail.length === 'undefined'){
+        if (foundEmail.length === 0 || typeof foundEmail.length === 'undefined') {
 
-            model.insertUser(email,password).then(data => {
-                const foundEmail = JSON.parse(JSON.stringify(data))
-                res.json({token: tokenForUser(foundEmail[0])})
-            })
-          }
+          model.insertUser(email, password).then(data => {
+            const foundEmail = JSON.parse(JSON.stringify(data))
+            res.json({token: tokenForUser(foundEmail[0])})
+          })
+        }
 
 
-          if(foundEmail.length === 1){
-            // If a user with the given email exist , return an error
-            return res.status(422).send({error: 'Email is in use'});
-            console.log("Email is in use")
-          }
-
-        });
+        if (foundEmail.length === 1) {
+          // If a user with the given email exist , return an error
+          return res.status(422).send({error: 'Email is in use'});
+        }
+      });
 
   });
 
@@ -67,19 +65,19 @@ module.exports = (model) => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   app.get(
     '/auth/google',
-    passport.authenticate('google',{
-    scope: ['profile', 'email']
+    passport.authenticate('google', {
+      scope: ['profile', 'email']
     })
   );
 
   app.get('/auth/google/callback', passport.authenticate('google'));
 
-  app.get('/api/logout', (req, res)=>{
+  app.get('/api/logout', (req, res) => {
     req.logout();
     res.send(req.user);
   });
 
-  app.get('/api/current_user', (req, res) =>{
+  app.get('/api/current_user', (req, res) => {
     res.send(req.user);
   });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
