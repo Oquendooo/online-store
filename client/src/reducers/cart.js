@@ -6,44 +6,42 @@ const INITIAL_STATE = [
 
 export default function(state = INITIAL_STATE, action){
 
-    switch(action.type){
-        case ADD_TO_CART:{
+  switch(action.type){
 
-            const {item} = action.payload;
-            let cart = [...state,item];
-            localStorage.setItem("cart", JSON.stringify(cart));
+    case ADD_TO_CART:{
+      const {item} = action.payload;
+      let cart = [...state,item];
+      localStorage.setItem("cart", JSON.stringify(cart));
 
-            return [
-                ...state,
-                item
+      return [
+        ...state,
+        item
+      ];
 
-            ];
-
-        }
-        case REMOVE_FROM_CART:{
-
-            const {index} = action.payload;
-            console.log("my index",index);
-            let cart = JSON.parse(localStorage.getItem('cart'));
-            let filteredCart = cart.slice();
-            filteredCart.splice(index, 1);
-
-            filteredCart = filteredCart.filter(item => item.length !== 0);
-            console.log("filteredCart",filteredCart);
-            localStorage.setItem('cart', JSON.stringify(filteredCart));
-            return filteredCart;
-
-        }
-        case SET_CART:{
-
-            let cart = JSON.parse(localStorage.getItem('cart'));
-            return [
-                cart
-            ];
-
-        }
-        default:
-            return state;
     }
+
+    case REMOVE_FROM_CART:{
+      const {index} = action.payload;
+
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      let filteredCart = cart.slice();
+      filteredCart.splice(index, 1);
+      filteredCart = filteredCart.filter(item => item.length !== 0);
+      localStorage.setItem('cart', JSON.stringify(filteredCart));
+
+      return filteredCart;
+
+    }
+    case SET_CART:{
+      let cart = JSON.parse(localStorage.getItem('cart'));
+
+      return [
+        cart
+      ];
+
+    }
+    default:
+      return state;
+  }
 
 }

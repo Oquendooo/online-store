@@ -85,7 +85,7 @@ class Cart extends Component {
         return (
             <React.Fragment>
                 <div id="main-content" className="">
-                    <div className="container">
+                    <div id="shopping-cart-container" className="container">
 
                             <div className="page-title-wrapper">
                                 <h1 className="page-title">
