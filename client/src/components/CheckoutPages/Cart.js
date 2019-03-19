@@ -26,9 +26,8 @@ class Cart extends Component {
         //Here we filter out if there are any empty elements in the array
         let cartItems = [];
         if(this.props.cart.length !== 0){
-            cartItems = this.props.cart.filter(item => item.length !== 0);
+            cartItems = this.props.cart.items.filter(item => item.length !== 0);
         }
-
 
         console.log("cart items",cartItems);
         if(cartItems.length > 0 ){

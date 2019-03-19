@@ -59,9 +59,9 @@ class Header extends Component {
 
    renderCartItems(){
 
-      const { cart } = this.props;
-         console.log("my props",this.props);
-         const filteredCart = cart.filter(item => item.length !== 0);
+      const { items } = this.props.cart;
+         console.log("my props",this.props.cart);
+         const filteredCart = items.filter(item => item.length !== 0);
 
          if(filteredCart.length > 0){
             return(
