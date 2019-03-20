@@ -72,7 +72,7 @@ export const handleToken = (token) => async dispatch => {
 export const addShippingInfo = (formProps, callback) => {
   console.log("testing");
   callback();
-  return{
+  return {
 
     type:ADD_SHIPPING_INFO,
     payload: {
