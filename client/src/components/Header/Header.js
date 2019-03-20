@@ -493,10 +493,10 @@ class Header extends Component {
                            <i className="fas fa-shopping-cart"></i>
                               {
                                  (() => {
-                                    if(this.props.cart.length > 0){
+                                    if(this.props.cart.items.length > 0){
                                        return(
                                            <span className="counter">
-                                             <span className="counter-number">{this.props.cart.length}</span>
+                                             <span className="counter-number">{this.props.cart.items.length}</span>
                                           </span>
                                        );
                                     }

@@ -12,25 +12,29 @@ const INITIAL_STATE = {
 };
 
 export default function(state = INITIAL_STATE, action){
-  console.log("reducers cart state", [...state.items, {hello:"sjsj"}]);
 
-  if(action.payload !== undefined){
-  console.log("action.payload",action.payload);
-  }
+  // if(action.type ) {
+  //   console.log("add to cart action", action.payload);
+  // }
+  //
+  //
+  // if(action.payload !== undefined){
+  // console.log("action.payload",action.payload);
+  // }
 
   switch(action.type){
-
     case ADD_TO_CART:{
-      const {item} = action.payload.item;
-      let cart = [...state.items, item];
-      console.log(cart);
+      const { item } = action.payload;
+      const newTotalPrice = state.total + item.price;
+      const cart = [...state.items, item];
+
       localStorage.setItem("cart", JSON.stringify(cart));
 
       return {
         ...state,
-        items:[...state, item],
+        items: cart,
+        total: newTotalPrice
       };
-
     }
 
     case REMOVE_FROM_CART:{
@@ -44,7 +48,7 @@ export default function(state = INITIAL_STATE, action){
 
       return {
         ...state,
-        items:[...state,filteredCart]
+        items: filteredCart,
       }
 
     }
