@@ -145,7 +145,7 @@ class Checkout extends Component {
                   <h2>Order Summary</h2>
                   <h3>1 Item in Cart</h3>
                   {
-                    this.props.cart.map( item => (
+                    this.props.cart.items.map( item => (
                         <div className="items">
                           <div className="item">
                             {item.product_name}
