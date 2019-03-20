@@ -23,6 +23,8 @@ const AuthRouter = require('./backend/routes/auth')(AuthModel);
 const BillingRouter = require('./backend/routes/billingRoutes')(null);
 
 
+
+
 //App Setup
 app.use(morgan('combined'));
 app.use(cors());
