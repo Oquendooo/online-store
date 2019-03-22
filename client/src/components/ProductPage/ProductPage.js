@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import {addToCart, removeFromCart} from "../../actions";
 import {Link} from "react-router-dom";
 import ItemAddedModal from './ItemAddedModal';
-import $ from 'jquery';
 
 class ProductPage extends Component {
   constructor(props) {
@@ -80,7 +79,7 @@ class ProductPage extends Component {
     console.log("product page props",this.props);
     return (
       <div className="product-container container">
-        <ItemAddedModal history={history}/>
+        <ItemAddedModal history={history} product={this.state.product}/>
         <div className="row">
           <div className="product-images-wrapper col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
             <div className="product-images">

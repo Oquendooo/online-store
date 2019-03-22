@@ -7,7 +7,7 @@ class Banner extends Component {
       <div className="banner">
         <div className="container">
           <p>
-            <strong>25% off sitewide on orders over $100!!! <big>Use code: </big> <a href="/">Details <i className="fas fa-greater-than"></i></a>
+            <strong>25% off sitewide on orders over $100!!! Use code: 25OFF <a href="/">Details <i className="fas fa-greater-than"></i></a>
             </strong>
           </p>
         </div>

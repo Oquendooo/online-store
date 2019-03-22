@@ -15,8 +15,9 @@ import Cart from './components/CheckoutPages/Cart';
 import Checkout from './components/CheckoutPages/Checkout';
 import Payment from './components/CheckoutPages/Payment';
 import Account from './components/UserAccountPages/Account';
-import './css/main.css';
 import './css/bootstrap.min.css';
+import './css/main.css';
+import './css/main2.css';
 
 
 class App extends Component {

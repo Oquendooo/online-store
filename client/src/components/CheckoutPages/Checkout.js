@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/checkout.css';
+import '../../css/sass/checkout.scss';
 import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import {connect} from "react-redux";
@@ -141,20 +141,37 @@ class Checkout extends Component {
 
 
                 </div>
-                <div className="order-summary col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                  <h2>Order Summary</h2>
-                  <h3>1 Item in Cart</h3>
-                  {
-                    this.props.cart.items.map( item => (
-                        <div className="items">
-                          <div className="item">
-                            {item.product_name}
-                            <img  alt="" src/>
-                          </div>
-                        </div>
-                      )
-                    )
-                  }
+                <div className="order-summary col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <div className="order-summary-wrapper">
+                    <h2>Order Summary</h2>
+
+
+                    <div className="cart-pricing">
+                      <div className="subtotal"><span>Subtotal</span><span>${this.props.cart.total}</span></div>
+                      <div className="shipping"><span>Shipping</span><span>$0.00</span></div>
+                      <div className="total"><span>Order Total</span><span>${this.props.cart.total}</span></div>
+                    </div>
+                    <h3>{this.props.cart.items.length} Items In Your Cart</h3>
+
+                    <div className="items">
+                      {
+                        this.props.cart.items.map( item => (
+                              <div className="item">
+                                <img src={item.img_urls} alt=""/>
+                                <div className="item-details">
+                                  <p className="product-name">{item.product_name}</p>
+                                  <p className="product-qty"><span>Qty:</span><span>1</span></p>
+                                  <p className="product-qty"><span>Price:</span><span> {item.price}</span></p>
+                                </div>
+
+
+                              </div>
+
+                          )
+                        )
+                      }
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

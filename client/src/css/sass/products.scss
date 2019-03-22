@@ -1,0 +1,20 @@
+@media (max-width: 576px) {
+  #main-content .container {
+    padding: 0px !important;
+  }
+  #main-content .container .content .products {
+    padding: 0px;
+  }
+  #main-content .container .content .filter-menu {
+    display: none;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  #main-content .container {
+    padding: 0px !important;
+  }
+}

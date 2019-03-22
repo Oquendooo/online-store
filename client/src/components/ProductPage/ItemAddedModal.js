@@ -9,7 +9,8 @@ class ItemAddedModal extends Component {
   };
 
   render() {
-
+    const {product} = this.props;
+    console.log("itemadded product",this.props.product);
     console.log("itemaddedmodal props",this.props.history);
 
     return (
@@ -27,13 +28,13 @@ class ItemAddedModal extends Component {
               </div>
               <div className="modal-body">
                 <img
-                  src="https://cdn.karmaloopassets.com/media/catalog/product/cache/thumbnail/120x120/beff4985b56e3afdbeabfc89641a4582/8/3/83e769d46f23bc2df84f55a357b246bc.jpg"
+                  src={product.img_urls}
                   alt=""/>
                 <div>
-                  <span>KING LONDON</span>
-                  <span>Manor Tracksuit Bottoms - Black</span>
-                  <span><strong>Quantity</strong>1</span>
-                  <span><strong>Quantity</strong>S</span>
+                  <span>{product.brand}</span>
+                  <span>{product.product_name}</span>
+                  <span><strong>Quantity</strong> 1</span>
+                  <span><strong>Size</strong> {product.size}</span>
                 </div>
               </div>
               <div className="modal-footer">

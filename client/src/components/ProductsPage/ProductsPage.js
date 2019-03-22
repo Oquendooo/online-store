@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/main2.css';
+import '../../css/sass/products.scss';
 import {getJson} from "../../helpers";
 class DisplayProductsPage extends Component {
     constructor(props){
@@ -91,7 +92,7 @@ class DisplayProductsPage extends Component {
                 <div className="container">
                     <div className="category">
                         <div className="row">
-                            <div className="col-xs-12 col-xl-12">
+                            <div className="banner-col col-xs-12 col-xl-12">
                                 <div className="category-img">
                                     <span>{category}</span>
 
@@ -100,8 +101,8 @@ class DisplayProductsPage extends Component {
                         </div>
                     </div>
                     <div className="content">
-                        <div className="row">
-                            <div className="filter-menu col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                        <div id="filter-items-row" className="row filter-items-row">
+                            <div className="filter-menu col-sm-3 col-md-2 col-lg-2 col-xl-2">
 
                                 <strong>Filter By</strong>
                                 <div className="filter-options">
@@ -205,7 +206,7 @@ class DisplayProductsPage extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="products col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                            <div className="products col-sm-9 col-md-10 col-lg-10 col-xl-10">
                                 <div className="page-title-wrapper">
                                     <h1 className="page-title">
                                         <span className="base">{category}</span>
@@ -254,8 +255,7 @@ class DisplayProductsPage extends Component {
                                                 <a className="action next"
                                                    href="https://www.karmaloop.com/category/mens/clothing/tops/basic-tees?p=2&amp;product_list_order=price"
                                                    title="Next">
-                                                    <span className="label">Page</span>
-                                                    <span>Next</span>
+                                                    <span className="label">></span>
                                                 </a>
                                             </li>
                                         </div>

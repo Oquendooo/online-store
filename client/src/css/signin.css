@@ -8,6 +8,8 @@
 .page-title-wrapper{
     padding-left:15px;
     width:100%;
+    z-index: 1;
+    min-height: 42px;
 }
 .page-title-wrapper .page-title{
 
