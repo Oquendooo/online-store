@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/account.scss';
+import './account.scss';
 import {Link} from "react-router-dom";
 
 class AccountMenuLinks extends Component {

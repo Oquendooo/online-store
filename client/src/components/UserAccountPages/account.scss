@@ -1,0 +1,83 @@
+.account-container {
+  .container {
+    list-style: none;
+    max-width: 1280px;
+
+    .account-links {
+      ul {
+        padding: 0;
+        list-style: none;
+
+        a {
+          text-decoration: none;
+        }
+
+        .menu-link {
+          padding: 5px 15px;
+          font-size: 15px;
+          color: black;
+
+        }
+
+        .menu-link:hover {
+          background: #f6f6f6;
+        }
+      }
+
+    }
+
+    .account-content-column {
+      .page-title-wrapper {
+        margin-bottom: 8px;
+
+        .page-title {
+          padding: 4px 6px 2px;
+          background-color: black;
+          font-size: 1.5rem;
+          color: white;
+          display: inline-block;
+          text-transform: uppercase;
+        }
+      }
+
+      .sub-title {
+        .title {
+          text-transform: uppercase;
+          font-size: .95rem;
+          margin-bottom: 20px;
+
+          strong {
+          }
+        }
+      }
+
+      .block-information {
+        .box-content {
+          display: inline-block;
+          vertical-align: top;
+          width: 48%;
+
+          .box-title {
+            font-size: .95rem;
+          }
+
+          p {
+            margin-bottom: 0;
+          }
+
+          a {
+            text-underline: none;
+            color:black;
+            font-size:.65rem;
+            background: #d3d3d3;
+            padding: 5px;
+            margin-right: 5px;
+
+          }
+        }
+      }
+    }
+  }
+
+}
+

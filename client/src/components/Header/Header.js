@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Payments  from '../CheckoutPages/Payments';
 import SearchBar from './SearchBar';
 import {removeFromCart} from "../../redux/actions";
 import '../../css/main.css';
@@ -25,7 +24,6 @@ class Header extends Component {
     if(this.props.authenticated){
       return(
         <React.Fragment>
-          <Payments />
           <li className="item">
             <Link className="login" to="/signout">
               <span>Sign Out</span>
@@ -461,7 +459,7 @@ class Header extends Component {
                   (() => {
                     if(this.props.authenticated !== ""){
                       return (
-                        <Link to="/account">
+                        <Link to="/account/dashboard">
                           <i className="fas fa-user-alt"></i>
                         </Link>
                       );
@@ -487,12 +485,12 @@ class Header extends Component {
                       </Link>
                     </li>
                     <li className="menu-actions-item">
-                      <Link to="/wishlist">
+                      <Link to="/account/wish-list">
                         <span>My WishList</span>
                       </Link>
                     </li>
                     <li className="menu-actions-item">
-                      <Link to="/my-orders">
+                      <Link to="/account/wish-list">
                         <span>My Orders</span>
                       </Link>
                     </li>

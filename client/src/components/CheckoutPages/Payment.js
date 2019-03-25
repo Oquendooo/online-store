@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../css/payment.css';
 import {connect} from "react-redux";
+import Payments  from '../CheckoutPages/Payments';
 
 
 
@@ -59,7 +60,8 @@ class Payment extends Component {
                                                 </div>
                                             </div>
                                             <div className="action-bar">
-                                                <button>Place Order</button>
+                                                <Payments />
+                                                {/*<button>Place Order</button>*/}
                                             </div>
 
                                         </div>

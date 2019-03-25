@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/account.scss';
+import './account.scss';
 
 class AccountWishList extends Component {
   render() {

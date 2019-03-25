@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import '../../css/account.scss';
+import './account.scss';
 import AccountAddressBook from './AccountAddressBook';
 import AccountMenuLinks from './AccountMenuLinks';
 import AccountOrders from './AccountOrders';
@@ -21,7 +21,7 @@ class Account extends Component {
               <Route path='/account' component={props => <AccountMenuLinks {...props}/>}/>
             </div>
 
-            <div className="right-content col-sm-2 col-md-2 col-lg-3 col-xl-3">
+            <div className="right-content col-sm-12 col-md-9 col-lg-9 col-xl-9">
               <Route path='/account/dashboard' component={props => <AccountDashboard {...props}/>}/>
               <Route path='/account/information' component={props => <AccountInformation{...props}/>}/>
               <Route path='/account/address-book' component={props => <AccountAddressBook {...props}/>}/>
