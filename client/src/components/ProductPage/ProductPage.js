@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../css/product.css';
 import { connect } from 'react-redux'
-import {addToCart, removeFromCart} from "../../actions";
+import {addToCart, removeFromCart} from "../../redux/actions";
 import {Link} from "react-router-dom";
 import ItemAddedModal from './ItemAddedModal';
 

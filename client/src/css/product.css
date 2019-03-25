@@ -140,6 +140,8 @@
 
 
 .product-information-wrapper .qty-addtocart .addtocart-btn {
+  outline:none;
+  cursor: pointer;
   color: white;
   background: #11873b;
   padding: 0 10px;

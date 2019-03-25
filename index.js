@@ -1,9 +1,5 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const mysql = require('mysql');
 const http = require('http');
-const cookieSession = require('cookie-session');
-const passport = require('passport');
 const path = require("path");
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
@@ -23,10 +19,6 @@ const AuthRouter = require('./backend/routes/auth')(AuthModel);
 const BillingRouter = require('./backend/routes/billingRoutes')(null);
 
 
-
-
-
-
 //App Setup
 app.use(morgan('combined'));
 app.use(cors());
@@ -42,11 +34,11 @@ app.use('/', BillingRouter);
 
 //Serve any static files built by React
 if(process.env.PORT){
-    app.use(express.static(path.join(__dirname, 'client', 'build')));
+  app.use(express.static(path.join(__dirname, 'client', 'build')));
 
-    app.get('/*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-    });
+  app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+  });
 }
 
 

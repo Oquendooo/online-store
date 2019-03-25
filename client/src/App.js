@@ -21,10 +21,6 @@ import './css/main2.css';
 
 
 class App extends Component {
-    componentWillMount() {
-
-    }
-
     render() {
     return (
       <div className="App">
@@ -41,9 +37,7 @@ class App extends Component {
           <Route exact path='/signout' component={Signout}/>
 
           {/*Authentication routes*/}
-          <Route exact path='/account' component={Account}/>
-
-
+          <Route path='/account' component={Account}/>
 
 
           {/*Product routes*/}

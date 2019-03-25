@@ -5,7 +5,7 @@ import { compose } from 'redux';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 
-import {addShippingInfo} from '../../actions';
+import {addShippingInfo} from '../../redux/actions';
 
 
 class Checkout extends Component {

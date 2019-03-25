@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../../css/cartPage.css';
 import {connect} from "react-redux";
 
-import {removeFromCart, setCart} from "../../actions";
+import {removeFromCart, setCart} from "../../redux/actions";
 
 class Cart extends Component {
 
