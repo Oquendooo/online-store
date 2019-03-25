@@ -13,6 +13,7 @@ class Header extends Component {
     this.state = {
       isMobileMenuOpened: false,
       mobileMenuClass: 'mobile-menu',
+      dropDownDesktopMenu: 'products-dropdown-wrapper',
       cart:[]
     };
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
@@ -56,9 +57,8 @@ class Header extends Component {
   }
 
   renderCartItems(){
-
     const { items } = this.props.cart;
-    console.log("my props",this.props.cart);
+
     const filteredCart = items.filter(item => item.length !== 0);
 
     if(filteredCart.length > 0){
@@ -91,7 +91,7 @@ class Header extends Component {
             <Link to="/checkout/cart" className="btn-primary">
               <span>View Cart</span>
             </Link>
-            <Link to="/checkout/cart" className="btn-secondary">
+            <Link to="/checkout/" className="btn-secondary">
               <span>Check Out</span>
             </Link>
           </div>
@@ -113,8 +113,8 @@ class Header extends Component {
 
     this.setState({cart: JSON.parse(localStorage.getItem('cart'))});
   };
-  toggleMobileMenu(){
 
+  toggleMobileMenu(){
     if(this.state.isMobileMenuOpened === true){
       this.setState({mobileMenuClass: 'mobile-menu', isMobileMenuOpened: false});
     }else if(!this.state.isMobileMenuOpened){
@@ -123,8 +123,15 @@ class Header extends Component {
 
   }
 
+  toggleDisplay(){
+    if(this.state.isMobileMenuOpened === true){
+      this.setState({mobileMenuClass: 'products-dropdown-wrapper', isMobileMenuOpened: false});
+    }else if(!this.state.isMobileMenuOpened){
+      this.setState({mobileMenuClass: 'products-dropdown-wrapper active', isMobileMenuOpened: true});
+    }
+  }
+
   render() {
-    console.log("header props",this.props);
     return (
       <React.Fragment>
         <header id="site-header" className="navbar">
@@ -137,10 +144,10 @@ class Header extends Component {
               <Link to="/" className="logo">Modern Apparel</Link>
             </div>
             <ul id="header-nav" className="nav">
-              <li className="nav-item">
+              <li className="nav-item flex">
                 <Link className="nav-link" to="/products/category/mens/clothing">Men's</Link>
                 <i className="fas fa-plus"></i>
-                <div className="products-dropdown-wrapper">
+                <div className={this.state.dropDownDesktopMenu}>
                   <div className="products-dropdown">
                     <ul className="dropdown-col">
                       <li>

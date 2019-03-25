@@ -96,7 +96,7 @@ body {
 }
 
 #site-header #header-nav .nav-item:hover .products-dropdown {
-  display: flex !important;
+  /*display: flex !important;*/
   background: white;
   color: black;
 }
@@ -312,12 +312,13 @@ body {
 }
 
 #site-header .cart:hover .cart-menu {
+  z-index:2;
   display: block;
   background: white;
   padding: 20px 0px 25px 0px;
   border: 1px solid black;
   position: absolute;
-  left: -200px;
+  left: -315px;
   overflow-x: hidden;
 }
 

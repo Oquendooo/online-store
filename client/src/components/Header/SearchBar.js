@@ -13,11 +13,13 @@ class SearchBar extends Component {
       query: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleInputLeft = this.handleInputLeft.bind(this);
   }
 
   doNothing(event) {
     event.preventDefault();
   }
+
   handleChange(event) {
     event.preventDefault();
 
@@ -43,6 +45,16 @@ class SearchBar extends Component {
         this.setState({searchResultsClass: 'search-results', areSearchResultsOpened: false});
       }
     }
+
+  }
+
+  handleInputLeft(event) {
+    event.preventDefault();
+
+    if(this.state.areSearchResultsOpened === true){
+      this.setState({searchResultsClass: 'search-results', areSearchResultsOpened: false});
+    }
+
   }
 
   goToProduct(product) {
@@ -58,7 +70,7 @@ class SearchBar extends Component {
       <React.Fragment>
         <form className="product-search-form">
           <div className="form-group">
-            <input type="text" className="form-control" value={this.state.query} onChange={this.handleChange} placeholder="Search"/>
+            <input type="text" className="form-control" value={this.state.query} onChange={this.handleChange} onBlur={this.handleInputLeft} placeholder="Search"/>
           </div>
           <a className="search-icon" href="/" onClick={this.doNothing}>
             <i className="fas fa-search"></i>
