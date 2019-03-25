@@ -64,7 +64,7 @@ export const setCart = () => ({
 //Stripe payment actions
 export const handleToken = (token) => async dispatch => {
   const res = await axios.post('/api/stripe',token);
-
+  console.log("token",token);
   dispatch({type: AUTH_USER, payload: res.data});
 };
 

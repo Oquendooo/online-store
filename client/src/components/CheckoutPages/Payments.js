@@ -7,12 +7,12 @@ import {handleToken} from '../../redux/actions';
 class Payments extends Component {
 
     render() {
-
+        console.log("payments component prop",this.props.cartTotal);
         return (
             <StripeCheckout
             name="Pay with card here"
             description="Pay here"
-            amount={500}
+            amount={this.props.cartTotal}
             token={token => this.props.handleToken(token) }
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
             >

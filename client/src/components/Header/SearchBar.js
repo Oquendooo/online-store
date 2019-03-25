@@ -56,7 +56,7 @@ class SearchBar extends Component {
   render() {
     return (
       <React.Fragment>
-        <form>
+        <form className="product-search-form">
           <div className="form-group">
             <input type="text" className="form-control" value={this.state.query} onChange={this.handleChange} placeholder="Search"/>
           </div>

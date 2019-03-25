@@ -1,3 +1,7 @@
+.cart {
+  position: relative
+}
+
 .cart .counter {
   position: relative;
   top: -16px;
@@ -85,7 +89,7 @@
   height: 40px;
   background: black;
   color: #000;
-  text-decoration: none ;
+  text-decoration: none;
   border: 0;
 
   cursor: pointer;

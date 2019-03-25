@@ -60,7 +60,7 @@ class Payment extends Component {
                     {/*</div>*/}
                     <div className="action-bar" style={{display: 'flex',flexDirection: 'column', justifyContent: 'center',marginTop: '80px', textAlign: 'center'}}>
                       <p>Pay with card here</p>
-                      <Payments />
+                      <Payments cartTotal={this.props.cart.total} />
                       {/*<button>Place Order</button>*/}
                     </div>
                   </div>
