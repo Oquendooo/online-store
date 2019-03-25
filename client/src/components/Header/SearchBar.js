@@ -60,7 +60,7 @@ class SearchBar extends Component {
           <div className="form-group">
             <input type="text" className="form-control" value={this.state.query} onChange={this.handleChange} placeholder="Search"/>
           </div>
-          <a className="search-icon" onClick={this.doNothing}>
+          <a className="search-icon" href="/" onClick={this.doNothing}>
             <i className="fas fa-search"></i>
           </a>
           <div className={this.state.searchResultsClass}>

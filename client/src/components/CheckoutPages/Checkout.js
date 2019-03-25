@@ -3,7 +3,6 @@ import '../../css/sass/checkout.scss';
 import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import {connect} from "react-redux";
-import {Link} from "react-router-dom";
 
 import {addShippingInfo} from '../../redux/actions';
 

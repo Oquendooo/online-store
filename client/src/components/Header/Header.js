@@ -79,10 +79,21 @@ class Header extends Component {
                   </div>
                   <div className="product-name"><p>{item.product_name}</p></div>
                   <div className="product-size"><span>Size: </span><span>M</span></div>
-                  <div className="product-qty-delete"><input/><span><i onClick={() => this.deleteCartItem(index)} className="fas fa-trash-alt"></i></span></div>
+                  <div className="product-qty-delete"><input /><span><i onClick={() => this.deleteCartItem(index)} className="fas fa-trash-alt"></i></span></div>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="cart-subtotal">
+            <span>Cart Subtotal : <strong>{this.props.cart.total}</strong></span>
+          </div>
+          <div className="cart-menu-ctas">
+            <Link to="/checkout/cart" className="btn-primary">
+              <span>View Cart</span>
+            </Link>
+            <Link to="/checkout/cart" className="btn-secondary">
+              <span>Check Out</span>
+            </Link>
           </div>
         </React.Fragment>
       );
@@ -113,7 +124,7 @@ class Header extends Component {
   }
 
   render() {
-    console.log("header props",this.props.authenticated);
+    console.log("header props",this.props);
     return (
       <React.Fragment>
         <header id="site-header" className="navbar">
@@ -490,7 +501,7 @@ class Header extends Component {
                       </Link>
                     </li>
                     <li className="menu-actions-item">
-                      <Link to="/account/wish-list">
+                      <Link to="/account/orders">
                         <span>My Orders</span>
                       </Link>
                     </li>

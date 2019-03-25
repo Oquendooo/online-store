@@ -102,8 +102,11 @@
     padding-bottom: 15px;
 }
 .cart-items i{
-
+    cursor: pointer;
     margin-left: 32px;
+}
+.cart-items i:hover{
+    font-size:20px;
 }
 
 /*Cart summary CSS*/
@@ -153,6 +156,7 @@
     display:flex;
     justify-content: center;
     margin: 35px 0 0px;
+
 }
 .cart-summary .cart-summary-inner-wrapper .checkout-cta button{
     background: #11873b;
@@ -164,6 +168,7 @@
     letter-spacing: .5px;
     text-transform: uppercase;
     outline: none;
+    cursor: pointer;
 }
 
 

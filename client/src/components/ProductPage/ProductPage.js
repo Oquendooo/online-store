@@ -135,10 +135,9 @@ class ProductPage extends Component {
                     <span>Quantity</span>
                   </label>
                   <div className="control">
-                    <span className="qty-minus">-</span>
+                    {/*<span className="qty-minus">-</span>*/}
                     <input type="number" name="qty" id="qty" value="1"/>
-                    <span className="qty-plus">+
-              </span>
+                    {/*<span className="qty-plus">+</span>*/}
                   </div>
                 </div>
                 <button onClick={this.addToCart} className="addtocart-btn" type="button" data-toggle="modal"
